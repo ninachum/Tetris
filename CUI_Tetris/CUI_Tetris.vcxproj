@@ -115,6 +115,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="debug_drawer.h" />
+    <ClInclude Include="tetris_block.h" />
+    <ClInclude Include="tetris_blockhandler.h" />
+    <ClInclude Include="tetris_board.h" />
+    <ClInclude Include="tetris_drawer.h" />
+    <ClInclude Include="tetris_game.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
