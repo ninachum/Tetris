@@ -4,7 +4,6 @@
 
 using std::vector;
 
-
 struct Coord
 {
 	int x;
@@ -20,9 +19,14 @@ class Block
 {
 public:
 	enum Mode { UPSIDE, LEFTSIDE, DOWNSIDE, RIGHTSIDE, VERTICAL, HORIZONTAL };
+	enum Color
+	{
+		BLACK, BLUE, GREEN, TURQ, RED, PURPLE, YELLOW, WHITE, GRAY,
+		PALEBLUE, PALEGREEN, PALETURQ, PALERED, PALEPURPLE, PALEYELLOW, BRIGHTWHITE
+	};
 	virtual ~Block() {}
 	virtual void rotate() = 0;
-	virtual const Mode getMode() = 0;
+	virtual const Color getColor() = 0;
 	virtual const vector<Coord>& getBlockInfo() = 0;
 	virtual const vector<Coord>& getNextBlockInfo() = 0;
 };
@@ -30,11 +34,12 @@ public:
 class I : public Block
 {
 private:
+	Mode mode;
+	static const Color color;
 	static const vector<Coord> blockInfoVertical;
 	static const vector<Coord> blockInfoHorizontal;
 
 public:
-	Mode mode;
 
 	I(): mode(VERTICAL) {}
 	
@@ -43,9 +48,9 @@ public:
 		mode == VERTICAL ? mode = HORIZONTAL : mode = VERTICAL;
 	}
 
-	const Mode getMode() override
+	const Color getColor() override
 	{
-		return mode;
+		return color;
 	}
 
 	const vector<Coord>& getBlockInfo() override
@@ -73,18 +78,19 @@ public:
 };
 const vector<Coord> I::blockInfoVertical = { { 0,0 }, { 0,1 }, { 0,2 }, { 0,3 } };
 const vector<Coord> I::blockInfoHorizontal = { {-1, 0}, {0, 0}, {1, 0}, {2, 0} };
-
+const Block::Color I::color = RED;
 
 class J : public Block
 {
 private:
+	Mode mode;
+	static const Color color;
 	static const vector<Coord> blockInfoUpside;
 	static const vector<Coord> blockInfoLeftside;
 	static const vector<Coord> blockInfoDownside;
 	static const vector<Coord> blockInfoRightside;
 
 public:
-	Mode mode;
 
 	J() : mode(UPSIDE) {}
 
@@ -107,9 +113,9 @@ public:
 		}
 	}
 
-	const Mode getMode() override
+	const Color getColor() override
 	{
-		return mode;
+		return color;
 	}
 
 	const vector<Coord>& getBlockInfo() override
@@ -147,18 +153,20 @@ const vector<Coord> J::blockInfoUpside = { {-1, 0}, {-1, 1}, {0, 1}, {1, 1} };
 const vector<Coord> J::blockInfoLeftside = { {1, -1}, {1, 0}, {1, 1}, {0, 1} };
 const vector<Coord> J::blockInfoDownside = { {-1, -1}, {0, -1}, {1, 0}, {1, -1} };
 const vector<Coord> J::blockInfoRightside = { {-1, -1}, {-1, 0}, {-1, 1}, {0, -1} };
+const Block::Color J::color = YELLOW;
 
 
 class L : public Block
 {
 private:
+	Mode mode;
+	static const Color color;
 	static const vector<Coord> blockInfoUpside;
 	static const vector<Coord> blockInfoLeftside;
 	static const vector<Coord> blockInfoDownside;
 	static const vector<Coord> blockInfoRightside;
 
 public:
-	Mode mode;
 
 	L() : mode(UPSIDE) {}
 
@@ -181,9 +189,9 @@ public:
 		}
 	}
 
-	const Mode getMode() override
+	const Color getColor() override
 	{
-		return mode;
+		return color;
 	}
 
 	const vector<Coord>& getBlockInfo() override
@@ -221,18 +229,20 @@ const vector<Coord> L::blockInfoUpside = { {-1, 1}, {0, 1}, {1, 0}, {1, 1} };
 const vector<Coord> L::blockInfoLeftside = { {0, -1}, {1, -1}, {1, 0}, {1, 1} };
 const vector<Coord> L::blockInfoDownside = { {-1, -1}, {-1, 0}, {0, -1}, {1, -1} };
 const vector<Coord> L::blockInfoRightside = { {-1, -1}, {-1, 0}, {-1, 1}, {0, 1} };
+const Block::Color L::color = PURPLE;
 
 
 class T : public Block
 {
 private:
+	Mode mode;
+	static const Color color;
 	static const vector<Coord> blockInfoUpside;
 	static const vector<Coord> blockInfoLeftside;
 	static const vector<Coord> blockInfoDownside;
 	static const vector<Coord> blockInfoRightside;
 
 public:
-	Mode mode;
 
 	T() : mode(UPSIDE) {}
 
@@ -255,9 +265,9 @@ public:
 		}
 	}
 
-	const Mode getMode() override
+	const Color getColor() override
 	{
-		return mode;
+		return color;
 	}
 
 	const vector<Coord>& getBlockInfo() override
@@ -295,15 +305,17 @@ const vector<Coord> T::blockInfoUpside = { {-1, 0}, {0, -1}, {0, 0}, {1, 0} };
 const vector<Coord> T::blockInfoLeftside = { {-1, 0}, {0, -1}, {0, 0}, {0, 1} };
 const vector<Coord> T::blockInfoDownside = { {-1, 0}, {0, 0}, {0, 1}, {1, 0} };
 const vector<Coord> T::blockInfoRightside = { {0, -1}, {0, 0}, {0, 1}, {1, 0} };
+const Block::Color T::color = GREEN;
 
 
 class O : public Block
 {
 private:
+	Mode mode;
+	static const Color color;
 	static const vector<Coord> blockInfo;
 
 public:
-	Mode mode;
 
 	O() : mode(UPSIDE) {}
 
@@ -312,9 +324,9 @@ public:
 		return;
 	}
 
-	const Mode getMode() override
+	const Color getColor() override
 	{
-		return mode;
+		return color;
 	}
 
 	const vector<Coord>& getBlockInfo() override
@@ -329,27 +341,29 @@ public:
 };
 
 const vector<Coord> O::blockInfo = { {0, 0}, {0, 1}, {1, 0}, {1, 1} };
+const Block::Color O::color = BLUE;
 
 
 class S : public Block
 {
 private:
+	Mode mode;
+	static const Color color;
 	static const vector<Coord> blockInfoHorizontal;
 	static const vector<Coord> blockInfoVertical;
 
 public:
-	Mode mode;
 
-	S() : mode(VERTICAL) {}
+	S() : mode(HORIZONTAL) {}
 
 	void rotate() override
 	{
 		mode == VERTICAL ? mode = HORIZONTAL : mode = VERTICAL;
 	}
 
-	const Mode getMode() override
+	const Color getColor() override
 	{
-		return mode;
+		return color;
 	}
 
 	const vector<Coord>& getBlockInfo() override
@@ -377,27 +391,29 @@ public:
 
 const vector<Coord> S::blockInfoHorizontal = { {-1, 0}, {0, 0}, {0, -1}, {1, -1} };
 const vector<Coord> S::blockInfoVertical = { {0, -1}, {0, 0}, {1, 0}, {1, 1} };
+const Block::Color S::color = TURQ;
 
 
 class Z : public Block
 {
 private:
+	Mode mode;
+	static const Color color;
 	static const vector<Coord> blockInfoHorizontal;
 	static const vector<Coord> blockInfoVertical;
 
 public:
-	Mode mode;
 
-	Z() : mode(VERTICAL) {}
+	Z() : mode(HORIZONTAL) {}
 
 	void rotate() override
 	{
 		mode == VERTICAL ? mode = HORIZONTAL : mode = VERTICAL;
 	}
 
-	const Mode getMode() override
+	const Color getColor() override
 	{
-		return mode;
+		return color;
 	}
 
 	const vector<Coord>& getBlockInfo() override
@@ -425,5 +441,6 @@ public:
 
 const vector<Coord> Z::blockInfoHorizontal = { {-1, 0}, {0, 0}, {0, 1}, {1, 1} };
 const vector<Coord> Z::blockInfoVertical = { {-1, 1}, {-1, 0}, {0, 0}, {0, -1} };
+const Block::Color Z::color = GRAY;
 
 

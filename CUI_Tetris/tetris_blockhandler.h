@@ -2,6 +2,7 @@
 
 #include <cstdlib>
 #include <memory>
+#include <utility>
 #include "tetris_block.h"
 
 class BlockHandler
@@ -45,8 +46,18 @@ public:
 	std::unique_ptr<Block> blk;
 	Coord entryCoord;
 
-	BlockHandler(Coord entry) : blk(nullptr), entryCoord(entry), currPos(entry) {};
-	void reset()
+	BlockHandler(Coord entry) : blk(nullptr), entryCoord(entry), currPos(entry) 
+	{
+		resetHandler(); 
+	}
+
+	void transferBlockFrom(BlockHandler & other)
+	{
+		blk = std::move(other.blk);
+		setCoordToEntry();
+	}
+
+	void resetHandler()
 	{
 		generateRandomBlock();
 		setCoordToEntry();

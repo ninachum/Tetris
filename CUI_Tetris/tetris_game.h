@@ -3,7 +3,7 @@
 #include "tetris_block.h"
 #include "tetris_board.h"
 #include "tetris_blockhandler.h"
-#include "debug_drawer.h"
+#include "tetris_drawer.h"
 #include <conio.h>
 #include <cstdlib>
 #include <memory>
@@ -14,34 +14,42 @@
 class Game
 {
 private:	// 생성자에 정의된 순서가 아닌, 선언된 순서대로 초기화 됨에 유의
+	Drawer drawer;
 	Board board;
 	BlockHandler handler;
-	DebugDrawer debugDrawer;
+	//BlockHandler nextHandler;
 	bool playing;
-	
 
 public:
 
-	Game() : board(10, 25), handler(board.entryCoord()), playing(true)
+	Game() : board(10, 25), handler(board.entryCoord()), /*nextHandler(drawer.nextEntryPoint()),*/ playing(true)
 	{
 		std::srand(std::time(NULL));
-		handler.reset(); // initialize handler
 	}
 
 	void play()
 	{
-		debugDrawer.debugDrawBoard(board);
-		debugDrawer.debugDrawHandler(handler);
+		drawer.drawgGameFrame();
+		drawer.drawBoard(board);
+		drawer.drawHandler(handler);
+		int countForAutoDown = 0;
 		while (playing)
 		{
-			if (board.isGameOver(handler.blk->getBlockInfo()))
+			if (board.isGameOver(handler))
 			{
 				playing = false;
 				Sleep(75);
-				debugDrawer.debugDrawGameover(board, handler);
+				drawer.drawGameover(board);
 				break;
 			}
 			
+			++countForAutoDown;
+			if (countForAutoDown == 10)	// 1 second
+			{
+				moveDown();
+				countForAutoDown = 0;
+			}
+
 			if (GetAsyncKeyState(VK_UP) & 0x8000)
 				rotate();
 			if (GetAsyncKeyState(VK_DOWN) & 0x8000)
@@ -54,47 +62,57 @@ public:
 			{
 				while (moveDown())
 					continue;
-				debugDrawer.debugDrawHandler(handler);
+				drawer.drawHandler(handler);
 			}
-			Sleep(75);
+			Sleep(100);
 		}
 	}
 	
 	void moveLeft()
 	{
-		if (!board.isLeftBlocked(handler.currPos, handler.blk->getBlockInfo()))
+		if (!board.isLeftBlocked(handler))
 		{
-			debugDrawer.debugDrawEraseHandler(handler);
+			drawer.eraseHandler(handler);
 			handler.currPos.x -= 1;
-			debugDrawer.debugDrawHandler(handler);
+			drawer.drawHandler(handler);
 		}
 	}
 
 	void moveRight()
 	{
-		if (!board.isRightBlocked(handler.currPos, handler.blk->getBlockInfo()))
+		if (!board.isRightBlocked(handler))
 		{
-			debugDrawer.debugDrawEraseHandler(handler);
+			drawer.eraseHandler(handler);
 			handler.currPos.x += 1;
-			debugDrawer.debugDrawHandler(handler);
+			drawer.drawHandler(handler);
 		}
 	}
 
 	bool moveDown()
 	{
-		if (!board.isDownBlocked(handler.currPos, handler.blk->getBlockInfo()))
+		if (!board.isDownBlocked(handler))
 		{
-			debugDrawer.debugDrawEraseHandler(handler);
+			drawer.eraseHandler(handler);
 			handler.currPos.y += 1;
-			debugDrawer.debugDrawHandler(handler);
+			drawer.drawHandler(handler);
 			return true;
 		}
 		else
 		{
-			board.updateBoard(handler.currPos, handler.blk->getBlockInfo());	// write the block to current board.
-			handler.reset();													// and initialize a new block.
-			if (!board.isGameOver(handler.blk->getBlockInfo()))
-				debugDrawer.debugDrawBoard(board);
+			drawer.eraseBoard(board);
+			drawer.eraseHandler(handler);
+			board.updateBoard(handler);	// write the block to current board.
+
+			//handler.transferBlockFrom(nextHandler);			// and initialize a new block.!!!
+			//drawer.eraseHandler(nextHandler);
+			//nextHandler.resetHandler();
+			//drawer.drawHandler(nextHandler);
+			handler.resetHandler();
+			if (!board.isGameOver(handler))
+			{
+				drawer.drawBoard(board);
+				drawer.drawHandler(handler);
+			}
 			return false;
 		}
 
@@ -102,11 +120,11 @@ public:
 
 	void rotate()
 	{
-		if (!board.isNotRotatable(handler.currPos, handler.blk->getNextBlockInfo()))
+		if (!board.isNotRotatable(handler))
 		{
-			debugDrawer.debugDrawEraseHandler(handler);
+			drawer.eraseHandler(handler);
 			handler.blk->rotate();
-			debugDrawer.debugDrawHandler(handler);
+			drawer.drawHandler(handler);
 		}
 	}
 

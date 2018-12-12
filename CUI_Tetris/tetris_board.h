@@ -1,28 +1,33 @@
 #pragma once
 
 #include "tetris_block.h"
+#include "tetris_blockhandler.h"
 #include <array>
 #include <vector>
 #include <utility>
 
 using std::vector;
 
-
-
 class Board
 {
 public:
-	typedef std::array<std::array<bool, 10>, 25> boardType;
+	struct cellInfo
+	{
+		bool occupied;
+		Block::Color color;
+		cellInfo() : occupied(false), color(Block::Color::WHITE) {}
+	};
+	typedef std::array<std::array<cellInfo, 10>, 25> boardType;
 
 private:
 	int width;
 	int height;
-	boardType board;
+	boardType board{};
 	Coord entryPoint;
 
 	bool isBlocked(const Coord & dest)
 	{
-		return board[dest.y][dest.x] == true;	// 좌표와 배열 subscript 사이에는 반대 관계가 존재한다..
+		return board[dest.y][dest.x].occupied == true;	// 좌표와 배열 subscript 사이에는 반대 관계가 존재한다..
 	}
 
 	bool isBlocked(const Coord & currPos, const vector<Coord> & blockShape)
@@ -45,7 +50,10 @@ public:
 
 	Board() = delete;
 
-	Board(int wd, int ht) : width(wd), height(ht), entryPoint(width / 2, 1) {}
+	Board(int wd, int ht) : width(wd), height(ht), entryPoint(width / 2, 1)
+	{
+		
+	}
 
 	const boardType & boardStatus() const
 	{
@@ -61,39 +69,43 @@ public:
 	{
 		return height;
 	}
-
-	bool isLeftBlocked(const Coord & currPos, const vector<Coord> & blockShape)
+	
+	bool isLeftBlocked(const BlockHandler & handler)
 	{
-		Coord temp(currPos.x - 1, currPos.y);
-		return isBlocked(temp, blockShape);
+		Coord temp(handler.currPos.x - 1, handler.currPos.y);
+		return isBlocked(temp, handler.blk->getBlockInfo());
 	}
 
-	bool isRightBlocked(const Coord & currPos, const vector<Coord> & blockShape)
+	bool isRightBlocked(const BlockHandler & handler)
 	{
-		Coord temp(currPos.x + 1, currPos.y);
-		return isBlocked(temp, blockShape);
+		Coord temp(handler.currPos.x + 1, handler.currPos.y);
+		return isBlocked(temp, handler.blk->getBlockInfo());
 	}
 
-	bool isDownBlocked(const Coord & currPos, const vector<Coord> & blockShape)
+	bool isDownBlocked(const BlockHandler & handler)
 	{
-		Coord temp(currPos.x, currPos.y + 1);
-		return isBlocked(temp, blockShape);
+		Coord temp(handler.currPos.x, handler.currPos.y + 1);
+		return isBlocked(temp, handler.blk->getBlockInfo());
 	}
 
-	bool isNotRotatable(const Coord & currPos, const vector<Coord> & nextBlockShape)
+	bool isNotRotatable(const BlockHandler & handler)
 	{
-		return isBlocked(currPos, nextBlockShape);
+		return isBlocked(handler.currPos, handler.blk->getNextBlockInfo());
 	}
 
-	bool isGameOver(const vector<Coord> & blockShape)
+	bool isGameOver(const BlockHandler & handler)
 	{
-		return isBlocked(entryPoint, blockShape);
+		return isBlocked(entryPoint, handler.blk->getBlockInfo());
 	}
 
-	void updateBoard(const Coord & currPos, const vector<Coord> & blockShape)	// critical section - updating board
+	void updateBoard(const BlockHandler & handler)	// critical section - updating board
 	{
-		for (auto & blkInfo : blockShape)
-			board[currPos.y + blkInfo.y][currPos.x + blkInfo.x] = true;	// 반대 관계에 유의
+		Block::Color currentBlockColor = handler.blk->getColor();
+		for (auto & blkInfo : handler.blk->getBlockInfo())
+		{
+			board[handler.currPos.y + blkInfo.y][handler.currPos.x + blkInfo.x].occupied = true;	// 반대 관계에 유의
+			board[handler.currPos.y + blkInfo.y][handler.currPos.x + blkInfo.x].color = currentBlockColor;
+		}
 
 		std::vector<bool> lineChecker;
 		int count;
@@ -103,7 +115,7 @@ public:
 			count = 0;
 			for (int j = 0; j < width; ++j)
 			{
-				if (board[i][j] == true)
+				if (board[i][j].occupied == true)
 					++count;
 				else
 					break;
@@ -121,7 +133,7 @@ public:
 
 		if (refreshFlag == true)
 		{
-			boardType newBoard{};
+			boardType newBoard {};
 			int j = lineChecker.size() - 1;
 			for (int i = lineChecker.size() - 1; i >= 0; --i)
 				if (lineChecker[lineChecker.size() - 1 - i] == true)
