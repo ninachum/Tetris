@@ -11,6 +11,8 @@
 #include <iostream>
 #include <windows.h>
 
+static int normalLevel = 10;
+
 class Game
 {
 private:	// 생성자에 정의된 순서가 아닌, 선언된 순서대로 초기화 됨에 유의
@@ -18,10 +20,52 @@ private:	// 생성자에 정의된 순서가 아닌, 선언된 순서대로 초기화 됨에 유의
 	Board board;
 	BlockHandler handler;
 	int difficulty;
+	
+	void pressSpaceToContinue() const
+	{
+		while (true)
+			if (GetAsyncKeyState(VK_SPACE) & 0x8000)
+			{
+				Sleep(500);
+				break;
+			}
+	}
+
+	void readUserMove()
+	{
+		if (GetAsyncKeyState(VK_UP) & 0x8000)
+			rotate();
+		if (GetAsyncKeyState(VK_DOWN) & 0x8000)
+			moveDown();
+		if (GetAsyncKeyState(VK_LEFT) & 0x8000)
+			moveLeft();
+		if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
+			moveRight();
+		if (GetAsyncKeyState(VK_SPACE) & 0x8000)
+		{
+			while (moveDown())
+				continue;
+			drawer.drawCurrentBlock(handler);
+			drawer.drawNextBlock(handler);
+		}
+		Sleep(100);
+	}
+
+	void drawHandlerContent() const
+	{
+		drawer.drawCurrentBlock(handler);
+		drawer.drawNextBlock(handler);
+	}
+
+	void eraseHandlerContent() const
+	{
+		drawer.eraseCurrentBlock(handler);
+		drawer.eraseNextBlock(handler);
+	}
 
 public:
 
-	Game(int level) : board(10, 25), handler(board.entryCoord()), difficulty(level)
+	Game(int level) : board(), handler(board.entryCoord()), difficulty(level - 1)
 	{
 		std::srand(std::time(NULL));
 	}
@@ -29,19 +73,12 @@ public:
 	void play()
 	{
 		drawer.drawTitleScreen(); // temp
-		while (true)
-			if (GetAsyncKeyState(VK_SPACE) & 0x8000)
-			{
-				Sleep(500);
-				break;
-			}
-
+		pressSpaceToContinue();
 		drawer.drawGameFrame();
 		drawer.drawBoard(board);
-		drawer.drawHandler(handler);
-		drawer.drawNextBlock(handler);
+		drawHandlerContent();
 		int countForAutoDown = 0;
-		int countLimit = 11 - difficulty;
+		int countLimit = normalLevel - difficulty;
 		while (true)
 		{
 			if (board.isGameOver(handler))
@@ -58,22 +95,7 @@ public:
 				countForAutoDown = 0;
 			}
 
-			if (GetAsyncKeyState(VK_UP) & 0x8000)
-				rotate();
-			if (GetAsyncKeyState(VK_DOWN) & 0x8000)
-				moveDown();
-			if (GetAsyncKeyState(VK_LEFT) & 0x8000)
-				moveLeft();
-			if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
-				moveRight();
-			if (GetAsyncKeyState(VK_SPACE) & 0x8000)
-			{
-				while (moveDown())
-					continue;
-				drawer.drawHandler(handler);
-				drawer.drawNextBlock(handler);
-			}
-			Sleep(100);
+			readUserMove();
 		}
 	}
 	
@@ -81,11 +103,9 @@ public:
 	{
 		if (!board.isLeftBlocked(handler))
 		{
-			drawer.eraseHandler(handler);
-			drawer.eraseNextBlock(handler);
+			eraseHandlerContent();
 			handler.currPos.x -= 1;
-			drawer.drawHandler(handler);
-			drawer.drawNextBlock(handler);
+			drawHandlerContent();
 		}
 	}
 
@@ -93,11 +113,9 @@ public:
 	{
 		if (!board.isRightBlocked(handler))
 		{
-			drawer.eraseHandler(handler);
-			drawer.eraseNextBlock(handler);
+			eraseHandlerContent();
 			handler.currPos.x += 1;
-			drawer.drawHandler(handler);
-			drawer.drawNextBlock(handler);
+			drawHandlerContent();
 		}
 	}
 
@@ -105,30 +123,23 @@ public:
 	{
 		if (!board.isDownBlocked(handler))
 		{
-			drawer.eraseHandler(handler);
-			drawer.eraseNextBlock(handler);
+			eraseHandlerContent();
 			handler.currPos.y += 1;
-			drawer.drawHandler(handler);
-			drawer.drawNextBlock(handler);
+			drawHandlerContent();
 			return true;
 		}
 		else
 		{
 			drawer.eraseBoard(board);
-			drawer.eraseHandler(handler);
-			drawer.eraseNextBlock(handler);
-			board.updateBoard(handler);	// write the block to current board.
+			eraseHandlerContent();
 
-			//handler.transferBlockFrom(nextHandler);			// and initialize a new block.!!!
-			//drawer.eraseHandler(nextHandler);
-			//nextHandler.resetHandler();
-			//drawer.drawHandler(nextHandler);
+			board.updateBoard(handler);	
 			handler.resetHandler();
+
 			if (!board.isGameOver(handler))
 			{
 				drawer.drawBoard(board);
-				drawer.drawHandler(handler);
-				drawer.drawNextBlock(handler);
+				drawHandlerContent();
 			}
 			return false;
 		}
@@ -139,10 +150,10 @@ public:
 	{
 		if (!board.isNotRotatable(handler))
 		{
-			drawer.eraseHandler(handler);
+			drawer.eraseCurrentBlock(handler);
 			drawer.eraseNextBlock(handler);
 			handler.blk->rotate();
-			drawer.drawHandler(handler);
+			drawer.drawCurrentBlock(handler);
 			drawer.drawNextBlock(handler);
 		}
 	}

@@ -6,10 +6,15 @@
 #include <iostream>
 #include <Windows.h>
 
+static const Coord boardDrawCoord { 38, 4 };
+static const Coord boardFrameDrawCoord{ 36, 3 };
+static const Coord nextFrameDrawCoord { 22, 2 };
+static const Coord instructionDrawCoord{ 64, 23 };
+static const Coord titleScreenDrawCoord{ 14, 10 };
+
 class Drawer
 {
 private:
-	const Coord boardDrawCoord;
 
 	void moveToCoord(int x, int y) const
 	{
@@ -21,76 +26,76 @@ private:
 
 	void drawNextFrame() const
 	{
-		moveToCoord(22, 2);
+		moveToCoord(nextFrameDrawCoord.x, nextFrameDrawCoord.y);
 		std::cout << " N  E  X  T";
-		moveToCoord(22, 3);
+		moveToCoord(nextFrameDrawCoord.x, nextFrameDrawCoord.y + 1);
 		for (int i = 0; i < 6; ++i)
 			std::cout << "▩";
-		for (int i = 4; i < 7; ++i)
+		for (int i = nextFrameDrawCoord.y + 2; i < nextFrameDrawCoord.y + 5; ++i)
 		{
-			moveToCoord(22, i);
+			moveToCoord(nextFrameDrawCoord.x, i);
 			std::cout << "▩";
-			moveToCoord(32, i);
+			moveToCoord(nextFrameDrawCoord.x + 10, i);
 			std::cout << "▩";
 		}
-		moveToCoord(22, 7);
+		moveToCoord(nextFrameDrawCoord.x, nextFrameDrawCoord.y + 5);
 		for (int i = 0; i < 6; ++i)
 			std::cout << "▩";
 	}
 
 	void drawBoardFrame() const
 	{
-		moveToCoord(36, 3);
+		moveToCoord(boardFrameDrawCoord.x, boardFrameDrawCoord.y);
 		for (int i = 0; i < 12; ++i)
 			std::cout << "▩";
-		for (int i = 4; i < 29; ++i)
+		for (int i = boardFrameDrawCoord.y + 1; i < boardFrameDrawCoord.y + 26; ++i)
 		{
-			moveToCoord(36, i);
+			moveToCoord(boardFrameDrawCoord.x, i);
 			std::cout << "▩";
-			moveToCoord(58, i);
+			moveToCoord(boardFrameDrawCoord.x + 22, i);
 			std::cout << "▩";
 		}
-		moveToCoord(36, 29);
+		moveToCoord(boardFrameDrawCoord.x, boardFrameDrawCoord.y + 26);
 		for (int i = 0; i < 12; ++i)
 			std::cout << "▩";
 	}
 
 	void drawInstruction() const
 	{
-		moveToCoord(64, 23);
+		moveToCoord(instructionDrawCoord.x, instructionDrawCoord.y);
 		std::cout << "  HOW TO PLAY";
-		moveToCoord(64, 24);
+		moveToCoord(instructionDrawCoord.x, instructionDrawCoord.y + 1);
 		std::cout << "  ▲ to rotate";
-		moveToCoord(64, 25);
+		moveToCoord(instructionDrawCoord.x, instructionDrawCoord.y + 2);
 		std::cout << "◀▼▶ to move";
-		moveToCoord(64, 26);
+		moveToCoord(instructionDrawCoord.x, instructionDrawCoord.y + 3);
 		std::cout << " SPACE to drop";
 	}
 
 public:
 
-	Drawer() : boardDrawCoord(38, 4) {}
+	Drawer() {}
 
 	void drawTitleScreen() const
 	{
 		system("cls");
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0x7);
 
-		moveToCoord(14, 10); // temporary
+		moveToCoord(titleScreenDrawCoord.x, titleScreenDrawCoord.y); // temporary
 		std::cout << "□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□\n";
-		moveToCoord(14, 11);
+		moveToCoord(titleScreenDrawCoord.x, titleScreenDrawCoord.y + 1);
 		std::cout << "□■■■■■□■■■■■□■■■■■□■■■■□□■■■■■□□■■■■□\n";
-		moveToCoord(14, 12);
+		moveToCoord(titleScreenDrawCoord.x, titleScreenDrawCoord.y + 2);
 		std::cout << "□□□■□□□■□□□□□□□■□□□■□□□■□□□■□□□■□□□□□\n";
-		moveToCoord(14, 13);
+		moveToCoord(titleScreenDrawCoord.x, titleScreenDrawCoord.y + 3);
 		std::cout << "□□□■□□□■■■■■□□□■□□□■■■■□□□□■□□□□■■■■□\n";
-		moveToCoord(14, 14);
+		moveToCoord(titleScreenDrawCoord.x, titleScreenDrawCoord.y + 4);
 		std::cout << "□□□■□□□■□□□□□□□■□□□■■■□□□□□■□□□□□□□■□\n";
-		moveToCoord(14, 15);
+		moveToCoord(titleScreenDrawCoord.x, titleScreenDrawCoord.y + 5);
 		std::cout << "□□□■□□□■■■■■□□□■□□□■□□■■□■■■■■□■■■■□□\n";
-		moveToCoord(14, 16); 
+		moveToCoord(titleScreenDrawCoord.x, titleScreenDrawCoord.y + 6);
 		std::cout << "□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□\n";
-		moveToCoord(30, 22);
+		moveToCoord(titleScreenDrawCoord.x + 16, titleScreenDrawCoord.y + 12);
 		std::cout << "P R E S S  S P A C E  K E Y  T O  S T A R T...";
 
 	}
@@ -120,10 +125,8 @@ public:
 	void drawBoard(const Board & bd) const
 	{
 		const Board::BoardType & status = bd.boardStatus();
-		int height = bd.getHeight();
-		int width = bd.getWidth();
-		for (int i = 0; i < height; ++i)
-			for (int j = 0; j < width; ++j)
+		for (int i = 0; i < 25; ++i)
+			for (int j = 0; j < 10; ++j)
 				if (status[i][j].occupied == true)	// false 시 else문을 통해 std::cout << "  "; 을 사용하면 간혹 게임이 매우 느려짐.
 				{
 					moveToCoord(boardDrawCoord.x + j * 2, boardDrawCoord.y + i);
@@ -135,10 +138,8 @@ public:
 	void eraseBoard(const Board & bd) const
 	{
 		const Board::BoardType & status = bd.boardStatus();
-		int height = bd.getHeight();
-		int width = bd.getWidth();
-		for (int i = 0; i < height; ++i)
-			for (int j = 0; j < width; ++j)
+		for (int i = 0; i < 25; ++i)
+			for (int j = 0; j < 10; ++j)
 				if (status[i][j].occupied == true)	// false 시 else문을 통해 std::cout << "  "; 을 사용하면 간혹 게임이 매우 느려짐.
 				{
 					moveToCoord(boardDrawCoord.x + j * 2, boardDrawCoord.y + i);
@@ -146,37 +147,35 @@ public:
 				}
 	}
 
-	void drawHandler(const BlockHandler & handle) const
+	void drawCurrentBlock(const BlockHandler & handle) const
 	{
 		Block::Color currentBlockColor = handle.blk->getColor();
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), static_cast<WORD>(currentBlockColor));
-		for (auto & x : handle.blk->getBlockInfo())
+		for (auto & cellInfo : handle.blk->getBlockInfo())
 		{
-			Coord temp = handle.currPos + x;
+			Coord temp = handle.currPos + cellInfo;
 			moveToCoord(boardDrawCoord.x + temp.x * 2, boardDrawCoord.y + temp.y);
 			std::cout << "■";
 		}
 	}
 
-	void eraseHandler(const BlockHandler & handle) const
+	void eraseCurrentBlock(const BlockHandler & handle) const
 	{
-		for (auto & x : handle.blk->getBlockInfo())
+		for (auto & cellInfo : handle.blk->getBlockInfo())
 		{
-			Coord temp = handle.currPos + x;
+			Coord temp = handle.currPos + cellInfo;
 			moveToCoord(boardDrawCoord.x + temp.x * 2, boardDrawCoord.y + temp.y);
 			std::cout << "  ";
 		}
 	}
 
-
-
 	void drawNextBlock(const BlockHandler & handle) const
 	{
 		Block::Color currentBlockColor = handle.nextBlk->getColor();
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), static_cast<WORD>(currentBlockColor));
-		for (auto & x : handle.nextBlk->getBlockInfo())
+		for (auto & cellInfo : handle.nextBlk->getBlockInfo())
 		{
-			moveToCoord(26 + (x.x * 2), 5 + x.y);
+			moveToCoord(nextFrameDrawCoord.x + 4 + (cellInfo.x * 2), nextFrameDrawCoord.y + 3 + cellInfo.y);
 			std::cout << "■";
 		}
 		moveToCoord(0, 0);
@@ -184,9 +183,9 @@ public:
 
 	void eraseNextBlock(const BlockHandler & handle) const
 	{
-		for (auto & x : handle.nextBlk->getBlockInfo())
+		for (auto & cellInfo : handle.nextBlk->getBlockInfo())
 		{
-			moveToCoord(26 + (x.x * 2), 5 + x.y);
+			moveToCoord(nextFrameDrawCoord.x + 4 + (cellInfo.x * 2), nextFrameDrawCoord.y + 3 + cellInfo.y);
 			std::cout << "  ";
 		}
 		moveToCoord(0, 0);

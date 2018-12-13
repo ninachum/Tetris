@@ -3,10 +3,8 @@
 #include "tetris_block.h"
 #include "tetris_blockhandler.h"
 #include <array>
-#include <vector>
 #include <utility>
-
-using std::vector;
+#include <vector>
 
 class Board
 {
@@ -48,9 +46,7 @@ private:
 
 public:
 
-	Board() = delete;
-
-	Board(int wd, int ht) : width(wd), height(ht), entryPoint(width / 2, 1)
+	Board() : width(10), height(25), entryPoint(width / 2, 1)
 	{
 		
 	}
