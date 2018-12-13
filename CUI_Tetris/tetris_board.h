@@ -17,12 +17,12 @@ public:
 		Block::Color color;
 		cellInfo() : occupied(false), color(Block::Color::WHITE) {}
 	};
-	typedef std::array<std::array<cellInfo, 10>, 25> boardType;
+	typedef std::array<std::array<cellInfo, 10>, 25> BoardType;
 
 private:
 	int width;
 	int height;
-	boardType board{};
+	BoardType board{};
 	Coord entryPoint;
 
 	bool isBlocked(const Coord & dest)
@@ -30,7 +30,7 @@ private:
 		return board[dest.y][dest.x].occupied == true;	// 좌표와 배열 subscript 사이에는 반대 관계가 존재한다..
 	}
 
-	bool isBlocked(const Coord & currPos, const vector<Coord> & blockShape)
+	bool isBlocked(const Coord & currPos, const Block::BlockShape & blockShape)
 	{
 		for (auto & x : blockShape)
 		{
@@ -55,7 +55,7 @@ public:
 		
 	}
 
-	const boardType & boardStatus() const
+	const BoardType & boardStatus() const
 	{
 		return board;
 	}
@@ -133,7 +133,7 @@ public:
 
 		if (refreshFlag == true)
 		{
-			boardType newBoard {};
+			BoardType newBoard {};
 			int j = lineChecker.size() - 1;
 			for (int i = lineChecker.size() - 1; i >= 0; --i)
 				if (lineChecker[lineChecker.size() - 1 - i] == true)

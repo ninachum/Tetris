@@ -1,13 +1,12 @@
 #pragma once
 
-#include <vector>
-
-using std::vector;
+#include <array>
 
 struct Coord
 {
 	int x;
 	int y;
+	Coord() = delete;
 	Coord(int xpos, int ypos) : x(xpos), y(ypos) {}
 	Coord operator+(const Coord & operand) const
 	{
@@ -24,11 +23,13 @@ public:
 		BLACK, BLUE, GREEN, TURQ, RED, PURPLE, YELLOW, WHITE, GRAY,
 		PALEBLUE, PALEGREEN, PALETURQ, PALERED, PALEPURPLE, PALEYELLOW, BRIGHTWHITE
 	};
+	typedef std::array<Coord, 4> BlockShape;
+
 	virtual ~Block() {}
 	virtual void rotate() = 0;
 	virtual const Color getColor() = 0;
-	virtual const vector<Coord>& getBlockInfo() = 0;
-	virtual const vector<Coord>& getNextBlockInfo() = 0;
+	virtual const BlockShape& getBlockInfo() = 0;
+	virtual const BlockShape& getNextBlockInfo() = 0;
 };
 
 class I : public Block
@@ -36,12 +37,12 @@ class I : public Block
 private:
 	Mode mode;
 	static const Color color;
-	static const vector<Coord> blockInfoVertical;
-	static const vector<Coord> blockInfoHorizontal;
+	static const BlockShape blockInfoVertical;
+	static const BlockShape blockInfoHorizontal;
 
 public:
 
-	I(): mode(VERTICAL) {}
+	I(): mode(HORIZONTAL) {}
 	
 	void rotate() override
 	{
@@ -53,7 +54,7 @@ public:
 		return color;
 	}
 
-	const vector<Coord>& getBlockInfo() override
+	const BlockShape& getBlockInfo() override
 	{
 		switch (mode)
 		{
@@ -64,7 +65,7 @@ public:
 		}
 	}
 
-	const vector<Coord>& getNextBlockInfo() override
+	const BlockShape& getNextBlockInfo() override
 	{
 		switch (mode)
 		{
@@ -76,8 +77,8 @@ public:
 	}
 
 };
-const vector<Coord> I::blockInfoVertical = { { 0,0 }, { 0,1 }, { 0,2 }, { 0,3 } };
-const vector<Coord> I::blockInfoHorizontal = { {-1, 0}, {0, 0}, {1, 0}, {2, 0} };
+const Block::BlockShape I::blockInfoVertical { {{0, 0}, {0, 1 }, {0, 2 }, {0, 3}} };
+const Block::BlockShape I::blockInfoHorizontal{ {{-1, 0}, {0, 0}, {1, 0}, {2, 0}} };
 const Block::Color I::color = RED;
 
 class J : public Block
@@ -85,10 +86,10 @@ class J : public Block
 private:
 	Mode mode;
 	static const Color color;
-	static const vector<Coord> blockInfoUpside;
-	static const vector<Coord> blockInfoLeftside;
-	static const vector<Coord> blockInfoDownside;
-	static const vector<Coord> blockInfoRightside;
+	static const BlockShape blockInfoUpside;
+	static const BlockShape blockInfoLeftside;
+	static const BlockShape blockInfoDownside;
+	static const BlockShape blockInfoRightside;
 
 public:
 
@@ -118,7 +119,7 @@ public:
 		return color;
 	}
 
-	const vector<Coord>& getBlockInfo() override
+	const BlockShape& getBlockInfo() override
 	{
 		switch (mode)
 		{
@@ -133,7 +134,7 @@ public:
 		}
 	}
 
-	const vector<Coord>& getNextBlockInfo() override
+	const BlockShape& getNextBlockInfo() override
 	{
 		switch (mode)
 		{
@@ -149,10 +150,10 @@ public:
 	}
 };
 
-const vector<Coord> J::blockInfoUpside = { {-1, 0}, {-1, 1}, {0, 1}, {1, 1} };
-const vector<Coord> J::blockInfoLeftside = { {1, -1}, {1, 0}, {1, 1}, {0, 1} };
-const vector<Coord> J::blockInfoDownside = { {-1, -1}, {0, -1}, {1, 0}, {1, -1} };
-const vector<Coord> J::blockInfoRightside = { {-1, -1}, {-1, 0}, {-1, 1}, {0, -1} };
+const Block::BlockShape J::blockInfoUpside { {{-1, 0}, {-1, 1}, {0, 1}, {1, 1}} };
+const Block::BlockShape J::blockInfoLeftside { {{1, -1}, {1, 0}, {1, 1}, {0, 1}} };
+const Block::BlockShape J::blockInfoDownside { {{-1, -1}, {0, -1}, {1, 0}, {1, -1}} };
+const Block::BlockShape J::blockInfoRightside { {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}} };
 const Block::Color J::color = YELLOW;
 
 
@@ -161,10 +162,10 @@ class L : public Block
 private:
 	Mode mode;
 	static const Color color;
-	static const vector<Coord> blockInfoUpside;
-	static const vector<Coord> blockInfoLeftside;
-	static const vector<Coord> blockInfoDownside;
-	static const vector<Coord> blockInfoRightside;
+	static const BlockShape blockInfoUpside;
+	static const BlockShape blockInfoLeftside;
+	static const BlockShape blockInfoDownside;
+	static const BlockShape blockInfoRightside;
 
 public:
 
@@ -194,7 +195,7 @@ public:
 		return color;
 	}
 
-	const vector<Coord>& getBlockInfo() override
+	const BlockShape& getBlockInfo() override
 	{
 		switch (mode)
 		{
@@ -209,7 +210,7 @@ public:
 		}
 	}
 
-	const vector<Coord>& getNextBlockInfo() override
+	const BlockShape& getNextBlockInfo() override
 	{
 		switch (mode)
 		{
@@ -225,10 +226,10 @@ public:
 	}
 };
 
-const vector<Coord> L::blockInfoUpside = { {-1, 1}, {0, 1}, {1, 0}, {1, 1} };
-const vector<Coord> L::blockInfoLeftside = { {0, -1}, {1, -1}, {1, 0}, {1, 1} };
-const vector<Coord> L::blockInfoDownside = { {-1, -1}, {-1, 0}, {0, -1}, {1, -1} };
-const vector<Coord> L::blockInfoRightside = { {-1, -1}, {-1, 0}, {-1, 1}, {0, 1} };
+const Block::BlockShape L::blockInfoUpside { {{-1, 1}, {0, 1}, {1, 0}, {1, 1}} };
+const Block::BlockShape L::blockInfoLeftside { {{0, -1}, {1, -1}, {1, 0}, {1, 1}} };
+const Block::BlockShape L::blockInfoDownside { {{-1, -1}, {-1, 0}, {0, -1}, {1, -1}} };
+const Block::BlockShape L::blockInfoRightside { {{-1, -1}, {-1, 0}, {-1, 1}, {0, 1}} };
 const Block::Color L::color = PURPLE;
 
 
@@ -237,10 +238,10 @@ class T : public Block
 private:
 	Mode mode;
 	static const Color color;
-	static const vector<Coord> blockInfoUpside;
-	static const vector<Coord> blockInfoLeftside;
-	static const vector<Coord> blockInfoDownside;
-	static const vector<Coord> blockInfoRightside;
+	static const BlockShape blockInfoUpside;
+	static const BlockShape blockInfoLeftside;
+	static const BlockShape blockInfoDownside;
+	static const BlockShape blockInfoRightside;
 
 public:
 
@@ -270,7 +271,7 @@ public:
 		return color;
 	}
 
-	const vector<Coord>& getBlockInfo() override
+	const BlockShape& getBlockInfo() override
 	{
 		switch (mode)
 		{
@@ -285,7 +286,7 @@ public:
 		}
 	}
 
-	const vector<Coord>& getNextBlockInfo() override
+	const BlockShape& getNextBlockInfo() override
 	{
 		switch (mode)
 		{
@@ -301,10 +302,10 @@ public:
 	}
 };
 
-const vector<Coord> T::blockInfoUpside = { {-1, 0}, {0, -1}, {0, 0}, {1, 0} };
-const vector<Coord> T::blockInfoLeftside = { {-1, 0}, {0, -1}, {0, 0}, {0, 1} };
-const vector<Coord> T::blockInfoDownside = { {-1, 0}, {0, 0}, {0, 1}, {1, 0} };
-const vector<Coord> T::blockInfoRightside = { {0, -1}, {0, 0}, {0, 1}, {1, 0} };
+const Block::BlockShape T::blockInfoUpside { {{-1, 1}, {0, 0}, {0, 1}, {1, 1}} };	// modified for drawNextBlock()
+const Block::BlockShape T::blockInfoLeftside { {{-1, 1}, {0, 0}, {0, 1}, {0, 2}} };
+const Block::BlockShape T::blockInfoDownside { {{-1, 1}, {0, 1}, {0, 2}, {1, 1}} };
+const Block::BlockShape T::blockInfoRightside { {{0, 0}, {0, 1}, {0, 2}, {1, 1}} };
 const Block::Color T::color = GREEN;
 
 
@@ -313,7 +314,7 @@ class O : public Block
 private:
 	Mode mode;
 	static const Color color;
-	static const vector<Coord> blockInfo;
+	static const BlockShape blockInfo;
 
 public:
 
@@ -329,18 +330,18 @@ public:
 		return color;
 	}
 
-	const vector<Coord>& getBlockInfo() override
+	const BlockShape& getBlockInfo() override
 	{
 		return blockInfo;
 	}
 
-	const vector<Coord>& getNextBlockInfo() override
+	const BlockShape& getNextBlockInfo() override
 	{
 		return blockInfo;
 	}
 };
 
-const vector<Coord> O::blockInfo = { {0, 0}, {0, 1}, {1, 0}, {1, 1} };
+const Block::BlockShape O::blockInfo { {{0, 0}, {0, 1}, {1, 0}, {1, 1}} };
 const Block::Color O::color = BLUE;
 
 
@@ -349,8 +350,8 @@ class S : public Block
 private:
 	Mode mode;
 	static const Color color;
-	static const vector<Coord> blockInfoHorizontal;
-	static const vector<Coord> blockInfoVertical;
+	static const BlockShape blockInfoHorizontal;
+	static const BlockShape blockInfoVertical;
 
 public:
 
@@ -366,7 +367,7 @@ public:
 		return color;
 	}
 
-	const vector<Coord>& getBlockInfo() override
+	const BlockShape& getBlockInfo() override
 	{
 		switch (mode)
 		{
@@ -377,7 +378,7 @@ public:
 		}
 	}
 
-	const vector<Coord>& getNextBlockInfo() override
+	const BlockShape& getNextBlockInfo() override
 	{
 		switch (mode)
 		{
@@ -389,8 +390,8 @@ public:
 	}
 };
 
-const vector<Coord> S::blockInfoHorizontal = { {-1, 0}, {0, 0}, {0, -1}, {1, -1} };
-const vector<Coord> S::blockInfoVertical = { {0, -1}, {0, 0}, {1, 0}, {1, 1} };
+const Block::BlockShape S::blockInfoHorizontal { {{-1, 1}, {0, 1}, {0, 0}, {1, 0}} };
+const Block::BlockShape S::blockInfoVertical { {{0, -1}, {0, 0}, {1, 0}, {1, 1}} };
 const Block::Color S::color = TURQ;
 
 
@@ -399,8 +400,8 @@ class Z : public Block
 private:
 	Mode mode;
 	static const Color color;
-	static const vector<Coord> blockInfoHorizontal;
-	static const vector<Coord> blockInfoVertical;
+	static const BlockShape blockInfoHorizontal;
+	static const BlockShape blockInfoVertical;
 
 public:
 
@@ -416,7 +417,7 @@ public:
 		return color;
 	}
 
-	const vector<Coord>& getBlockInfo() override
+	const BlockShape& getBlockInfo() override
 	{
 		switch (mode)
 		{
@@ -427,7 +428,7 @@ public:
 		}
 	}
 
-	const vector<Coord>& getNextBlockInfo() override
+	const BlockShape& getNextBlockInfo() override
 	{
 		switch (mode)
 		{
@@ -439,8 +440,8 @@ public:
 	}
 };
 
-const vector<Coord> Z::blockInfoHorizontal = { {-1, 0}, {0, 0}, {0, 1}, {1, 1} };
-const vector<Coord> Z::blockInfoVertical = { {-1, 1}, {-1, 0}, {0, 0}, {0, -1} };
+const Block::BlockShape Z::blockInfoHorizontal { {{-1, 0}, {0, 0}, {0, 1}, {1, 1}} };	// modified for drawNextBlock()
+const Block::BlockShape Z::blockInfoVertical { {{-1, 1}, {-1, 0}, {0, 0}, {0, -1}} };
 const Block::Color Z::color = GRAY;
 
 

@@ -26,14 +26,14 @@ private:
 		moveToCoord(22, 3);
 		for (int i = 0; i < 6; ++i)
 			std::cout << "▩";
-		for (int i = 4; i < 6; ++i)
+		for (int i = 4; i < 7; ++i)
 		{
 			moveToCoord(22, i);
 			std::cout << "▩";
 			moveToCoord(32, i);
 			std::cout << "▩";
 		}
-		moveToCoord(22, 6);
+		moveToCoord(22, 7);
 		for (int i = 0; i < 6; ++i)
 			std::cout << "▩";
 	}
@@ -71,8 +71,47 @@ public:
 
 	Drawer() : boardDrawCoord(38, 4) {}
 
-	void drawgGameFrame() const
+	void drawTitleScreen() const
 	{
+		system("cls");
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0x7);
+
+		moveToCoord(14, 10); // temporary
+		std::cout << "□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□\n";
+		moveToCoord(14, 11);
+		std::cout << "□■■■■■□■■■■■□■■■■■□■■■■□□■■■■■□□■■■■□\n";
+		moveToCoord(14, 12);
+		std::cout << "□□□■□□□■□□□□□□□■□□□■□□□■□□□■□□□■□□□□□\n";
+		moveToCoord(14, 13);
+		std::cout << "□□□■□□□■■■■■□□□■□□□■■■■□□□□■□□□□■■■■□\n";
+		moveToCoord(14, 14);
+		std::cout << "□□□■□□□■□□□□□□□■□□□■■■□□□□□■□□□□□□□■□\n";
+		moveToCoord(14, 15);
+		std::cout << "□□□■□□□■■■■■□□□■□□□■□□■■□■■■■■□■■■■□□\n";
+		moveToCoord(14, 16); 
+		std::cout << "□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□\n";
+		moveToCoord(30, 22);
+		std::cout << "P R E S S  S P A C E  K E Y  T O  S T A R T...";
+
+	}
+
+	void drawGameOverScreen(const Board & bd) const
+	{
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0x7);
+		
+		moveToCoord(boardDrawCoord.x, boardDrawCoord.y + 9);
+		std::cout << "                    "; // 20 spaces
+		moveToCoord(boardDrawCoord.x, boardDrawCoord.y + 10);
+		std::cout << "  G A M E O V E R   ";
+		moveToCoord(boardDrawCoord.x, boardDrawCoord.y + 11);
+		std::cout << "                    ";
+		moveToCoord(0, 0);
+		Sleep(1000);
+	}
+
+	void drawGameFrame() const
+	{
+		system("cls");
 		drawNextFrame();
 		drawBoardFrame();
 		drawInstruction();
@@ -80,39 +119,31 @@ public:
 
 	void drawBoard(const Board & bd) const
 	{
-		const Board::boardType & status = bd.boardStatus();
+		const Board::BoardType & status = bd.boardStatus();
 		int height = bd.getHeight();
 		int width = bd.getWidth();
 		for (int i = 0; i < height; ++i)
-		{
 			for (int j = 0; j < width; ++j)
-			{
 				if (status[i][j].occupied == true)	// false 시 else문을 통해 std::cout << "  "; 을 사용하면 간혹 게임이 매우 느려짐.
 				{
 					moveToCoord(boardDrawCoord.x + j * 2, boardDrawCoord.y + i);
 					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), static_cast<WORD>(status[i][j].color));
 					std::cout << "■";
 				}
-			}
-		}
 	}
 
 	void eraseBoard(const Board & bd) const
 	{
-		const Board::boardType & status = bd.boardStatus();
+		const Board::BoardType & status = bd.boardStatus();
 		int height = bd.getHeight();
 		int width = bd.getWidth();
 		for (int i = 0; i < height; ++i)
-		{
 			for (int j = 0; j < width; ++j)
-			{
 				if (status[i][j].occupied == true)	// false 시 else문을 통해 std::cout << "  "; 을 사용하면 간혹 게임이 매우 느려짐.
 				{
 					moveToCoord(boardDrawCoord.x + j * 2, boardDrawCoord.y + i);
 					std::cout << "  ";
 				}
-			}
-		}
 	}
 
 	void drawHandler(const BlockHandler & handle) const
@@ -137,17 +168,29 @@ public:
 		}
 	}
 
-	void drawGameover(const Board & bd) const
+
+
+	void drawNextBlock(const BlockHandler & handle) const
 	{
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0x7);
-		// temporary
-		system("cls");
+		Block::Color currentBlockColor = handle.nextBlk->getColor();
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), static_cast<WORD>(currentBlockColor));
+		for (auto & x : handle.nextBlk->getBlockInfo())
+		{
+			moveToCoord(26 + (x.x * 2), 5 + x.y);
+			std::cout << "■";
+		}
 		moveToCoord(0, 0);
-		std::cout << "Game Over!" << '\n';
 	}
 
-	Coord nextEntryPoint() const
+	void eraseNextBlock(const BlockHandler & handle) const
 	{
-		return Coord(24, 4);
+		for (auto & x : handle.nextBlk->getBlockInfo())
+		{
+			moveToCoord(26 + (x.x * 2), 5 + x.y);
+			std::cout << "  ";
+		}
+		moveToCoord(0, 0);
 	}
+
+
 };

@@ -13,25 +13,25 @@ private:
 		switch (std::rand() % 7)
 		{
 		case 0:
-			blk = std::make_unique<I>();
+			nextBlk = std::make_unique<I>();
 			break;
 		case 1:
-			blk = std::make_unique<J>();
+			nextBlk = std::make_unique<J>();
 			break;
 		case 2:
-			blk = std::make_unique<L>();
+			nextBlk = std::make_unique<L>();
 			break;
 		case 3:
-			blk = std::make_unique<T>();
+			nextBlk = std::make_unique<T>();
 			break;
 		case 4:
-			blk = std::make_unique<O>();
+			nextBlk = std::make_unique<O>();
 			break;
 		case 5:
-			blk = std::make_unique<S>();
+			nextBlk = std::make_unique<S>();
 			break;
 		case 6:
-			blk = std::make_unique<Z>();
+			nextBlk = std::make_unique<Z>();
 			break;
 		}
 	}
@@ -44,21 +44,21 @@ private:
 public:
 	Coord currPos;
 	std::unique_ptr<Block> blk;
+	std::unique_ptr<Block> nextBlk;
 	Coord entryCoord;
 
-	BlockHandler(Coord entry) : blk(nullptr), entryCoord(entry), currPos(entry) 
+	BlockHandler(Coord entry) : blk(nullptr), nextBlk(nullptr), entryCoord(entry), currPos(entry) 
 	{
-		resetHandler(); 
-	}
-
-	void transferBlockFrom(BlockHandler & other)
-	{
-		blk = std::move(other.blk);
+		//resetHandler();
+		generateRandomBlock();
 		setCoordToEntry();
+		blk = std::move(nextBlk);
+		generateRandomBlock();
 	}
 
 	void resetHandler()
 	{
+		blk = std::move(nextBlk);
 		generateRandomBlock();
 		setCoordToEntry();
 	}

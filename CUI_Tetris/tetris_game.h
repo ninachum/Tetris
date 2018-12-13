@@ -17,34 +17,42 @@ private:	// 생성자에 정의된 순서가 아닌, 선언된 순서대로 초기화 됨에 유의
 	Drawer drawer;
 	Board board;
 	BlockHandler handler;
-	//BlockHandler nextHandler;
-	bool playing;
+	int difficulty;
 
 public:
 
-	Game() : board(10, 25), handler(board.entryCoord()), /*nextHandler(drawer.nextEntryPoint()),*/ playing(true)
+	Game(int level) : board(10, 25), handler(board.entryCoord()), difficulty(level)
 	{
 		std::srand(std::time(NULL));
 	}
 
 	void play()
 	{
-		drawer.drawgGameFrame();
+		drawer.drawTitleScreen(); // temp
+		while (true)
+			if (GetAsyncKeyState(VK_SPACE) & 0x8000)
+			{
+				Sleep(500);
+				break;
+			}
+
+		drawer.drawGameFrame();
 		drawer.drawBoard(board);
 		drawer.drawHandler(handler);
+		drawer.drawNextBlock(handler);
 		int countForAutoDown = 0;
-		while (playing)
+		int countLimit = 11 - difficulty;
+		while (true)
 		{
 			if (board.isGameOver(handler))
 			{
-				playing = false;
 				Sleep(75);
-				drawer.drawGameover(board);
+				drawer.drawGameOverScreen(board);
 				break;
 			}
 			
 			++countForAutoDown;
-			if (countForAutoDown == 10)	// 1 second
+			if (countForAutoDown == countLimit)	// 1 second
 			{
 				moveDown();
 				countForAutoDown = 0;
@@ -63,6 +71,7 @@ public:
 				while (moveDown())
 					continue;
 				drawer.drawHandler(handler);
+				drawer.drawNextBlock(handler);
 			}
 			Sleep(100);
 		}
@@ -73,8 +82,10 @@ public:
 		if (!board.isLeftBlocked(handler))
 		{
 			drawer.eraseHandler(handler);
+			drawer.eraseNextBlock(handler);
 			handler.currPos.x -= 1;
 			drawer.drawHandler(handler);
+			drawer.drawNextBlock(handler);
 		}
 	}
 
@@ -83,8 +94,10 @@ public:
 		if (!board.isRightBlocked(handler))
 		{
 			drawer.eraseHandler(handler);
+			drawer.eraseNextBlock(handler);
 			handler.currPos.x += 1;
 			drawer.drawHandler(handler);
+			drawer.drawNextBlock(handler);
 		}
 	}
 
@@ -93,14 +106,17 @@ public:
 		if (!board.isDownBlocked(handler))
 		{
 			drawer.eraseHandler(handler);
+			drawer.eraseNextBlock(handler);
 			handler.currPos.y += 1;
 			drawer.drawHandler(handler);
+			drawer.drawNextBlock(handler);
 			return true;
 		}
 		else
 		{
 			drawer.eraseBoard(board);
 			drawer.eraseHandler(handler);
+			drawer.eraseNextBlock(handler);
 			board.updateBoard(handler);	// write the block to current board.
 
 			//handler.transferBlockFrom(nextHandler);			// and initialize a new block.!!!
@@ -112,6 +128,7 @@ public:
 			{
 				drawer.drawBoard(board);
 				drawer.drawHandler(handler);
+				drawer.drawNextBlock(handler);
 			}
 			return false;
 		}
@@ -123,8 +140,10 @@ public:
 		if (!board.isNotRotatable(handler))
 		{
 			drawer.eraseHandler(handler);
+			drawer.eraseNextBlock(handler);
 			handler.blk->rotate();
 			drawer.drawHandler(handler);
+			drawer.drawNextBlock(handler);
 		}
 	}
 
