@@ -1,0 +1,37 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$main_8cpp.html#ac9e5ce3bd5c52feb8e8ab4703a54f9ec" title="키보드에서 Y 또는 N을 입력받아 게임 실행 여부를 결정 " alt="" coords="104,208,193,235"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a9a9dcb3b4adfef5b21e4ba4573ad26d8" title="게임을 실행하기로 한 경우, 1에서 5 사이의 숫자 버튼을 키보드에서 입력받아 난이도를 결정 ..." alt="" coords="104,259,193,285"/>
+<area shape="rect" id="node4" href="$class_game.html#aa333825d0bca80e91e53c7e23f053405" title="게임을 실행한다. " alt="" coords="104,309,193,336"/>
+<area shape="rect" id="node5" href="$class_drawer.html#ad87ca95db3cafee6f005e297e2c6d4de" title="타이틀 화면을 그림 " alt="" coords="259,385,422,412"/>
+<area shape="rect" id="node7" href="$class_game.html#a00e70c3fa536c8b76e92aaca66c5ccc2" title="사용자가 스페이스를 누를 때까지 대기한다. " alt="" coords="241,157,440,184"/>
+<area shape="rect" id="node8" href="$class_drawer.html#a9f5e10f6175710be253244d6f80ebcf7" title="게임 플레이에 필요한 프레임들을 그림 " alt="" coords="671,664,841,691"/>
+<area shape="rect" id="node12" href="$class_drawer.html#af26df40487cb2de033887b5342d94b5a" title="보드를 그림 " alt="" coords="691,563,821,589"/>
+<area shape="rect" id="node14" href="$class_game.html#aa61075838d60bc5c850b72bc4804b7b8" title="현재 블럭과 다음 블럭을 그리는 함수를 호출하는 함수. " alt="" coords="665,5,847,32"/>
+<area shape="rect" id="node17" href="$class_board.html#a538ca2c02fbccf3af07ed3c821d9a736" title="현재 블럭이 보드에 진입 가능한지를 리턴 " alt="" coords="689,259,823,285"/>
+<area shape="rect" id="node19" href="$class_drawer.html#a57ec099eb46c93f20d9221a2244dd9a7" title="게임오버 화면을 그림 " alt="" coords="241,752,440,779"/>
+<area shape="rect" id="node20" href="$class_game.html#af379862400da53dd8f296f0990c0953f" title="Game::moveDown" alt="" coords="488,309,615,336"/>
+<area shape="rect" id="node30" href="$class_game.html#aeb128045605ef167c233da9f993d407d" title="사용자의 조작을 읽어 블럭을 조작한다. " alt="" coords="267,208,414,235"/>
+<area shape="rect" id="node6" href="$class_drawer.html#ac1a96e007c07cab2e36a7c78484ee9a6" title="해당 좌표로 커서를 이동시킴 " alt="" coords="1151,487,1299,513"/>
+<area shape="rect" id="node9" href="$class_drawer.html#a2deae79fb268b41b72693d005cdf2178" title="다음 블럭을 나타낼 자리에 프레임을 그림 " alt="" coords="919,639,1081,665"/>
+<area shape="rect" id="node10" href="$class_drawer.html#a72d01f53fc2c5ff15763dcd76a9b9395" title="보드 프레임을 그림 " alt="" coords="916,689,1084,716"/>
+<area shape="rect" id="node11" href="$class_drawer.html#a4fb74bcad295250c519bb848dd48b0de" title="게임 플레이 방법을 그림 " alt="" coords="921,740,1079,767"/>
+<area shape="rect" id="node13" href="$class_board.html#ac96b4da16e8dc266b39772f2da3fd7e2" title="보드의 현재 상태를 리턴한다 " alt="" coords="933,537,1067,564"/>
+<area shape="rect" id="node15" href="$class_drawer.html#acef9be5772c0a3bdbae4f01d851e60f1" title="현재 블럭을 그림 " alt="" coords="914,5,1086,32"/>
+<area shape="rect" id="node16" href="$class_drawer.html#a6d8f74fa5fae96990547abb2521b5432" title="다음 블럭을 그림 " alt="" coords="921,56,1079,83"/>
+<area shape="rect" id="node18" href="$class_board.html#a61ff9b1284e5c3e1214a780361ed650b" title="좌표에 해당하는 자리에 이미 블럭이 있는지를 리턴 " alt="" coords="939,208,1061,235"/>
+<area shape="rect" id="node21" href="$class_board.html#ad617ae22e46d1a62ed33592b20e00b44" title="현재 블럭의 아래가 막혀 있는 지를 리턴 " alt="" coords="679,309,833,336"/>
+<area shape="rect" id="node22" href="$class_game.html#a7ab3d17dc7bf72f0a59fbb7b17c6ce5a" title="현재 블럭과 다음 블럭을 지우는 함수를 호출하는 함수. " alt="" coords="663,107,849,133"/>
+<area shape="rect" id="node25" href="$class_drawer.html#ad8b55aff1fbf975536ef3d995d3a4526" title="보드를 지움 " alt="" coords="688,512,824,539"/>
+<area shape="rect" id="node26" href="$class_board.html#a06e5188ef352fc5c0e3957895cef6a89" title="블럭이 끝에 도달했을 때, 이를 보드에 기록한다. 줄이 꽉찼다면 보드를 새로 고친다. " alt="" coords="687,360,825,387"/>
+<area shape="rect" id="node27" href="$class_block_handler.html#a170a8b83b6df72530675d722a17fb8c4" title="BlockHandler::resetHandler" alt="" coords="666,461,846,488"/>
+<area shape="rect" id="node23" href="$class_drawer.html#a513de5ba9d65771ed21918a90cd70afa" title="현재 블럭을 지움 " alt="" coords="911,157,1089,184"/>
+<area shape="rect" id="node24" href="$class_drawer.html#a3110e80f9256176373f0580788e69037" title="다음 블럭을 지움 " alt="" coords="919,107,1081,133"/>
+<area shape="rect" id="node28" href="$class_block_handler.html#afaa88871c837a9af8fc407690aadffd6" title="BlockHandler::generateRandom\lBlock" alt="" coords="897,421,1103,462"/>
+<area shape="rect" id="node29" href="$class_block_handler.html#aa0143a5722a52a91357c184354d484a6" title="BlockHandler::setCoordTo\lEntry" alt="" coords="913,355,1087,397"/>
+<area shape="rect" id="node31" href="$class_game.html#a8727c9c167265bff376f606d02687c6b" title="현 블럭을 회전시킬 수 있으면 회전시킨다. " alt="" coords="502,157,601,184"/>
+<area shape="rect" id="node33" href="$class_game.html#a3bd586b9c1bcd71f78bc2c2f7e2fe9e7" title="왼쪽으로 움직일 수 있으면, 현 블럭을 옮기고 새로 그린다. " alt="" coords="493,208,609,235"/>
+<area shape="rect" id="node35" href="$class_game.html#a36ee055aa2c311deea72c38f50814007" title="오른쪽으로 움직일 수 있으면, 현 블럭을 옮기고 새로 그린다. " alt="" coords="489,107,614,133"/>
+<area shape="rect" id="node32" href="$class_board.html#a4b84310dd1ac3a08a3180361508a43e3" title="현재 블럭이 회전 불가능한지를 리턴 " alt="" coords="681,157,831,184"/>
+<area shape="rect" id="node34" href="$class_board.html#a5545704e21b5f7447eb9ffe014954cb3" title="현재 블럭의 왼쪽이 막혀 있는 지를 리턴 " alt="" coords="685,208,827,235"/>
+<area shape="rect" id="node36" href="$class_board.html#ad38cdb8757f58a32b5747e2b7e0be277" title="현재 블럭의 오른쪽이 막혀 있는 지를 리턴 " alt="" coords="681,56,831,83"/>
+</map>

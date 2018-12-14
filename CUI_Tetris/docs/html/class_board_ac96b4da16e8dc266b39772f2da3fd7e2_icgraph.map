@@ -1,0 +1,8 @@
+<map id="Board::boardStatus" name="Board::boardStatus">
+<area shape="rect" id="node2" href="$class_drawer.html#af26df40487cb2de033887b5342d94b5a" title="보드를 그림 " alt="" coords="191,5,321,32"/>
+<area shape="rect" id="node7" href="$class_drawer.html#ad8b55aff1fbf975536ef3d995d3a4526" title="보드를 지움 " alt="" coords="188,56,324,83"/>
+<area shape="rect" id="node3" href="$class_game.html#aa333825d0bca80e91e53c7e23f053405" title="게임을 실행한다. " alt="" coords="741,56,831,83"/>
+<area shape="rect" id="node5" href="$class_game.html#af379862400da53dd8f296f0990c0953f" title="Game::moveDown" alt="" coords="372,56,499,83"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="사용자에게 게임 실행 여부를 묻고, 실행할 경우 난이도를 설정한다. 아니라면 프로그램을 종료한다..." alt="" coords="879,56,929,83"/>
+<area shape="rect" id="node6" href="$class_game.html#aeb128045605ef167c233da9f993d407d" title="사용자의 조작을 읽어 블럭을 조작한다. " alt="" coords="547,107,693,133"/>
+</map>

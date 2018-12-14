@@ -1,0 +1,15 @@
+<map id="Board::isBlocked" name="Board::isBlocked">
+<area shape="rect" id="node2" href="$class_board.html#a1ba0d2a44e1469738220b5ff7dfda6fc" title="해당하는 자리가 막혀있는지를 리턴 " alt="" coords="191,5,312,32"/>
+<area shape="rect" id="node3" href="$class_board.html#a5545704e21b5f7447eb9ffe014954cb3" title="현재 블럭의 왼쪽이 막혀 있는 지를 리턴 " alt="" coords="180,56,323,83"/>
+<area shape="rect" id="node8" href="$class_board.html#ad38cdb8757f58a32b5747e2b7e0be277" title="현재 블럭의 오른쪽이 막혀 있는 지를 리턴 " alt="" coords="176,107,327,133"/>
+<area shape="rect" id="node10" href="$class_board.html#ad617ae22e46d1a62ed33592b20e00b44" title="현재 블럭의 아래가 막혀 있는 지를 리턴 " alt="" coords="175,208,328,235"/>
+<area shape="rect" id="node12" href="$class_board.html#a4b84310dd1ac3a08a3180361508a43e3" title="현재 블럭이 회전 불가능한지를 리턴 " alt="" coords="177,157,326,184"/>
+<area shape="rect" id="node14" href="$class_board.html#a538ca2c02fbccf3af07ed3c821d9a736" title="현재 블럭이 보드에 진입 가능한지를 리턴 " alt="" coords="184,259,319,285"/>
+<area shape="rect" id="node4" href="$class_game.html#a3bd586b9c1bcd71f78bc2c2f7e2fe9e7" title="왼쪽으로 움직일 수 있으면, 현 블럭을 옮기고 새로 그린다. " alt="" coords="381,56,497,83"/>
+<area shape="rect" id="node5" href="$class_game.html#aeb128045605ef167c233da9f993d407d" title="사용자의 조작을 읽어 블럭을 조작한다. " alt="" coords="551,157,697,184"/>
+<area shape="rect" id="node6" href="$class_game.html#aa333825d0bca80e91e53c7e23f053405" title="게임을 실행한다. " alt="" coords="745,208,835,235"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="사용자에게 게임 실행 여부를 묻고, 실행할 경우 난이도를 설정한다. 아니라면 프로그램을 종료한다..." alt="" coords="883,208,933,235"/>
+<area shape="rect" id="node9" href="$class_game.html#a36ee055aa2c311deea72c38f50814007" title="오른쪽으로 움직일 수 있으면, 현 블럭을 옮기고 새로 그린다. " alt="" coords="377,107,502,133"/>
+<area shape="rect" id="node11" href="$class_game.html#af379862400da53dd8f296f0990c0953f" title="Game::moveDown" alt="" coords="376,208,503,235"/>
+<area shape="rect" id="node13" href="$class_game.html#a8727c9c167265bff376f606d02687c6b" title="현 블럭을 회전시킬 수 있으면 회전시킨다. " alt="" coords="390,157,489,184"/>
+</map>

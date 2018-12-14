@@ -1,0 +1,684 @@
+\hypertarget{class_drawer}{}\section{Drawer 클래스 참조}
+\label{class_drawer}\index{Drawer@{Drawer}}
+
+
+화면에 게임을 출력하는 클래스  
+
+
+
+
+{\ttfamily \#include $<$tetris\+\_\+drawer.\+h$>$}
+
+
+
+Drawer에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_drawer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_drawer_a7daabfaadc8a076a71f5f09b0a88f4bb}{Drawer}} ()
+\item 
+void \mbox{\hyperlink{class_drawer_ad87ca95db3cafee6f005e297e2c6d4de}{draw\+Title\+Screen}} () const
+\begin{DoxyCompactList}\small\item\em 타이틀 화면을 그림 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drawer_a57ec099eb46c93f20d9221a2244dd9a7}{draw\+Game\+Over\+Screen}} (const \mbox{\hyperlink{class_board}{Board}} \&bd) const
+\begin{DoxyCompactList}\small\item\em 게임오버 화면을 그림 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drawer_a9f5e10f6175710be253244d6f80ebcf7}{draw\+Game\+Frame}} () const
+\begin{DoxyCompactList}\small\item\em 게임 플레이에 필요한 프레임들을 그림 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drawer_af26df40487cb2de033887b5342d94b5a}{draw\+Board}} (const \mbox{\hyperlink{class_board}{Board}} \&bd) const
+\begin{DoxyCompactList}\small\item\em 보드를 그림 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drawer_ad8b55aff1fbf975536ef3d995d3a4526}{erase\+Board}} (const \mbox{\hyperlink{class_board}{Board}} \&bd) const
+\begin{DoxyCompactList}\small\item\em 보드를 지움 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drawer_acef9be5772c0a3bdbae4f01d851e60f1}{draw\+Current\+Block}} (const \mbox{\hyperlink{class_block_handler}{Block\+Handler}} \&handle) const
+\begin{DoxyCompactList}\small\item\em 현재 블럭을 그림 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drawer_a513de5ba9d65771ed21918a90cd70afa}{erase\+Current\+Block}} (const \mbox{\hyperlink{class_block_handler}{Block\+Handler}} \&handle) const
+\begin{DoxyCompactList}\small\item\em 현재 블럭을 지움 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drawer_a6d8f74fa5fae96990547abb2521b5432}{draw\+Next\+Block}} (const \mbox{\hyperlink{class_block_handler}{Block\+Handler}} \&handle) const
+\begin{DoxyCompactList}\small\item\em 다음 블럭을 그림 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drawer_a3110e80f9256176373f0580788e69037}{erase\+Next\+Block}} (const \mbox{\hyperlink{class_block_handler}{Block\+Handler}} \&handle) const
+\begin{DoxyCompactList}\small\item\em 다음 블럭을 지움 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{move\+To\+Coord}} (int x, int y) const
+\begin{DoxyCompactList}\small\item\em 해당 좌표로 커서를 이동시킴 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drawer_a2deae79fb268b41b72693d005cdf2178}{draw\+Next\+Frame}} () const
+\begin{DoxyCompactList}\small\item\em 다음 블럭을 나타낼 자리에 프레임을 그림 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drawer_a72d01f53fc2c5ff15763dcd76a9b9395}{draw\+Board\+Frame}} () const
+\begin{DoxyCompactList}\small\item\em 보드 프레임을 그림 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drawer_a4fb74bcad295250c519bb848dd48b0de}{draw\+Instruction}} () const
+\begin{DoxyCompactList}\small\item\em 게임 플레이 방법을 그림 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+화면에 게임을 출력하는 클래스 
+
+tetris\+\_\+drawer.\+h 파일의 18 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_drawer_a7daabfaadc8a076a71f5f09b0a88f4bb}\label{class_drawer_a7daabfaadc8a076a71f5f09b0a88f4bb}} 
+\index{Drawer@{Drawer}!Drawer@{Drawer}}
+\index{Drawer@{Drawer}!Drawer@{Drawer}}
+\subsubsection{\texorpdfstring{Drawer()}{Drawer()}}
+{\footnotesize\ttfamily Drawer\+::\+Drawer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+tetris\+\_\+drawer.\+h 파일의 83 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+83 \{\}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_drawer_af26df40487cb2de033887b5342d94b5a}\label{class_drawer_af26df40487cb2de033887b5342d94b5a}} 
+\index{Drawer@{Drawer}!draw\+Board@{draw\+Board}}
+\index{draw\+Board@{draw\+Board}!Drawer@{Drawer}}
+\subsubsection{\texorpdfstring{draw\+Board()}{drawBoard()}}
+{\footnotesize\ttfamily void Drawer\+::draw\+Board (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_board}{Board}} \&}]{bd }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+보드를 그림 
+
+
+
+tetris\+\_\+drawer.\+h 파일의 135 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+136     \{
+137         \textcolor{keyword}{const} \mbox{\hyperlink{class_board_a84bf794bc185e31e333b78bb003c4bc3}{Board::BoardType}} & status = bd.\mbox{\hyperlink{class_board_ac96b4da16e8dc266b39772f2da3fd7e2}{boardStatus}}();
+138         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 25; ++i)
+139             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < 10; ++j)
+140                 \textcolor{keywordflow}{if} (status[i][j].occupied == \textcolor{keyword}{true})  \textcolor{comment}{// false 시 else문을 통해 std::cout << "  "; 을 사용하면 간혹 게임이
+       매우 느려짐.}
+141                 \{
+142                     \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_afe5fa4d0ad1820f448b83de84142af4d}{boardDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}} + j * 2, 
+      \mbox{\hyperlink{tetris__drawer_8h_afe5fa4d0ad1820f448b83de84142af4d}{boardDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + i);
+143                     SetConsoleTextAttribute(GetStdHandle(STD\_OUTPUT\_HANDLE), static\_cast<WORD>(status[i][j]
+      .color));
+144                     std::cout << \textcolor{stringliteral}{"■"};
+145                 \}
+146     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{class_drawer_af26df40487cb2de033887b5342d94b5a_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_af26df40487cb2de033887b5342d94b5a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_drawer_a72d01f53fc2c5ff15763dcd76a9b9395}\label{class_drawer_a72d01f53fc2c5ff15763dcd76a9b9395}} 
+\index{Drawer@{Drawer}!draw\+Board\+Frame@{draw\+Board\+Frame}}
+\index{draw\+Board\+Frame@{draw\+Board\+Frame}!Drawer@{Drawer}}
+\subsubsection{\texorpdfstring{draw\+Board\+Frame()}{drawBoardFrame()}}
+{\footnotesize\ttfamily void Drawer\+::draw\+Board\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+보드 프레임을 그림 
+
+
+
+tetris\+\_\+drawer.\+h 파일의 51 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+52     \{
+53         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_a4dcd1769680ae6c150a2285edfeb9e1f}{boardFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, 
+      \mbox{\hyperlink{tetris__drawer_8h_a4dcd1769680ae6c150a2285edfeb9e1f}{boardFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}});
+54         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 12; ++i)
+55             std::cout << \textcolor{stringliteral}{"▩"};
+56         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = \mbox{\hyperlink{tetris__drawer_8h_a4dcd1769680ae6c150a2285edfeb9e1f}{boardFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 1; i < 
+      \mbox{\hyperlink{tetris__drawer_8h_a4dcd1769680ae6c150a2285edfeb9e1f}{boardFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 26; ++i)
+57         \{
+58             \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_a4dcd1769680ae6c150a2285edfeb9e1f}{boardFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, i);
+59             std::cout << \textcolor{stringliteral}{"▩"};
+60             \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_a4dcd1769680ae6c150a2285edfeb9e1f}{boardFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}} + 22, i);
+61             std::cout << \textcolor{stringliteral}{"▩"};
+62         \}
+63         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_a4dcd1769680ae6c150a2285edfeb9e1f}{boardFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, 
+      \mbox{\hyperlink{tetris__drawer_8h_a4dcd1769680ae6c150a2285edfeb9e1f}{boardFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 26);
+64         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 12; ++i)
+65             std::cout << \textcolor{stringliteral}{"▩"};
+66     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_a72d01f53fc2c5ff15763dcd76a9b9395_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_a72d01f53fc2c5ff15763dcd76a9b9395_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_drawer_acef9be5772c0a3bdbae4f01d851e60f1}\label{class_drawer_acef9be5772c0a3bdbae4f01d851e60f1}} 
+\index{Drawer@{Drawer}!draw\+Current\+Block@{draw\+Current\+Block}}
+\index{draw\+Current\+Block@{draw\+Current\+Block}!Drawer@{Drawer}}
+\subsubsection{\texorpdfstring{draw\+Current\+Block()}{drawCurrentBlock()}}
+{\footnotesize\ttfamily void Drawer\+::draw\+Current\+Block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_block_handler}{Block\+Handler}} \&}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+현재 블럭을 그림 
+
+
+
+tetris\+\_\+drawer.\+h 파일의 162 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+163     \{
+164         \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5}{Block::Color}} currentBlockColor = handle.\mbox{\hyperlink{class_block_handler_ab57212ded2552ab5559d278c8538c454}{blk}}->getColor();
+165         SetConsoleTextAttribute(GetStdHandle(STD\_OUTPUT\_HANDLE), static\_cast<WORD>(currentBlockColor));
+166         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} & cellInfo : handle.\mbox{\hyperlink{class_block_handler_ab57212ded2552ab5559d278c8538c454}{blk}}->getBlockInfo())
+167         \{
+168             \mbox{\hyperlink{struct_coord}{Coord}} temp = handle.\mbox{\hyperlink{class_block_handler_a11bd634fdc179446f9c6751e2394999e}{currPos}} + cellInfo;
+169             \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_afe5fa4d0ad1820f448b83de84142af4d}{boardDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}} + temp.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}} * 2, 
+      \mbox{\hyperlink{tetris__drawer_8h_afe5fa4d0ad1820f448b83de84142af4d}{boardDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + temp.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}});
+170             std::cout << \textcolor{stringliteral}{"■"};
+171         \}
+172     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_acef9be5772c0a3bdbae4f01d851e60f1_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_acef9be5772c0a3bdbae4f01d851e60f1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_drawer_a9f5e10f6175710be253244d6f80ebcf7}\label{class_drawer_a9f5e10f6175710be253244d6f80ebcf7}} 
+\index{Drawer@{Drawer}!draw\+Game\+Frame@{draw\+Game\+Frame}}
+\index{draw\+Game\+Frame@{draw\+Game\+Frame}!Drawer@{Drawer}}
+\subsubsection{\texorpdfstring{draw\+Game\+Frame()}{drawGameFrame()}}
+{\footnotesize\ttfamily void Drawer\+::draw\+Game\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+게임 플레이에 필요한 프레임들을 그림 
+
+
+
+tetris\+\_\+drawer.\+h 파일의 126 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+127     \{
+128         system(\textcolor{stringliteral}{"cls"});
+129         \mbox{\hyperlink{class_drawer_a2deae79fb268b41b72693d005cdf2178}{drawNextFrame}}();
+130         \mbox{\hyperlink{class_drawer_a72d01f53fc2c5ff15763dcd76a9b9395}{drawBoardFrame}}();
+131         \mbox{\hyperlink{class_drawer_a4fb74bcad295250c519bb848dd48b0de}{drawInstruction}}();
+132     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_a9f5e10f6175710be253244d6f80ebcf7_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_a9f5e10f6175710be253244d6f80ebcf7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_drawer_a57ec099eb46c93f20d9221a2244dd9a7}\label{class_drawer_a57ec099eb46c93f20d9221a2244dd9a7}} 
+\index{Drawer@{Drawer}!draw\+Game\+Over\+Screen@{draw\+Game\+Over\+Screen}}
+\index{draw\+Game\+Over\+Screen@{draw\+Game\+Over\+Screen}!Drawer@{Drawer}}
+\subsubsection{\texorpdfstring{draw\+Game\+Over\+Screen()}{drawGameOverScreen()}}
+{\footnotesize\ttfamily void Drawer\+::draw\+Game\+Over\+Screen (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_board}{Board}} \&}]{bd }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+게임오버 화면을 그림 
+
+
+
+tetris\+\_\+drawer.\+h 파일의 111 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+112     \{
+113         SetConsoleTextAttribute(GetStdHandle(STD\_OUTPUT\_HANDLE), 0x7);
+114         
+115         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_afe5fa4d0ad1820f448b83de84142af4d}{boardDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, \mbox{\hyperlink{tetris__drawer_8h_afe5fa4d0ad1820f448b83de84142af4d}{boardDrawCoord}}.
+      \mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 9);
+116         std::cout << \textcolor{stringliteral}{"                    "}; \textcolor{comment}{// 20 spaces}
+117         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_afe5fa4d0ad1820f448b83de84142af4d}{boardDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, \mbox{\hyperlink{tetris__drawer_8h_afe5fa4d0ad1820f448b83de84142af4d}{boardDrawCoord}}.
+      \mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 10);
+118         std::cout << \textcolor{stringliteral}{"  G A M E O V E R   "};
+119         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_afe5fa4d0ad1820f448b83de84142af4d}{boardDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, \mbox{\hyperlink{tetris__drawer_8h_afe5fa4d0ad1820f448b83de84142af4d}{boardDrawCoord}}.
+      \mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 11);
+120         std::cout << \textcolor{stringliteral}{"                    "};
+121         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(0, 0);
+122         Sleep(1000);
+123     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_a57ec099eb46c93f20d9221a2244dd9a7_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_a57ec099eb46c93f20d9221a2244dd9a7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_drawer_a4fb74bcad295250c519bb848dd48b0de}\label{class_drawer_a4fb74bcad295250c519bb848dd48b0de}} 
+\index{Drawer@{Drawer}!draw\+Instruction@{draw\+Instruction}}
+\index{draw\+Instruction@{draw\+Instruction}!Drawer@{Drawer}}
+\subsubsection{\texorpdfstring{draw\+Instruction()}{drawInstruction()}}
+{\footnotesize\ttfamily void Drawer\+::draw\+Instruction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+게임 플레이 방법을 그림 
+
+
+
+tetris\+\_\+drawer.\+h 파일의 69 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+70     \{
+71         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_a19714d61f50f7fa80357eba4d88aa69d}{instructionDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, 
+      \mbox{\hyperlink{tetris__drawer_8h_a19714d61f50f7fa80357eba4d88aa69d}{instructionDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}});
+72         std::cout << \textcolor{stringliteral}{"  HOW TO PLAY"};
+73         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_a19714d61f50f7fa80357eba4d88aa69d}{instructionDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, 
+      \mbox{\hyperlink{tetris__drawer_8h_a19714d61f50f7fa80357eba4d88aa69d}{instructionDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 1);
+74         std::cout << \textcolor{stringliteral}{"  ▲ to rotate"};
+75         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_a19714d61f50f7fa80357eba4d88aa69d}{instructionDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, 
+      \mbox{\hyperlink{tetris__drawer_8h_a19714d61f50f7fa80357eba4d88aa69d}{instructionDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 2);
+76         std::cout << \textcolor{stringliteral}{"◀▼▶ to move"};
+77         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_a19714d61f50f7fa80357eba4d88aa69d}{instructionDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, 
+      \mbox{\hyperlink{tetris__drawer_8h_a19714d61f50f7fa80357eba4d88aa69d}{instructionDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 3);
+78         std::cout << \textcolor{stringliteral}{" SPACE to drop"};
+79     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{class_drawer_a4fb74bcad295250c519bb848dd48b0de_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_a4fb74bcad295250c519bb848dd48b0de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_drawer_a6d8f74fa5fae96990547abb2521b5432}\label{class_drawer_a6d8f74fa5fae96990547abb2521b5432}} 
+\index{Drawer@{Drawer}!draw\+Next\+Block@{draw\+Next\+Block}}
+\index{draw\+Next\+Block@{draw\+Next\+Block}!Drawer@{Drawer}}
+\subsubsection{\texorpdfstring{draw\+Next\+Block()}{drawNextBlock()}}
+{\footnotesize\ttfamily void Drawer\+::draw\+Next\+Block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_block_handler}{Block\+Handler}} \&}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+다음 블럭을 그림 
+
+
+
+tetris\+\_\+drawer.\+h 파일의 186 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+187     \{
+188         \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5}{Block::Color}} currentBlockColor = handle.\mbox{\hyperlink{class_block_handler_a7a7f96fa7c0d44f9e0fb5e52ebc9c428}{nextBlk}}->getColor();
+189         SetConsoleTextAttribute(GetStdHandle(STD\_OUTPUT\_HANDLE), static\_cast<WORD>(currentBlockColor));
+190         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} & cellInfo : handle.\mbox{\hyperlink{class_block_handler_a7a7f96fa7c0d44f9e0fb5e52ebc9c428}{nextBlk}}->getBlockInfo())
+191         \{
+192             \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_a83cc61593b9fb64d690139400b3d760b}{nextFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}} + 4 + (cellInfo.x * 2), 
+      \mbox{\hyperlink{tetris__drawer_8h_a83cc61593b9fb64d690139400b3d760b}{nextFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 3 + cellInfo.y);
+193             std::cout << \textcolor{stringliteral}{"■"};
+194         \}
+195         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(0, 0);   \textcolor{comment}{// 게임 플레이시 커서가 화면 구석에서 깜빡거리도록 좌표를 구석으로 이동시킴}
+196     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{class_drawer_a6d8f74fa5fae96990547abb2521b5432_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_a6d8f74fa5fae96990547abb2521b5432_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_drawer_a2deae79fb268b41b72693d005cdf2178}\label{class_drawer_a2deae79fb268b41b72693d005cdf2178}} 
+\index{Drawer@{Drawer}!draw\+Next\+Frame@{draw\+Next\+Frame}}
+\index{draw\+Next\+Frame@{draw\+Next\+Frame}!Drawer@{Drawer}}
+\subsubsection{\texorpdfstring{draw\+Next\+Frame()}{drawNextFrame()}}
+{\footnotesize\ttfamily void Drawer\+::draw\+Next\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+다음 블럭을 나타낼 자리에 프레임을 그림 
+
+
+
+tetris\+\_\+drawer.\+h 파일의 31 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+32     \{
+33         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_a83cc61593b9fb64d690139400b3d760b}{nextFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, 
+      \mbox{\hyperlink{tetris__drawer_8h_a83cc61593b9fb64d690139400b3d760b}{nextFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}});
+34         std::cout << \textcolor{stringliteral}{" N  E  X  T"};
+35         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_a83cc61593b9fb64d690139400b3d760b}{nextFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, 
+      \mbox{\hyperlink{tetris__drawer_8h_a83cc61593b9fb64d690139400b3d760b}{nextFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 1);
+36         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 6; ++i)
+37             std::cout << \textcolor{stringliteral}{"▩"};
+38         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = \mbox{\hyperlink{tetris__drawer_8h_a83cc61593b9fb64d690139400b3d760b}{nextFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 2; i < 
+      \mbox{\hyperlink{tetris__drawer_8h_a83cc61593b9fb64d690139400b3d760b}{nextFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 5; ++i)
+39         \{
+40             \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_a83cc61593b9fb64d690139400b3d760b}{nextFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, i);
+41             std::cout << \textcolor{stringliteral}{"▩"};
+42             \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_a83cc61593b9fb64d690139400b3d760b}{nextFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}} + 10, i);
+43             std::cout << \textcolor{stringliteral}{"▩"};
+44         \}
+45         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_a83cc61593b9fb64d690139400b3d760b}{nextFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, 
+      \mbox{\hyperlink{tetris__drawer_8h_a83cc61593b9fb64d690139400b3d760b}{nextFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 5);
+46         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 6; ++i)
+47             std::cout << \textcolor{stringliteral}{"▩"};
+48     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_drawer_a2deae79fb268b41b72693d005cdf2178_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_a2deae79fb268b41b72693d005cdf2178_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_drawer_ad87ca95db3cafee6f005e297e2c6d4de}\label{class_drawer_ad87ca95db3cafee6f005e297e2c6d4de}} 
+\index{Drawer@{Drawer}!draw\+Title\+Screen@{draw\+Title\+Screen}}
+\index{draw\+Title\+Screen@{draw\+Title\+Screen}!Drawer@{Drawer}}
+\subsubsection{\texorpdfstring{draw\+Title\+Screen()}{drawTitleScreen()}}
+{\footnotesize\ttfamily void Drawer\+::draw\+Title\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+타이틀 화면을 그림 
+
+
+
+tetris\+\_\+drawer.\+h 파일의 86 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+87     \{
+88         system(\textcolor{stringliteral}{"cls"});
+89         SetConsoleTextAttribute(GetStdHandle(STD\_OUTPUT\_HANDLE), 0x7);
+90 
+91         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_ae68c7ba7cc7e4331abf15313be5319bb}{titleScreenDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, 
+      \mbox{\hyperlink{tetris__drawer_8h_ae68c7ba7cc7e4331abf15313be5319bb}{titleScreenDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}}); \textcolor{comment}{// temporary}
+92         std::cout << \textcolor{stringliteral}{"□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□\(\backslash\)n"};
+93         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_ae68c7ba7cc7e4331abf15313be5319bb}{titleScreenDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, 
+      \mbox{\hyperlink{tetris__drawer_8h_ae68c7ba7cc7e4331abf15313be5319bb}{titleScreenDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 1);
+94         std::cout << \textcolor{stringliteral}{"□■■■■■□■■■■■□■■■■■□■■■■□□■■■■■□□■■■■□\(\backslash\)n"};
+95         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_ae68c7ba7cc7e4331abf15313be5319bb}{titleScreenDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, 
+      \mbox{\hyperlink{tetris__drawer_8h_ae68c7ba7cc7e4331abf15313be5319bb}{titleScreenDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 2);
+96         std::cout << \textcolor{stringliteral}{"□□□■□□□■□□□□□□□■□□□■□□□■□□□■□□□■□□□□□\(\backslash\)n"};
+97         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_ae68c7ba7cc7e4331abf15313be5319bb}{titleScreenDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, 
+      \mbox{\hyperlink{tetris__drawer_8h_ae68c7ba7cc7e4331abf15313be5319bb}{titleScreenDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 3);
+98         std::cout << \textcolor{stringliteral}{"□□□■□□□■■■■■□□□■□□□■■■■□□□□■□□□□■■■■□\(\backslash\)n"};
+99         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_ae68c7ba7cc7e4331abf15313be5319bb}{titleScreenDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, 
+      \mbox{\hyperlink{tetris__drawer_8h_ae68c7ba7cc7e4331abf15313be5319bb}{titleScreenDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 4);
+100         std::cout << \textcolor{stringliteral}{"□□□■□□□■□□□□□□□■□□□■■■□□□□□■□□□□□□□■□\(\backslash\)n"};
+101         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_ae68c7ba7cc7e4331abf15313be5319bb}{titleScreenDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, 
+      \mbox{\hyperlink{tetris__drawer_8h_ae68c7ba7cc7e4331abf15313be5319bb}{titleScreenDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 5);
+102         std::cout << \textcolor{stringliteral}{"□□□■□□□■■■■■□□□■□□□■□□■■□■■■■■□■■■■□□\(\backslash\)n"};
+103         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_ae68c7ba7cc7e4331abf15313be5319bb}{titleScreenDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, 
+      \mbox{\hyperlink{tetris__drawer_8h_ae68c7ba7cc7e4331abf15313be5319bb}{titleScreenDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 6);
+104         std::cout << \textcolor{stringliteral}{"□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□\(\backslash\)n"};
+105         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_ae68c7ba7cc7e4331abf15313be5319bb}{titleScreenDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}} + 16, 
+      \mbox{\hyperlink{tetris__drawer_8h_ae68c7ba7cc7e4331abf15313be5319bb}{titleScreenDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 12);
+106         std::cout << \textcolor{stringliteral}{"P R E S S  S P A C E  K E Y  T O  S T A R T..."};
+107 
+108     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{class_drawer_ad87ca95db3cafee6f005e297e2c6d4de_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_ad87ca95db3cafee6f005e297e2c6d4de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_drawer_ad8b55aff1fbf975536ef3d995d3a4526}\label{class_drawer_ad8b55aff1fbf975536ef3d995d3a4526}} 
+\index{Drawer@{Drawer}!erase\+Board@{erase\+Board}}
+\index{erase\+Board@{erase\+Board}!Drawer@{Drawer}}
+\subsubsection{\texorpdfstring{erase\+Board()}{eraseBoard()}}
+{\footnotesize\ttfamily void Drawer\+::erase\+Board (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_board}{Board}} \&}]{bd }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+보드를 지움 
+
+
+
+tetris\+\_\+drawer.\+h 파일의 149 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+150     \{
+151         \textcolor{keyword}{const} \mbox{\hyperlink{class_board_a84bf794bc185e31e333b78bb003c4bc3}{Board::BoardType}} & status = bd.\mbox{\hyperlink{class_board_ac96b4da16e8dc266b39772f2da3fd7e2}{boardStatus}}();
+152         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 25; ++i)
+153             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < 10; ++j)
+154                 \textcolor{keywordflow}{if} (status[i][j].occupied == \textcolor{keyword}{true})  \textcolor{comment}{// false 시 else문을 통해 std::cout << "  "; 을 사용하면 간혹 게임이
+       매우 느려짐.}
+155                 \{
+156                     \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_afe5fa4d0ad1820f448b83de84142af4d}{boardDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}} + j * 2, 
+      \mbox{\hyperlink{tetris__drawer_8h_afe5fa4d0ad1820f448b83de84142af4d}{boardDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + i);
+157                     std::cout << \textcolor{stringliteral}{"  "};
+158                 \}
+159     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{class_drawer_ad8b55aff1fbf975536ef3d995d3a4526_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_ad8b55aff1fbf975536ef3d995d3a4526_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_drawer_a513de5ba9d65771ed21918a90cd70afa}\label{class_drawer_a513de5ba9d65771ed21918a90cd70afa}} 
+\index{Drawer@{Drawer}!erase\+Current\+Block@{erase\+Current\+Block}}
+\index{erase\+Current\+Block@{erase\+Current\+Block}!Drawer@{Drawer}}
+\subsubsection{\texorpdfstring{erase\+Current\+Block()}{eraseCurrentBlock()}}
+{\footnotesize\ttfamily void Drawer\+::erase\+Current\+Block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_block_handler}{Block\+Handler}} \&}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+현재 블럭을 지움 
+
+
+
+tetris\+\_\+drawer.\+h 파일의 175 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+176     \{
+177         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} & cellInfo : handle.\mbox{\hyperlink{class_block_handler_ab57212ded2552ab5559d278c8538c454}{blk}}->getBlockInfo())
+178         \{
+179             \mbox{\hyperlink{struct_coord}{Coord}} temp = handle.\mbox{\hyperlink{class_block_handler_a11bd634fdc179446f9c6751e2394999e}{currPos}} + cellInfo;
+180             \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_afe5fa4d0ad1820f448b83de84142af4d}{boardDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}} + temp.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}} * 2, 
+      \mbox{\hyperlink{tetris__drawer_8h_afe5fa4d0ad1820f448b83de84142af4d}{boardDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + temp.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}});
+181             std::cout << \textcolor{stringliteral}{"  "};
+182         \}
+183     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_a513de5ba9d65771ed21918a90cd70afa_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_a513de5ba9d65771ed21918a90cd70afa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_drawer_a3110e80f9256176373f0580788e69037}\label{class_drawer_a3110e80f9256176373f0580788e69037}} 
+\index{Drawer@{Drawer}!erase\+Next\+Block@{erase\+Next\+Block}}
+\index{erase\+Next\+Block@{erase\+Next\+Block}!Drawer@{Drawer}}
+\subsubsection{\texorpdfstring{erase\+Next\+Block()}{eraseNextBlock()}}
+{\footnotesize\ttfamily void Drawer\+::erase\+Next\+Block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_block_handler}{Block\+Handler}} \&}]{handle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+다음 블럭을 지움 
+
+
+
+tetris\+\_\+drawer.\+h 파일의 199 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+200     \{
+201         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} & cellInfo : handle.\mbox{\hyperlink{class_block_handler_a7a7f96fa7c0d44f9e0fb5e52ebc9c428}{nextBlk}}->getBlockInfo())
+202         \{
+203             \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(\mbox{\hyperlink{tetris__drawer_8h_a83cc61593b9fb64d690139400b3d760b}{nextFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}} + 4 + (cellInfo.x * 2), 
+      \mbox{\hyperlink{tetris__drawer_8h_a83cc61593b9fb64d690139400b3d760b}{nextFrameDrawCoord}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + 3 + cellInfo.y);
+204             std::cout << \textcolor{stringliteral}{"  "};
+205         \}
+206         \mbox{\hyperlink{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}{moveToCoord}}(0, 0);
+207     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{class_drawer_a3110e80f9256176373f0580788e69037_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_a3110e80f9256176373f0580788e69037_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}\label{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6}} 
+\index{Drawer@{Drawer}!move\+To\+Coord@{move\+To\+Coord}}
+\index{move\+To\+Coord@{move\+To\+Coord}!Drawer@{Drawer}}
+\subsubsection{\texorpdfstring{move\+To\+Coord()}{moveToCoord()}}
+{\footnotesize\ttfamily void Drawer\+::move\+To\+Coord (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+해당 좌표로 커서를 이동시킴 
+
+
+
+tetris\+\_\+drawer.\+h 파일의 22 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+23     \{
+24         COORD cursor;
+25         cursor.X = x;
+26         cursor.Y = y;
+27         SetConsoleCursorPosition(GetStdHandle(STD\_OUTPUT\_HANDLE), cursor);
+28     \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawer_ac1a96e007c07cab2e36a7c78484ee9a6_icgraph}
+\end{center}
+\end{figure}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tetris__drawer_8h}{tetris\+\_\+drawer.\+h}}\end{DoxyCompactItemize}

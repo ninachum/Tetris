@@ -6,16 +6,19 @@
 #include <iostream>
 #include <Windows.h>
 
-static const Coord boardDrawCoord { 38, 4 };
-static const Coord boardFrameDrawCoord{ 36, 3 };
-static const Coord nextFrameDrawCoord { 22, 2 };
-static const Coord instructionDrawCoord{ 64, 23 };
-static const Coord titleScreenDrawCoord{ 14, 10 };
+static const Coord boardDrawCoord { 38, 4 };		//!< 보드를 그릴 때, 기준 좌표
+static const Coord boardFrameDrawCoord{ 36, 3 };	//!< 보드 프레임을 그릴 때, 기준 좌표
+static const Coord nextFrameDrawCoord { 22, 2 };	//!< 다음 블럭을 나타낼 자리에 프레임을 그릴 때, 기준 좌표
+static const Coord instructionDrawCoord{ 64, 23 };	//!< 게임 플레이 방법을 그릴 때, 기준 좌표
+static const Coord titleScreenDrawCoord{ 14, 10 };	//!< 타이틀 화면을 그릴 때, 기준 좌표
 
+/**
+  @brief 화면에 게임을 출력하는 클래스
+ */
 class Drawer
 {
 private:
-
+	//! 해당 좌표로 커서를 이동시킴
 	void moveToCoord(int x, int y) const
 	{
 		COORD cursor;
@@ -24,6 +27,7 @@ private:
 		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cursor);
 	}
 
+	//! 다음 블럭을 나타낼 자리에 프레임을 그림
 	void drawNextFrame() const
 	{
 		moveToCoord(nextFrameDrawCoord.x, nextFrameDrawCoord.y);
@@ -43,6 +47,7 @@ private:
 			std::cout << "▩";
 	}
 
+	//! 보드 프레임을 그림
 	void drawBoardFrame() const
 	{
 		moveToCoord(boardFrameDrawCoord.x, boardFrameDrawCoord.y);
@@ -60,6 +65,7 @@ private:
 			std::cout << "▩";
 	}
 
+	//! 게임 플레이 방법을 그림
 	void drawInstruction() const
 	{
 		moveToCoord(instructionDrawCoord.x, instructionDrawCoord.y);
@@ -76,6 +82,7 @@ public:
 
 	Drawer() {}
 
+	//! 타이틀 화면을 그림
 	void drawTitleScreen() const
 	{
 		system("cls");
@@ -100,6 +107,7 @@ public:
 
 	}
 
+	//! 게임오버 화면을 그림
 	void drawGameOverScreen(const Board & bd) const
 	{
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0x7);
@@ -114,6 +122,7 @@ public:
 		Sleep(1000);
 	}
 
+	//! 게임 플레이에 필요한 프레임들을 그림
 	void drawGameFrame() const
 	{
 		system("cls");
@@ -122,6 +131,7 @@ public:
 		drawInstruction();
 	}
 
+	//! 보드를 그림
 	void drawBoard(const Board & bd) const
 	{
 		const Board::BoardType & status = bd.boardStatus();
@@ -135,6 +145,7 @@ public:
 				}
 	}
 
+	//! 보드를 지움
 	void eraseBoard(const Board & bd) const
 	{
 		const Board::BoardType & status = bd.boardStatus();
@@ -147,6 +158,7 @@ public:
 				}
 	}
 
+	//! 현재 블럭을 그림
 	void drawCurrentBlock(const BlockHandler & handle) const
 	{
 		Block::Color currentBlockColor = handle.blk->getColor();
@@ -159,6 +171,7 @@ public:
 		}
 	}
 
+	//! 현재 블럭을 지움
 	void eraseCurrentBlock(const BlockHandler & handle) const
 	{
 		for (auto & cellInfo : handle.blk->getBlockInfo())
@@ -169,6 +182,7 @@ public:
 		}
 	}
 
+	//! 다음 블럭을 그림
 	void drawNextBlock(const BlockHandler & handle) const
 	{
 		Block::Color currentBlockColor = handle.nextBlk->getColor();
@@ -178,9 +192,10 @@ public:
 			moveToCoord(nextFrameDrawCoord.x + 4 + (cellInfo.x * 2), nextFrameDrawCoord.y + 3 + cellInfo.y);
 			std::cout << "■";
 		}
-		moveToCoord(0, 0);
+		moveToCoord(0, 0);	// 게임 플레이시 커서가 화면 구석에서 깜빡거리도록 좌표를 구석으로 이동시킴
 	}
 
+	//! 다음 블럭을 지움
 	void eraseNextBlock(const BlockHandler & handle) const
 	{
 		for (auto & cellInfo : handle.nextBlk->getBlockInfo())

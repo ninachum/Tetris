@@ -1,3 +1,9 @@
+
+/**
+ * A CUI-Based Tetris Game.
+ */
+
+
 #include <iostream>
 #include <cctype>
 #include <windows.h>
@@ -7,6 +13,11 @@
 bool wantToPlay();
 int setDifficulty();
 
+/**
+  @brief 사용자에게 게임 실행 여부를 묻고, 실행할 경우 난이도를 설정한다. 아니라면 프로그램을 종료한다.
+  @param 없음.
+  @return 프로그램 실행 결과 코드 (보통 0)
+ */
 int main()
 {
 	std::cout << "WELCOME TO TETRIS!\n";
@@ -26,6 +37,11 @@ int main()
 
 }
 
+/**
+  @brief 키보드에서 Y 또는 N을 입력받아 게임 실행 여부를 결정
+  @param 없음
+  @return 프로그램 실행 결과
+ */
 bool wantToPlay()
 {
 	while (true)
@@ -45,6 +61,11 @@ bool wantToPlay()
 	}
 }
 
+/**
+  @brief 게임을 실행하기로 한 경우, 1에서 5 사이의 숫자 버튼을 키보드에서 입력받아 난이도를 결정
+  @param 없음
+  @return 1부터 5까지의 정수
+ */
 int setDifficulty()
 {
 	std::cout << '\n' << "difficulty ? (1 - 5)";

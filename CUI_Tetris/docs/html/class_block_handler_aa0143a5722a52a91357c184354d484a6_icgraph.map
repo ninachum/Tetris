@@ -1,0 +1,8 @@
+<map id="BlockHandler::setCoordToEntry" name="BlockHandler::setCoordToEntry">
+<area shape="rect" id="node2" href="$class_block_handler.html#ae1955a1830df4398795c153ef54804fa" title="블럭 초기 설정 " alt="" coords="227,5,411,32"/>
+<area shape="rect" id="node3" href="$class_block_handler.html#a170a8b83b6df72530675d722a17fb8c4" title="BlockHandler::resetHandler" alt="" coords="229,56,409,83"/>
+<area shape="rect" id="node4" href="$class_game.html#af379862400da53dd8f296f0990c0953f" title="Game::moveDown" alt="" coords="459,56,585,83"/>
+<area shape="rect" id="node5" href="$class_game.html#aeb128045605ef167c233da9f993d407d" title="사용자의 조작을 읽어 블럭을 조작한다. " alt="" coords="633,31,780,57"/>
+<area shape="rect" id="node6" href="$class_game.html#aa333825d0bca80e91e53c7e23f053405" title="게임을 실행한다. " alt="" coords="828,56,917,83"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="사용자에게 게임 실행 여부를 묻고, 실행할 경우 난이도를 설정한다. 아니라면 프로그램을 종료한다..." alt="" coords="965,56,1016,83"/>
+</map>

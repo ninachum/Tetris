@@ -1,0 +1,5 @@
+<map id="Game::drawHandlerContent" name="Game::drawHandlerContent">
+<area shape="rect" id="node2" href="$class_drawer.html#acef9be5772c0a3bdbae4f01d851e60f1" title="현재 블럭을 그림 " alt="" coords="235,5,407,32"/>
+<area shape="rect" id="node4" href="$class_drawer.html#a6d8f74fa5fae96990547abb2521b5432" title="다음 블럭을 그림 " alt="" coords="242,56,399,83"/>
+<area shape="rect" id="node3" href="$class_drawer.html#ac1a96e007c07cab2e36a7c78484ee9a6" title="해당 좌표로 커서를 이동시킴 " alt="" coords="455,31,603,57"/>
+</map>

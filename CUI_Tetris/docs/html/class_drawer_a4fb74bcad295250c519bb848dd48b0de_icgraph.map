@@ -1,0 +1,5 @@
+<map id="Drawer::drawInstruction" name="Drawer::drawInstruction">
+<area shape="rect" id="node2" href="$class_drawer.html#a9f5e10f6175710be253244d6f80ebcf7" title="게임 플레이에 필요한 프레임들을 그림 " alt="" coords="211,5,380,32"/>
+<area shape="rect" id="node3" href="$class_game.html#aa333825d0bca80e91e53c7e23f053405" title="게임을 실행한다. " alt="" coords="428,5,517,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="사용자에게 게임 실행 여부를 묻고, 실행할 경우 난이도를 설정한다. 아니라면 프로그램을 종료한다..." alt="" coords="565,5,616,32"/>
+</map>

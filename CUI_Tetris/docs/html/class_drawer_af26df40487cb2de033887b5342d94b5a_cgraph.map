@@ -1,0 +1,4 @@
+<map id="Drawer::drawBoard" name="Drawer::drawBoard">
+<area shape="rect" id="node2" href="$class_board.html#ac96b4da16e8dc266b39772f2da3fd7e2" title="보드의 현재 상태를 리턴한다 " alt="" coords="191,5,325,32"/>
+<area shape="rect" id="node3" href="$class_drawer.html#ac1a96e007c07cab2e36a7c78484ee9a6" title="해당 좌표로 커서를 이동시킴 " alt="" coords="184,56,332,83"/>
+</map>

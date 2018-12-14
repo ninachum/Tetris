@@ -1,0 +1,449 @@
+\hypertarget{class_s}{}\section{S 클래스 참조}
+\label{class_s}\index{S@{S}}
+
+
+\mbox{\hyperlink{class_s}{S}} 모양 블럭  
+
+
+
+
+{\ttfamily \#include $<$tetris\+\_\+block.\+h$>$}
+
+
+
+S에 대한 상속 다이어그램 \+: 
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{class_s__inherit__graph}
+\end{center}
+\end{figure}
+
+
+S에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{class_s__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765}{Mode}} \{ \newline
+\mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a4529e89ca1c08cc5f81181e355719fad}{U\+P\+S\+I\+DE}}, 
+\mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a9c855bf91465e7da98901d7900740919}{L\+E\+F\+T\+S\+I\+DE}}, 
+\mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a73fd4ad0ff8642235ec8549f9290d13b}{D\+O\+W\+N\+S\+I\+DE}}, 
+\mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a005424e665ea0b83edfaf9ddb3ab85a1}{R\+I\+G\+H\+T\+S\+I\+DE}}, 
+\newline
+\mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a76628d7877667ccb2f6e549b89466a4a}{V\+E\+R\+T\+I\+C\+AL}}, 
+\mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a883bda1b4a0cb6d25d8b3c3465f0cfef}{H\+O\+R\+I\+Z\+O\+N\+T\+AL}}
+ \}
+\begin{DoxyCompactList}\small\item\em 블럭들의 회전 상태를 나타내는 enum type \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5}{Color}} \{ \newline
+\mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5acd0cdefe1b7ef4fc0c9b47a765ae00ca}{B\+L\+A\+CK}}, 
+\mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a770f3d9456df6e3e286c001f0ffc835f}{B\+L\+UE}}, 
+\mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ac7f4e27e7581d2456d7db6b52514800d}{G\+R\+E\+EN}}, 
+\mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5aa6acf45f9e85e879c50413b30769006a}{T\+U\+RQ}}, 
+\newline
+\mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ac3d067e89682bb3d91db42beb7c68062}{R\+ED}}, 
+\mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5adf5ec5d70a53f3465e863f43e9118588}{P\+U\+R\+P\+LE}}, 
+\mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a7ae21b7c7ed4cd37d641a5119d0b3939}{Y\+E\+L\+L\+OW}}, 
+\mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a37ab7320f3ca5662b117fb110adb1011}{W\+H\+I\+TE}}, 
+\newline
+\mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a1158efe2e537f0b96f9ea590f22ab821}{G\+R\+AY}}, 
+\mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5aad861330fd0e7f87dbfbe9ceb49785b3}{P\+A\+L\+E\+B\+L\+UE}}, 
+\mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ad7542730815e74f4f9a9df7fec33d3b5}{P\+A\+L\+E\+G\+R\+E\+EN}}, 
+\mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5acbe4a64f95830b01b5be63b91544d452}{P\+A\+L\+E\+T\+U\+RQ}}, 
+\newline
+\mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a9a1a56423a8c5b1b51fb11d184ced4cd}{P\+A\+L\+E\+R\+ED}}, 
+\mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ae78300d2e1540cc8a58c4018a2b902a6}{P\+A\+L\+E\+P\+U\+R\+P\+LE}}, 
+\mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ac09cccdee282b3a0c1331e2892042bea}{P\+A\+L\+E\+Y\+E\+L\+L\+OW}}, 
+\mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5af606ae67cebcef81e9ee80f1411d4247}{B\+R\+I\+G\+H\+T\+W\+H\+I\+TE}}
+ \}
+\begin{DoxyCompactList}\small\item\em 블럭들이 가질 수 있는 색상을 나타내는 enum type \end{DoxyCompactList}\item 
+typedef std\+::array$<$ \mbox{\hyperlink{struct_coord}{Coord}}, 4 $>$ \mbox{\hyperlink{class_block_aca5d951639f113e2ebd7856209d6b9ab}{Block\+Shape}}
+\begin{DoxyCompactList}\small\item\em 블럭의 모양 정보를 좌표의 배열로 나타냄. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_a375a5fe3ea61076cbb372c47fcd6eecd}{S}} ()
+\item 
+void \mbox{\hyperlink{class_s_a9d968087a1d499416a0ce91cce3c8f9f}{rotate}} () override
+\begin{DoxyCompactList}\small\item\em 회전 상태를 다음 회전 상태로 변경 (한 번에 90도 회전) \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5}{Color}} \mbox{\hyperlink{class_s_a6b0a59fa5ae754544d2ad1c250f8dece}{get\+Color}} () override
+\begin{DoxyCompactList}\small\item\em 블럭의 색상 정보를 리턴 \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_block_aca5d951639f113e2ebd7856209d6b9ab}{Block\+Shape}} \& \mbox{\hyperlink{class_s_aedd52f4a59ed94415945a54e0a1a477b}{get\+Block\+Info}} () override
+\begin{DoxyCompactList}\small\item\em 블럭의 현재 회전 상태에 따른 모양 정보 리턴 \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_block_aca5d951639f113e2ebd7856209d6b9ab}{Block\+Shape}} \& \mbox{\hyperlink{class_s_a48ef6d5f37afe48b14ea11fe00537c5e}{get\+Next\+Block\+Info}} () override
+\begin{DoxyCompactList}\small\item\em 회전을 1번 더 했을 경우의 모양 정보 리턴 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765}{Mode}} \mbox{\hyperlink{class_s_a0a3c150f9afbfe65a5558d947b999776}{mode}}
+\begin{DoxyCompactList}\small\item\em 회전 상태(가로, 세로) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{정적 Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5}{Color}} \mbox{\hyperlink{class_s_a21faa1a841e2e11d5b9853bdfd0583df}{color}} = \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5aa6acf45f9e85e879c50413b30769006a}{T\+U\+RQ}}
+\begin{DoxyCompactList}\small\item\em 블럭의 색상 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{class_block_aca5d951639f113e2ebd7856209d6b9ab}{Block\+Shape}} \mbox{\hyperlink{class_s_a4dfa7559187c41616256612400bcaab7}{block\+Info\+Vertical}} \{ \{\{0, -\/1\}, \{0, 0\}, \{1, 0\}, \{1, 1\}\} \}
+\begin{DoxyCompactList}\small\item\em 세로로 회전되어있을 경우의 모양 정보 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{class_block_aca5d951639f113e2ebd7856209d6b9ab}{Block\+Shape}} \mbox{\hyperlink{class_s_ac96253e642b4d209abc7ea47aa687999}{block\+Info\+Horizontal}} \{ \{\{-\/1, 1\}, \{0, 1\}, \{0, 0\}, \{1, 0\}\} \}
+\begin{DoxyCompactList}\small\item\em 가로로 회전되어있을 경우의 모양 정보 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+\mbox{\hyperlink{class_s}{S}} 모양 블럭 
+
+tetris\+\_\+block.\+h 파일의 372 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 타입정의 문서화}
+\mbox{\Hypertarget{class_block_aca5d951639f113e2ebd7856209d6b9ab}\label{class_block_aca5d951639f113e2ebd7856209d6b9ab}} 
+\index{S@{S}!Block\+Shape@{Block\+Shape}}
+\index{Block\+Shape@{Block\+Shape}!S@{S}}
+\subsubsection{\texorpdfstring{Block\+Shape}{BlockShape}}
+{\footnotesize\ttfamily typedef std\+::array$<$\mbox{\hyperlink{struct_coord}{Coord}}, 4$>$ \mbox{\hyperlink{class_block_aca5d951639f113e2ebd7856209d6b9ab}{Block\+::\+Block\+Shape}}\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+블럭의 모양 정보를 좌표의 배열로 나타냄. 
+
+
+
+tetris\+\_\+block.\+h 파일의 36 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 열거형 문서화}
+\mbox{\Hypertarget{class_block_ad054b4ac51df79aa910040b2a2fdf7b5}\label{class_block_ad054b4ac51df79aa910040b2a2fdf7b5}} 
+\index{S@{S}!Color@{Color}}
+\index{Color@{Color}!S@{S}}
+\subsubsection{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5}{Block\+::\+Color}}\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+블럭들이 가질 수 있는 색상을 나타내는 enum type 
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+L\+A\+CK@{B\+L\+A\+CK}!S@{S}}\index{S@{S}!B\+L\+A\+CK@{B\+L\+A\+CK}}}\mbox{\Hypertarget{class_block_ad054b4ac51df79aa910040b2a2fdf7b5acd0cdefe1b7ef4fc0c9b47a765ae00ca}\label{class_block_ad054b4ac51df79aa910040b2a2fdf7b5acd0cdefe1b7ef4fc0c9b47a765ae00ca}} 
+B\+L\+A\+CK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+L\+UE@{B\+L\+UE}!S@{S}}\index{S@{S}!B\+L\+UE@{B\+L\+UE}}}\mbox{\Hypertarget{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a770f3d9456df6e3e286c001f0ffc835f}\label{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a770f3d9456df6e3e286c001f0ffc835f}} 
+B\+L\+UE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+R\+E\+EN@{G\+R\+E\+EN}!S@{S}}\index{S@{S}!G\+R\+E\+EN@{G\+R\+E\+EN}}}\mbox{\Hypertarget{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ac7f4e27e7581d2456d7db6b52514800d}\label{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ac7f4e27e7581d2456d7db6b52514800d}} 
+G\+R\+E\+EN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+U\+RQ@{T\+U\+RQ}!S@{S}}\index{S@{S}!T\+U\+RQ@{T\+U\+RQ}}}\mbox{\Hypertarget{class_block_ad054b4ac51df79aa910040b2a2fdf7b5aa6acf45f9e85e879c50413b30769006a}\label{class_block_ad054b4ac51df79aa910040b2a2fdf7b5aa6acf45f9e85e879c50413b30769006a}} 
+T\+U\+RQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+ED@{R\+ED}!S@{S}}\index{S@{S}!R\+ED@{R\+ED}}}\mbox{\Hypertarget{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ac3d067e89682bb3d91db42beb7c68062}\label{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ac3d067e89682bb3d91db42beb7c68062}} 
+R\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+U\+R\+P\+LE@{P\+U\+R\+P\+LE}!S@{S}}\index{S@{S}!P\+U\+R\+P\+LE@{P\+U\+R\+P\+LE}}}\mbox{\Hypertarget{class_block_ad054b4ac51df79aa910040b2a2fdf7b5adf5ec5d70a53f3465e863f43e9118588}\label{class_block_ad054b4ac51df79aa910040b2a2fdf7b5adf5ec5d70a53f3465e863f43e9118588}} 
+P\+U\+R\+P\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Y\+E\+L\+L\+OW@{Y\+E\+L\+L\+OW}!S@{S}}\index{S@{S}!Y\+E\+L\+L\+OW@{Y\+E\+L\+L\+OW}}}\mbox{\Hypertarget{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a7ae21b7c7ed4cd37d641a5119d0b3939}\label{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a7ae21b7c7ed4cd37d641a5119d0b3939}} 
+Y\+E\+L\+L\+OW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+H\+I\+TE@{W\+H\+I\+TE}!S@{S}}\index{S@{S}!W\+H\+I\+TE@{W\+H\+I\+TE}}}\mbox{\Hypertarget{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a37ab7320f3ca5662b117fb110adb1011}\label{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a37ab7320f3ca5662b117fb110adb1011}} 
+W\+H\+I\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+R\+AY@{G\+R\+AY}!S@{S}}\index{S@{S}!G\+R\+AY@{G\+R\+AY}}}\mbox{\Hypertarget{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a1158efe2e537f0b96f9ea590f22ab821}\label{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a1158efe2e537f0b96f9ea590f22ab821}} 
+G\+R\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+A\+L\+E\+B\+L\+UE@{P\+A\+L\+E\+B\+L\+UE}!S@{S}}\index{S@{S}!P\+A\+L\+E\+B\+L\+UE@{P\+A\+L\+E\+B\+L\+UE}}}\mbox{\Hypertarget{class_block_ad054b4ac51df79aa910040b2a2fdf7b5aad861330fd0e7f87dbfbe9ceb49785b3}\label{class_block_ad054b4ac51df79aa910040b2a2fdf7b5aad861330fd0e7f87dbfbe9ceb49785b3}} 
+P\+A\+L\+E\+B\+L\+UE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+A\+L\+E\+G\+R\+E\+EN@{P\+A\+L\+E\+G\+R\+E\+EN}!S@{S}}\index{S@{S}!P\+A\+L\+E\+G\+R\+E\+EN@{P\+A\+L\+E\+G\+R\+E\+EN}}}\mbox{\Hypertarget{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ad7542730815e74f4f9a9df7fec33d3b5}\label{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ad7542730815e74f4f9a9df7fec33d3b5}} 
+P\+A\+L\+E\+G\+R\+E\+EN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+A\+L\+E\+T\+U\+RQ@{P\+A\+L\+E\+T\+U\+RQ}!S@{S}}\index{S@{S}!P\+A\+L\+E\+T\+U\+RQ@{P\+A\+L\+E\+T\+U\+RQ}}}\mbox{\Hypertarget{class_block_ad054b4ac51df79aa910040b2a2fdf7b5acbe4a64f95830b01b5be63b91544d452}\label{class_block_ad054b4ac51df79aa910040b2a2fdf7b5acbe4a64f95830b01b5be63b91544d452}} 
+P\+A\+L\+E\+T\+U\+RQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+A\+L\+E\+R\+ED@{P\+A\+L\+E\+R\+ED}!S@{S}}\index{S@{S}!P\+A\+L\+E\+R\+ED@{P\+A\+L\+E\+R\+ED}}}\mbox{\Hypertarget{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a9a1a56423a8c5b1b51fb11d184ced4cd}\label{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a9a1a56423a8c5b1b51fb11d184ced4cd}} 
+P\+A\+L\+E\+R\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+A\+L\+E\+P\+U\+R\+P\+LE@{P\+A\+L\+E\+P\+U\+R\+P\+LE}!S@{S}}\index{S@{S}!P\+A\+L\+E\+P\+U\+R\+P\+LE@{P\+A\+L\+E\+P\+U\+R\+P\+LE}}}\mbox{\Hypertarget{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ae78300d2e1540cc8a58c4018a2b902a6}\label{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ae78300d2e1540cc8a58c4018a2b902a6}} 
+P\+A\+L\+E\+P\+U\+R\+P\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+A\+L\+E\+Y\+E\+L\+L\+OW@{P\+A\+L\+E\+Y\+E\+L\+L\+OW}!S@{S}}\index{S@{S}!P\+A\+L\+E\+Y\+E\+L\+L\+OW@{P\+A\+L\+E\+Y\+E\+L\+L\+OW}}}\mbox{\Hypertarget{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ac09cccdee282b3a0c1331e2892042bea}\label{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ac09cccdee282b3a0c1331e2892042bea}} 
+P\+A\+L\+E\+Y\+E\+L\+L\+OW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+R\+I\+G\+H\+T\+W\+H\+I\+TE@{B\+R\+I\+G\+H\+T\+W\+H\+I\+TE}!S@{S}}\index{S@{S}!B\+R\+I\+G\+H\+T\+W\+H\+I\+TE@{B\+R\+I\+G\+H\+T\+W\+H\+I\+TE}}}\mbox{\Hypertarget{class_block_ad054b4ac51df79aa910040b2a2fdf7b5af606ae67cebcef81e9ee80f1411d4247}\label{class_block_ad054b4ac51df79aa910040b2a2fdf7b5af606ae67cebcef81e9ee80f1411d4247}} 
+B\+R\+I\+G\+H\+T\+W\+H\+I\+TE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+tetris\+\_\+block.\+h 파일의 31 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+32     \{
+33         \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5acd0cdefe1b7ef4fc0c9b47a765ae00ca}{BLACK}}, \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a770f3d9456df6e3e286c001f0ffc835f}{BLUE}}, \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ac7f4e27e7581d2456d7db6b52514800d}{GREEN}}, \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5aa6acf45f9e85e879c50413b30769006a}{TURQ}}, \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ac3d067e89682bb3d91db42beb7c68062}{RED}}, \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5adf5ec5d70a53f3465e863f43e9118588}{PURPLE}}, \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a7ae21b7c7ed4cd37d641a5119d0b3939}{YELLOW}}, 
+      \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a37ab7320f3ca5662b117fb110adb1011}{WHITE}}, \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a1158efe2e537f0b96f9ea590f22ab821}{GRAY}},
+34         \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5aad861330fd0e7f87dbfbe9ceb49785b3}{PALEBLUE}}, \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ad7542730815e74f4f9a9df7fec33d3b5}{PALEGREEN}}, \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5acbe4a64f95830b01b5be63b91544d452}{PALETURQ}}, \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5a9a1a56423a8c5b1b51fb11d184ced4cd}{PALERED}}, 
+      \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ae78300d2e1540cc8a58c4018a2b902a6}{PALEPURPLE}}, \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5ac09cccdee282b3a0c1331e2892042bea}{PALEYELLOW}}, \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5af606ae67cebcef81e9ee80f1411d4247}{BRIGHTWHITE}}
+35     \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_block_a33a96023993478ad4b52426188454765}\label{class_block_a33a96023993478ad4b52426188454765}} 
+\index{S@{S}!Mode@{Mode}}
+\index{Mode@{Mode}!S@{S}}
+\subsubsection{\texorpdfstring{Mode}{Mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765}{Block\+::\+Mode}}\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+블럭들의 회전 상태를 나타내는 enum type 
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+P\+S\+I\+DE@{U\+P\+S\+I\+DE}!S@{S}}\index{S@{S}!U\+P\+S\+I\+DE@{U\+P\+S\+I\+DE}}}\mbox{\Hypertarget{class_block_a33a96023993478ad4b52426188454765a4529e89ca1c08cc5f81181e355719fad}\label{class_block_a33a96023993478ad4b52426188454765a4529e89ca1c08cc5f81181e355719fad}} 
+U\+P\+S\+I\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+E\+F\+T\+S\+I\+DE@{L\+E\+F\+T\+S\+I\+DE}!S@{S}}\index{S@{S}!L\+E\+F\+T\+S\+I\+DE@{L\+E\+F\+T\+S\+I\+DE}}}\mbox{\Hypertarget{class_block_a33a96023993478ad4b52426188454765a9c855bf91465e7da98901d7900740919}\label{class_block_a33a96023993478ad4b52426188454765a9c855bf91465e7da98901d7900740919}} 
+L\+E\+F\+T\+S\+I\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+O\+W\+N\+S\+I\+DE@{D\+O\+W\+N\+S\+I\+DE}!S@{S}}\index{S@{S}!D\+O\+W\+N\+S\+I\+DE@{D\+O\+W\+N\+S\+I\+DE}}}\mbox{\Hypertarget{class_block_a33a96023993478ad4b52426188454765a73fd4ad0ff8642235ec8549f9290d13b}\label{class_block_a33a96023993478ad4b52426188454765a73fd4ad0ff8642235ec8549f9290d13b}} 
+D\+O\+W\+N\+S\+I\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+I\+G\+H\+T\+S\+I\+DE@{R\+I\+G\+H\+T\+S\+I\+DE}!S@{S}}\index{S@{S}!R\+I\+G\+H\+T\+S\+I\+DE@{R\+I\+G\+H\+T\+S\+I\+DE}}}\mbox{\Hypertarget{class_block_a33a96023993478ad4b52426188454765a005424e665ea0b83edfaf9ddb3ab85a1}\label{class_block_a33a96023993478ad4b52426188454765a005424e665ea0b83edfaf9ddb3ab85a1}} 
+R\+I\+G\+H\+T\+S\+I\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\+E\+R\+T\+I\+C\+AL@{V\+E\+R\+T\+I\+C\+AL}!S@{S}}\index{S@{S}!V\+E\+R\+T\+I\+C\+AL@{V\+E\+R\+T\+I\+C\+AL}}}\mbox{\Hypertarget{class_block_a33a96023993478ad4b52426188454765a76628d7877667ccb2f6e549b89466a4a}\label{class_block_a33a96023993478ad4b52426188454765a76628d7877667ccb2f6e549b89466a4a}} 
+V\+E\+R\+T\+I\+C\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+O\+R\+I\+Z\+O\+N\+T\+AL@{H\+O\+R\+I\+Z\+O\+N\+T\+AL}!S@{S}}\index{S@{S}!H\+O\+R\+I\+Z\+O\+N\+T\+AL@{H\+O\+R\+I\+Z\+O\+N\+T\+AL}}}\mbox{\Hypertarget{class_block_a33a96023993478ad4b52426188454765a883bda1b4a0cb6d25d8b3c3465f0cfef}\label{class_block_a33a96023993478ad4b52426188454765a883bda1b4a0cb6d25d8b3c3465f0cfef}} 
+H\+O\+R\+I\+Z\+O\+N\+T\+AL&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+tetris\+\_\+block.\+h 파일의 28 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+28 \{ \mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a4529e89ca1c08cc5f81181e355719fad}{UPSIDE}}, \mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a9c855bf91465e7da98901d7900740919}{LEFTSIDE}}, \mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a73fd4ad0ff8642235ec8549f9290d13b}{DOWNSIDE}}, \mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a005424e665ea0b83edfaf9ddb3ab85a1}{RIGHTSIDE}}, \mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a76628d7877667ccb2f6e549b89466a4a}{VERTICAL}}, 
+      \mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a883bda1b4a0cb6d25d8b3c3465f0cfef}{HORIZONTAL}} \}; 
+\end{DoxyCode}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_s_a375a5fe3ea61076cbb372c47fcd6eecd}\label{class_s_a375a5fe3ea61076cbb372c47fcd6eecd}} 
+\index{S@{S}!S@{S}}
+\index{S@{S}!S@{S}}
+\subsubsection{\texorpdfstring{S()}{S()}}
+{\footnotesize\ttfamily S\+::S (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+tetris\+\_\+block.\+h 파일의 382 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+382 : \mbox{\hyperlink{class_s_a0a3c150f9afbfe65a5558d947b999776}{mode}}(\mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a883bda1b4a0cb6d25d8b3c3465f0cfef}{HORIZONTAL}}) \{\}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_s_aedd52f4a59ed94415945a54e0a1a477b}\label{class_s_aedd52f4a59ed94415945a54e0a1a477b}} 
+\index{S@{S}!get\+Block\+Info@{get\+Block\+Info}}
+\index{get\+Block\+Info@{get\+Block\+Info}!S@{S}}
+\subsubsection{\texorpdfstring{get\+Block\+Info()}{getBlockInfo()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_block_aca5d951639f113e2ebd7856209d6b9ab}{Block\+Shape}}\& S\+::get\+Block\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+블럭의 현재 회전 상태에 따른 모양 정보 리턴 
+
+
+
+\mbox{\hyperlink{class_block_a2cdc0af223d621add42ac6c37fede329}{Block}}를 구현.
+
+
+
+tetris\+\_\+block.\+h 파일의 394 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+395     \{
+396         \textcolor{keywordflow}{switch} (\mbox{\hyperlink{class_s_a0a3c150f9afbfe65a5558d947b999776}{mode}})
+397         \{
+398         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a76628d7877667ccb2f6e549b89466a4a}{VERTICAL}}:
+399             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_s_a4dfa7559187c41616256612400bcaab7}{blockInfoVertical}};
+400         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a883bda1b4a0cb6d25d8b3c3465f0cfef}{HORIZONTAL}}:
+401             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_s_ac96253e642b4d209abc7ea47aa687999}{blockInfoHorizontal}};
+402         \}
+403     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_s_a6b0a59fa5ae754544d2ad1c250f8dece}\label{class_s_a6b0a59fa5ae754544d2ad1c250f8dece}} 
+\index{S@{S}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!S@{S}}
+\subsubsection{\texorpdfstring{get\+Color()}{getColor()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5}{Color}} S\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+블럭의 색상 정보를 리턴 
+
+
+
+\mbox{\hyperlink{class_block_af10efef648f21dc708e42e149cd6fbcf}{Block}}를 구현.
+
+
+
+tetris\+\_\+block.\+h 파일의 389 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+390     \{
+391         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_s_a21faa1a841e2e11d5b9853bdfd0583df}{color}};
+392     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_s_a48ef6d5f37afe48b14ea11fe00537c5e}\label{class_s_a48ef6d5f37afe48b14ea11fe00537c5e}} 
+\index{S@{S}!get\+Next\+Block\+Info@{get\+Next\+Block\+Info}}
+\index{get\+Next\+Block\+Info@{get\+Next\+Block\+Info}!S@{S}}
+\subsubsection{\texorpdfstring{get\+Next\+Block\+Info()}{getNextBlockInfo()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_block_aca5d951639f113e2ebd7856209d6b9ab}{Block\+Shape}}\& S\+::get\+Next\+Block\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+회전을 1번 더 했을 경우의 모양 정보 리턴 
+
+
+
+\mbox{\hyperlink{class_block_a654da164e0493be9de6f2f2334bc73e8}{Block}}를 구현.
+
+
+
+tetris\+\_\+block.\+h 파일의 405 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+406     \{
+407         \textcolor{keywordflow}{switch} (\mbox{\hyperlink{class_s_a0a3c150f9afbfe65a5558d947b999776}{mode}})
+408         \{
+409         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a76628d7877667ccb2f6e549b89466a4a}{VERTICAL}}:
+410             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_s_ac96253e642b4d209abc7ea47aa687999}{blockInfoHorizontal}};
+411         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a883bda1b4a0cb6d25d8b3c3465f0cfef}{HORIZONTAL}}:
+412             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_s_a4dfa7559187c41616256612400bcaab7}{blockInfoVertical}};
+413         \}
+414     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_s_a9d968087a1d499416a0ce91cce3c8f9f}\label{class_s_a9d968087a1d499416a0ce91cce3c8f9f}} 
+\index{S@{S}!rotate@{rotate}}
+\index{rotate@{rotate}!S@{S}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void S\+::rotate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+회전 상태를 다음 회전 상태로 변경 (한 번에 90도 회전) 
+
+
+
+\mbox{\hyperlink{class_block_af1499ad7e48fb750581b471d0d5bb0e0}{Block}}를 구현.
+
+
+
+tetris\+\_\+block.\+h 파일의 384 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+385     \{
+386         \mbox{\hyperlink{class_s_a0a3c150f9afbfe65a5558d947b999776}{mode}} == \mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a76628d7877667ccb2f6e549b89466a4a}{VERTICAL}} ? \mbox{\hyperlink{class_s_a0a3c150f9afbfe65a5558d947b999776}{mode}} = \mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a883bda1b4a0cb6d25d8b3c3465f0cfef}{HORIZONTAL}} : \mbox{\hyperlink{class_s_a0a3c150f9afbfe65a5558d947b999776}{mode}} = 
+      \mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765a76628d7877667ccb2f6e549b89466a4a}{VERTICAL}};
+387     \}
+\end{DoxyCode}
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_s_ac96253e642b4d209abc7ea47aa687999}\label{class_s_ac96253e642b4d209abc7ea47aa687999}} 
+\index{S@{S}!block\+Info\+Horizontal@{block\+Info\+Horizontal}}
+\index{block\+Info\+Horizontal@{block\+Info\+Horizontal}!S@{S}}
+\subsubsection{\texorpdfstring{block\+Info\+Horizontal}{blockInfoHorizontal}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_block_aca5d951639f113e2ebd7856209d6b9ab}{Block\+::\+Block\+Shape}} S\+::block\+Info\+Horizontal \{ \{\{-\/1, 1\}, \{0, 1\}, \{0, 0\}, \{1, 0\}\} \}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+가로로 회전되어있을 경우의 모양 정보 
+
+
+
+tetris\+\_\+block.\+h 파일의 378 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_s_a4dfa7559187c41616256612400bcaab7}\label{class_s_a4dfa7559187c41616256612400bcaab7}} 
+\index{S@{S}!block\+Info\+Vertical@{block\+Info\+Vertical}}
+\index{block\+Info\+Vertical@{block\+Info\+Vertical}!S@{S}}
+\subsubsection{\texorpdfstring{block\+Info\+Vertical}{blockInfoVertical}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_block_aca5d951639f113e2ebd7856209d6b9ab}{Block\+::\+Block\+Shape}} S\+::block\+Info\+Vertical \{ \{\{0, -\/1\}, \{0, 0\}, \{1, 0\}, \{1, 1\}\} \}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+세로로 회전되어있을 경우의 모양 정보 
+
+
+
+tetris\+\_\+block.\+h 파일의 377 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_s_a21faa1a841e2e11d5b9853bdfd0583df}\label{class_s_a21faa1a841e2e11d5b9853bdfd0583df}} 
+\index{S@{S}!color@{color}}
+\index{color@{color}!S@{S}}
+\subsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5}{Block\+::\+Color}} S\+::color = \mbox{\hyperlink{class_block_ad054b4ac51df79aa910040b2a2fdf7b5aa6acf45f9e85e879c50413b30769006a}{T\+U\+RQ}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+블럭의 색상 
+
+
+
+tetris\+\_\+block.\+h 파일의 376 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_s_a0a3c150f9afbfe65a5558d947b999776}\label{class_s_a0a3c150f9afbfe65a5558d947b999776}} 
+\index{S@{S}!mode@{mode}}
+\index{mode@{mode}!S@{S}}
+\subsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_block_a33a96023993478ad4b52426188454765}{Mode}} S\+::mode\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+회전 상태(가로, 세로) 
+
+
+
+tetris\+\_\+block.\+h 파일의 375 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tetris__block_8h}{tetris\+\_\+block.\+h}}\end{DoxyCompactItemize}

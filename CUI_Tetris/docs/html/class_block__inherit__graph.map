@@ -1,0 +1,9 @@
+<map id="Block" name="Block">
+<area shape="rect" id="node2" href="$class_i.html" title="I 모양 블럭 " alt="" coords="5,204,145,384"/>
+<area shape="rect" id="node3" href="$class_j.html" title="J 모양 블럭 " alt="" coords="169,189,309,399"/>
+<area shape="rect" id="node4" href="$class_l.html" title="L 모양 블럭 " alt="" coords="333,189,473,399"/>
+<area shape="rect" id="node5" href="$class_o.html" title="ㅁ(네모) 모양 블럭 " alt="" coords="497,211,637,377"/>
+<area shape="rect" id="node6" href="$class_s.html" title="S 모양 블럭 " alt="" coords="661,204,801,384"/>
+<area shape="rect" id="node7" href="$class_t.html" title="T 모양 블럭 " alt="" coords="825,189,965,399"/>
+<area shape="rect" id="node8" href="$class_z.html" title="Z 모양 블럭 " alt="" coords="989,204,1129,384"/>
+</map>

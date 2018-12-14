@@ -1,0 +1,6 @@
+<map id="Board::isLeftBlocked" name="Board::isLeftBlocked">
+<area shape="rect" id="node2" href="$class_game.html#a3bd586b9c1bcd71f78bc2c2f7e2fe9e7" title="왼쪽으로 움직일 수 있으면, 현 블럭을 옮기고 새로 그린다. " alt="" coords="196,5,312,32"/>
+<area shape="rect" id="node3" href="$class_game.html#aeb128045605ef167c233da9f993d407d" title="사용자의 조작을 읽어 블럭을 조작한다. " alt="" coords="360,5,507,32"/>
+<area shape="rect" id="node4" href="$class_game.html#aa333825d0bca80e91e53c7e23f053405" title="게임을 실행한다. " alt="" coords="555,5,644,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="사용자에게 게임 실행 여부를 묻고, 실행할 경우 난이도를 설정한다. 아니라면 프로그램을 종료한다..." alt="" coords="692,5,743,32"/>
+</map>

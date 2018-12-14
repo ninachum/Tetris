@@ -1,0 +1,9 @@
+<map id="Game::eraseHandlerContent" name="Game::eraseHandlerContent">
+<area shape="rect" id="node2" href="$class_game.html#a3bd586b9c1bcd71f78bc2c2f7e2fe9e7" title="왼쪽으로 움직일 수 있으면, 현 블럭을 옮기고 새로 그린다. " alt="" coords="245,5,361,32"/>
+<area shape="rect" id="node6" href="$class_game.html#a36ee055aa2c311deea72c38f50814007" title="오른쪽으로 움직일 수 있으면, 현 블럭을 옮기고 새로 그린다. " alt="" coords="241,56,366,83"/>
+<area shape="rect" id="node7" href="$class_game.html#af379862400da53dd8f296f0990c0953f" title="Game::moveDown" alt="" coords="240,157,367,184"/>
+<area shape="rect" id="node8" href="$class_game.html#a8727c9c167265bff376f606d02687c6b" title="현 블럭을 회전시킬 수 있으면 회전시킨다. " alt="" coords="254,107,353,133"/>
+<area shape="rect" id="node3" href="$class_game.html#aeb128045605ef167c233da9f993d407d" title="사용자의 조작을 읽어 블럭을 조작한다. " alt="" coords="415,107,561,133"/>
+<area shape="rect" id="node4" href="$class_game.html#aa333825d0bca80e91e53c7e23f053405" title="게임을 실행한다. " alt="" coords="609,132,699,159"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="사용자에게 게임 실행 여부를 묻고, 실행할 경우 난이도를 설정한다. 아니라면 프로그램을 종료한다..." alt="" coords="747,132,797,159"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Board::isBlocked" name="Board::isBlocked">
+<area shape="rect" id="node2" href="$class_board.html#a5df9c4c18c53b8029e0a080e5e089732" title="Board::isValid" alt="" coords="184,5,287,32"/>
+<area shape="rect" id="node3" href="$class_board.html#a61ff9b1284e5c3e1214a780361ed650b" title="좌표에 해당하는 자리에 이미 블럭이 있는지를 리턴 " alt="" coords="175,56,296,83"/>
+</map>

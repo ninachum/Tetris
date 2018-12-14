@@ -1,0 +1,132 @@
+\hypertarget{struct_coord}{}\section{Coord 구조체 참조}
+\label{struct_coord}\index{Coord@{Coord}}
+
+
+\mbox{\hyperlink{class_board}{Board}} 내의 좌표와 \mbox{\hyperlink{class_block}{Block}} 모양의 좌표 형식 정보 표현  
+
+
+
+
+{\ttfamily \#include $<$tetris\+\_\+block.\+h$>$}
+
+
+
+Coord에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{struct_coord__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_coord_a46e518631fa539ebb8a7f2a5b59fd483}{Coord}} ()=delete
+\item 
+\mbox{\hyperlink{struct_coord_ab01ff8e569cc417d7c669007e12a5fa1}{Coord}} (int xpos, int ypos)
+\item 
+\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{struct_coord_ad564b77330c90986e1586d2d04aad6f9}{operator+}} (const \mbox{\hyperlink{struct_coord}{Coord}} \&operand) const
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}
+\item 
+int \mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}}
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+\mbox{\hyperlink{class_board}{Board}} 내의 좌표와 \mbox{\hyperlink{class_block}{Block}} 모양의 좌표 형식 정보 표현 
+
+\mbox{\hyperlink{class_board}{Board}} 내에서의 좌표를 (열, 행) 순서로 표현한다. \mbox{\hyperlink{class_block}{Block}} 모양의 좌표 형식 정보를 (열, 행) 순서로 표현한다. 
+
+tetris\+\_\+block.\+h 파일의 9 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{struct_coord_a46e518631fa539ebb8a7f2a5b59fd483}\label{struct_coord_a46e518631fa539ebb8a7f2a5b59fd483}} 
+\index{Coord@{Coord}!Coord@{Coord}}
+\index{Coord@{Coord}!Coord@{Coord}}
+\subsubsection{\texorpdfstring{Coord()}{Coord()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Coord\+::\+Coord (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{struct_coord_a46e518631fa539ebb8a7f2a5b59fd483_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_coord_ab01ff8e569cc417d7c669007e12a5fa1}\label{struct_coord_ab01ff8e569cc417d7c669007e12a5fa1}} 
+\index{Coord@{Coord}!Coord@{Coord}}
+\index{Coord@{Coord}!Coord@{Coord}}
+\subsubsection{\texorpdfstring{Coord()}{Coord()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Coord\+::\+Coord (\begin{DoxyParamCaption}\item[{int}]{xpos,  }\item[{int}]{ypos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+tetris\+\_\+block.\+h 파일의 14 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+14 : \mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}(xpos), \mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}}(ypos) \{\}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{struct_coord_ad564b77330c90986e1586d2d04aad6f9}\label{struct_coord_ad564b77330c90986e1586d2d04aad6f9}} 
+\index{Coord@{Coord}!operator+@{operator+}}
+\index{operator+@{operator+}!Coord@{Coord}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} Coord\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_coord}{Coord}} \&}]{operand }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+tetris\+\_\+block.\+h 파일의 15 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+16     \{
+17         \textcolor{keywordflow}{return} \mbox{\hyperlink{struct_coord_a46e518631fa539ebb8a7f2a5b59fd483}{Coord}}(\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}} + operand.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}}, \mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} + operand.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}});
+18     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{struct_coord_ad564b77330c90986e1586d2d04aad6f9_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{struct_coord_a696eaa744360fc791d0e3b331c549dbe}\label{struct_coord_a696eaa744360fc791d0e3b331c549dbe}} 
+\index{Coord@{Coord}!x@{x}}
+\index{x@{x}!Coord@{Coord}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily int Coord\+::x}
+
+
+
+tetris\+\_\+block.\+h 파일의 11 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_coord_a214166cca70cef7dda9201689c3e81ab}\label{struct_coord_a214166cca70cef7dda9201689c3e81ab}} 
+\index{Coord@{Coord}!y@{y}}
+\index{y@{y}!Coord@{Coord}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily int Coord\+::y}
+
+
+
+tetris\+\_\+block.\+h 파일의 12 번째 라인에서 정의되었습니다.
+
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tetris__block_8h}{tetris\+\_\+block.\+h}}\end{DoxyCompactItemize}

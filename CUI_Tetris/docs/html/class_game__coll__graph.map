@@ -1,0 +1,6 @@
+<map id="Game" name="Game">
+<area shape="rect" id="node2" href="$class_board.html" title="블럭이 배치될 보드 판. " alt="" coords="5,204,136,501"/>
+<area shape="rect" id="node3" href="$struct_coord.html" title="Board 내의 좌표와 Block 모양의 좌표 형식 정보 표현 " alt="" coords="118,5,215,127"/>
+<area shape="rect" id="node4" href="$class_block_handler.html" title="Block을 생성하여 Board 내에서 움직이도록 하는 클래스 " alt="" coords="161,285,330,421"/>
+<area shape="rect" id="node5" href="$class_drawer.html" title="화면에 게임을 출력하는 클래스 " alt="" coords="355,219,525,487"/>
+</map>

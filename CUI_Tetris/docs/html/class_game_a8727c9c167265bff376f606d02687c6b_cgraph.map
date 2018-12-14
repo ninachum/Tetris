@@ -1,0 +1,11 @@
+<map id="Game::rotate" name="Game::rotate">
+<area shape="rect" id="node2" href="$class_board.html#a4b84310dd1ac3a08a3180361508a43e3" title="현재 블럭이 회전 불가능한지를 리턴 " alt="" coords="171,19,320,45"/>
+<area shape="rect" id="node4" href="$class_game.html#a7ab3d17dc7bf72f0a59fbb7b17c6ce5a" title="현재 블럭과 다음 블럭을 지우는 함수를 호출하는 함수. " alt="" coords="152,81,339,108"/>
+<area shape="rect" id="node8" href="$class_game.html#aa61075838d60bc5c850b72bc4804b7b8" title="현재 블럭과 다음 블럭을 그리는 함수를 호출하는 함수. " alt="" coords="155,157,336,184"/>
+<area shape="rect" id="node3" href="$class_board.html#a61ff9b1284e5c3e1214a780361ed650b" title="좌표에 해당하는 자리에 이미 블럭이 있는지를 리턴 " alt="" coords="415,5,536,32"/>
+<area shape="rect" id="node5" href="$class_drawer.html#a513de5ba9d65771ed21918a90cd70afa" title="현재 블럭을 지움 " alt="" coords="387,56,564,83"/>
+<area shape="rect" id="node7" href="$class_drawer.html#a3110e80f9256176373f0580788e69037" title="다음 블럭을 지움 " alt="" coords="394,107,557,133"/>
+<area shape="rect" id="node6" href="$class_drawer.html#ac1a96e007c07cab2e36a7c78484ee9a6" title="해당 좌표로 커서를 이동시킴 " alt="" coords="612,132,760,159"/>
+<area shape="rect" id="node9" href="$class_drawer.html#acef9be5772c0a3bdbae4f01d851e60f1" title="현재 블럭을 그림 " alt="" coords="389,157,561,184"/>
+<area shape="rect" id="node10" href="$class_drawer.html#a6d8f74fa5fae96990547abb2521b5432" title="다음 블럭을 그림 " alt="" coords="397,208,554,235"/>
+</map>

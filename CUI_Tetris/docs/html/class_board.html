@@ -1,0 +1,969 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CUI_Tetris: Board 클래스 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CUI_Tetris
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_board.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">클래스</a> &#124;
+<a href="#pub-types">Public 타입</a> &#124;
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="#pri-methods">Private 멤버 함수</a> &#124;
+<a href="#pri-attribs">Private 속성</a> &#124;
+<a href="class_board-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle">
+<div class="title">Board 클래스 참조</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>블럭이 배치될 보드 판.  
+ <a href="class_board.html#details">더 자세히 ...</a></p>
+
+<p><code>#include &lt;<a class="el" href="tetris__board_8h_source.html">tetris_board.h</a>&gt;</code></p>
+<div class="dynheader">
+Board에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board__coll__graph.png" border="0" usemap="#_board_coll__map" alt="Collaboration graph"/></div>
+<map name="_board_coll__map" id="_board_coll__map">
+<area shape="rect" id="node2" href="struct_coord.html" title="Board 내의 좌표와 Block 모양의 좌표 형식 정보 표현 " alt="" coords="22,5,119,127"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+클래스</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_board_1_1cell_info.html">cellInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">보드 내 각 셀에 대한 정보(채워져 있나 여부, 채운 블럭의 색상) 저장.  <a href="struct_board_1_1cell_info.html#details">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 타입</h2></td></tr>
+<tr class="memitem:a84bf794bc185e31e333b78bb003c4bc3"><td class="memItemLeft" align="right" valign="top">typedef std::array&lt; std::array&lt; <a class="el" href="struct_board_1_1cell_info.html">cellInfo</a>, 10 &gt;, 25 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a84bf794bc185e31e333b78bb003c4bc3">BoardType</a></td></tr>
+<tr class="memdesc:a84bf794bc185e31e333b78bb003c4bc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">25 * 10의 <a class="el" href="struct_board_1_1cell_info.html" title="보드 내 각 셀에 대한 정보(채워져 있나 여부, 채운 블럭의 색상) 저장. ">cellInfo</a> 2차원 배열로 보드를 나타냄  <a href="#a84bf794bc185e31e333b78bb003c4bc3">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a84bf794bc185e31e333b78bb003c4bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:a9ee491d4fea680cf69b033374a9fdfcb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a9ee491d4fea680cf69b033374a9fdfcb">Board</a> ()</td></tr>
+<tr class="memdesc:a9ee491d4fea680cf69b033374a9fdfcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">25 * 10 보드를 생성하고, 진입 지점을 설정한다.  <a href="#a9ee491d4fea680cf69b033374a9fdfcb">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a9ee491d4fea680cf69b033374a9fdfcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac96b4da16e8dc266b39772f2da3fd7e2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_board.html#a84bf794bc185e31e333b78bb003c4bc3">BoardType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#ac96b4da16e8dc266b39772f2da3fd7e2">boardStatus</a> () const</td></tr>
+<tr class="memdesc:ac96b4da16e8dc266b39772f2da3fd7e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">보드의 현재 상태를 리턴한다  <a href="#ac96b4da16e8dc266b39772f2da3fd7e2">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:ac96b4da16e8dc266b39772f2da3fd7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31bdad2985e3b4857a383dd2da8e8e27"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a31bdad2985e3b4857a383dd2da8e8e27">getWidth</a> () const</td></tr>
+<tr class="memdesc:a31bdad2985e3b4857a383dd2da8e8e27"><td class="mdescLeft">&#160;</td><td class="mdescRight">보드의 너비를 리턴한다  <a href="#a31bdad2985e3b4857a383dd2da8e8e27">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a31bdad2985e3b4857a383dd2da8e8e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a888725ae3b1177a60a8f77299c1c939a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a888725ae3b1177a60a8f77299c1c939a">getHeight</a> () const</td></tr>
+<tr class="memdesc:a888725ae3b1177a60a8f77299c1c939a"><td class="mdescLeft">&#160;</td><td class="mdescRight">보드의 높이를 리턴한다  <a href="#a888725ae3b1177a60a8f77299c1c939a">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a888725ae3b1177a60a8f77299c1c939a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5545704e21b5f7447eb9ffe014954cb3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a5545704e21b5f7447eb9ffe014954cb3">isLeftBlocked</a> (const <a class="el" href="class_block_handler.html">BlockHandler</a> &amp;handler) const</td></tr>
+<tr class="memdesc:a5545704e21b5f7447eb9ffe014954cb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">현재 블럭의 왼쪽이 막혀 있는 지를 리턴  <a href="#a5545704e21b5f7447eb9ffe014954cb3">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a5545704e21b5f7447eb9ffe014954cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad38cdb8757f58a32b5747e2b7e0be277"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#ad38cdb8757f58a32b5747e2b7e0be277">isRightBlocked</a> (const <a class="el" href="class_block_handler.html">BlockHandler</a> &amp;handler) const</td></tr>
+<tr class="memdesc:ad38cdb8757f58a32b5747e2b7e0be277"><td class="mdescLeft">&#160;</td><td class="mdescRight">현재 블럭의 오른쪽이 막혀 있는 지를 리턴  <a href="#ad38cdb8757f58a32b5747e2b7e0be277">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:ad38cdb8757f58a32b5747e2b7e0be277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad617ae22e46d1a62ed33592b20e00b44"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#ad617ae22e46d1a62ed33592b20e00b44">isDownBlocked</a> (const <a class="el" href="class_block_handler.html">BlockHandler</a> &amp;handler) const</td></tr>
+<tr class="memdesc:ad617ae22e46d1a62ed33592b20e00b44"><td class="mdescLeft">&#160;</td><td class="mdescRight">현재 블럭의 아래가 막혀 있는 지를 리턴  <a href="#ad617ae22e46d1a62ed33592b20e00b44">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:ad617ae22e46d1a62ed33592b20e00b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b84310dd1ac3a08a3180361508a43e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a4b84310dd1ac3a08a3180361508a43e3">isNotRotatable</a> (const <a class="el" href="class_block_handler.html">BlockHandler</a> &amp;handler) const</td></tr>
+<tr class="memdesc:a4b84310dd1ac3a08a3180361508a43e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">현재 블럭이 회전 불가능한지를 리턴  <a href="#a4b84310dd1ac3a08a3180361508a43e3">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a4b84310dd1ac3a08a3180361508a43e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a538ca2c02fbccf3af07ed3c821d9a736"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a538ca2c02fbccf3af07ed3c821d9a736">isGameOver</a> (const <a class="el" href="class_block_handler.html">BlockHandler</a> &amp;handler) const</td></tr>
+<tr class="memdesc:a538ca2c02fbccf3af07ed3c821d9a736"><td class="mdescLeft">&#160;</td><td class="mdescRight">현재 블럭이 보드에 진입 가능한지를 리턴  <a href="#a538ca2c02fbccf3af07ed3c821d9a736">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a538ca2c02fbccf3af07ed3c821d9a736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06e5188ef352fc5c0e3957895cef6a89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a06e5188ef352fc5c0e3957895cef6a89">updateBoard</a> (const <a class="el" href="class_block_handler.html">BlockHandler</a> &amp;handler)</td></tr>
+<tr class="memdesc:a06e5188ef352fc5c0e3957895cef6a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">블럭이 끝에 도달했을 때, 이를 보드에 기록한다. 줄이 꽉찼다면 보드를 새로 고친다.  <a href="#a06e5188ef352fc5c0e3957895cef6a89">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a06e5188ef352fc5c0e3957895cef6a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a902cd3b288be772ba6b7abc6a822afea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_coord.html">Coord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a902cd3b288be772ba6b7abc6a822afea">entryCoord</a> () const</td></tr>
+<tr class="memdesc:a902cd3b288be772ba6b7abc6a822afea"><td class="mdescLeft">&#160;</td><td class="mdescRight">진입 지점을 리턴한다  <a href="#a902cd3b288be772ba6b7abc6a822afea">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a902cd3b288be772ba6b7abc6a822afea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 멤버 함수</h2></td></tr>
+<tr class="memitem:a61ff9b1284e5c3e1214a780361ed650b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b">isBlocked</a> (const <a class="el" href="struct_coord.html">Coord</a> &amp;dest) const</td></tr>
+<tr class="memdesc:a61ff9b1284e5c3e1214a780361ed650b"><td class="mdescLeft">&#160;</td><td class="mdescRight">좌표에 해당하는 자리에 이미 블럭이 있는지를 리턴  <a href="#a61ff9b1284e5c3e1214a780361ed650b">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a61ff9b1284e5c3e1214a780361ed650b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5df9c4c18c53b8029e0a080e5e089732"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a5df9c4c18c53b8029e0a080e5e089732">isValid</a> (const <a class="el" href="struct_coord.html">Coord</a> &amp;dest) const</td></tr>
+<tr class="separator:a5df9c4c18c53b8029e0a080e5e089732"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba0d2a44e1469738220b5ff7dfda6fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a1ba0d2a44e1469738220b5ff7dfda6fc">isBlocked</a> (const <a class="el" href="struct_coord.html">Coord</a> &amp;currPos, const <a class="el" href="class_block.html#aca5d951639f113e2ebd7856209d6b9ab">Block::BlockShape</a> &amp;blockShape) const</td></tr>
+<tr class="memdesc:a1ba0d2a44e1469738220b5ff7dfda6fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">해당하는 자리가 막혀있는지를 리턴  <a href="#a1ba0d2a44e1469738220b5ff7dfda6fc">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a1ba0d2a44e1469738220b5ff7dfda6fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 속성</h2></td></tr>
+<tr class="memitem:a5c5b64d99e3c653c425206d2babf2f97"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a5c5b64d99e3c653c425206d2babf2f97">width</a></td></tr>
+<tr class="memdesc:a5c5b64d99e3c653c425206d2babf2f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">보드의 너비(25)  <a href="#a5c5b64d99e3c653c425206d2babf2f97">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a5c5b64d99e3c653c425206d2babf2f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37b65287f3b416ed31b0f15cfd9b3f7c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a37b65287f3b416ed31b0f15cfd9b3f7c">height</a></td></tr>
+<tr class="memdesc:a37b65287f3b416ed31b0f15cfd9b3f7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">보드의 높이(10)  <a href="#a37b65287f3b416ed31b0f15cfd9b3f7c">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a37b65287f3b416ed31b0f15cfd9b3f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad26aada4f19d2ca0c7bd534e8f466b6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_board.html#a84bf794bc185e31e333b78bb003c4bc3">BoardType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#ad26aada4f19d2ca0c7bd534e8f466b6b">board</a> {}</td></tr>
+<tr class="memdesc:ad26aada4f19d2ca0c7bd534e8f466b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">보드(<a class="el" href="struct_board_1_1cell_info.html" title="보드 내 각 셀에 대한 정보(채워져 있나 여부, 채운 블럭의 색상) 저장. ">cellInfo</a> 2차원 배열)  <a href="#ad26aada4f19d2ca0c7bd534e8f466b6b">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:ad26aada4f19d2ca0c7bd534e8f466b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51d0b870dfe79367034bdda967e63a82"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_coord.html">Coord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a51d0b870dfe79367034bdda967e63a82">entryPoint</a></td></tr>
+<tr class="memdesc:a51d0b870dfe79367034bdda967e63a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">보드 내 블럭의 진입 지점 - width와 height 다음에 선언되어야 한다  <a href="#a51d0b870dfe79367034bdda967e63a82">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a51d0b870dfe79367034bdda967e63a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock"><p>블럭이 배치될 보드 판. </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 타입정의 문서화</h2>
+<a id="a84bf794bc185e31e333b78bb003c4bc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84bf794bc185e31e333b78bb003c4bc3">&#9670;&nbsp;</a></span>BoardType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::array&lt;std::array&lt;<a class="el" href="struct_board_1_1cell_info.html">cellInfo</a>, 10&gt;, 25&gt; <a class="el" href="class_board.html#a84bf794bc185e31e333b78bb003c4bc3">Board::BoardType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>25 * 10의 <a class="el" href="struct_board_1_1cell_info.html" title="보드 내 각 셀에 대한 정보(채워져 있나 여부, 채운 블럭의 색상) 저장. ">cellInfo</a> 2차원 배열로 보드를 나타냄 </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00024">24</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a9ee491d4fea680cf69b033374a9fdfcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ee491d4fea680cf69b033374a9fdfcb">&#9670;&nbsp;</a></span>Board()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Board::Board </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>25 * 10 보드를 생성하고, 진입 지점을 설정한다. </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00067">67</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            : <a class="code" href="class_board.html#a5c5b64d99e3c653c425206d2babf2f97">width</a>(10), <a class="code" href="class_board.html#a37b65287f3b416ed31b0f15cfd9b3f7c">height</a>(25), <a class="code" href="class_board.html#a51d0b870dfe79367034bdda967e63a82">entryPoint</a>(<a class="code" href="class_board.html#a5c5b64d99e3c653c425206d2babf2f97">width</a> / 2, 1)</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        </div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div><div class="ttc" id="class_board_html_a37b65287f3b416ed31b0f15cfd9b3f7c"><div class="ttname"><a href="class_board.html#a37b65287f3b416ed31b0f15cfd9b3f7c">Board::height</a></div><div class="ttdeci">const int height</div><div class="ttdoc">보드의 높이(10) </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00028">tetris_board.h:28</a></div></div>
+<div class="ttc" id="class_board_html_a51d0b870dfe79367034bdda967e63a82"><div class="ttname"><a href="class_board.html#a51d0b870dfe79367034bdda967e63a82">Board::entryPoint</a></div><div class="ttdeci">const Coord entryPoint</div><div class="ttdoc">보드 내 블럭의 진입 지점 - width와 height 다음에 선언되어야 한다 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00030">tetris_board.h:30</a></div></div>
+<div class="ttc" id="class_board_html_a5c5b64d99e3c653c425206d2babf2f97"><div class="ttname"><a href="class_board.html#a5c5b64d99e3c653c425206d2babf2f97">Board::width</a></div><div class="ttdeci">const int width</div><div class="ttdoc">보드의 너비(25) </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00027">tetris_board.h:27</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="ac96b4da16e8dc266b39772f2da3fd7e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac96b4da16e8dc266b39772f2da3fd7e2">&#9670;&nbsp;</a></span>boardStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_board.html#a84bf794bc185e31e333b78bb003c4bc3">BoardType</a>&amp; Board::boardStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>보드의 현재 상태를 리턴한다 </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00073">73</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_board.html#ad26aada4f19d2ca0c7bd534e8f466b6b">board</a>;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div><div class="ttc" id="class_board_html_ad26aada4f19d2ca0c7bd534e8f466b6b"><div class="ttname"><a href="class_board.html#ad26aada4f19d2ca0c7bd534e8f466b6b">Board::board</a></div><div class="ttdeci">BoardType board</div><div class="ttdoc">보드(cellInfo 2차원 배열) </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00029">tetris_board.h:29</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_ac96b4da16e8dc266b39772f2da3fd7e2_icgraph.png" border="0" usemap="#class_board_ac96b4da16e8dc266b39772f2da3fd7e2_icgraph" alt=""/></div>
+<map name="class_board_ac96b4da16e8dc266b39772f2da3fd7e2_icgraph" id="class_board_ac96b4da16e8dc266b39772f2da3fd7e2_icgraph">
+<area shape="rect" id="node2" href="class_drawer.html#af26df40487cb2de033887b5342d94b5a" title="보드를 그림 " alt="" coords="191,5,321,32"/>
+<area shape="rect" id="node7" href="class_drawer.html#ad8b55aff1fbf975536ef3d995d3a4526" title="보드를 지움 " alt="" coords="188,56,324,83"/>
+<area shape="rect" id="node3" href="class_game.html#aa333825d0bca80e91e53c7e23f053405" title="게임을 실행한다. " alt="" coords="741,56,831,83"/>
+<area shape="rect" id="node5" href="class_game.html#af379862400da53dd8f296f0990c0953f" title="Game::moveDown" alt="" coords="372,56,499,83"/>
+<area shape="rect" id="node4" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="사용자에게 게임 실행 여부를 묻고, 실행할 경우 난이도를 설정한다. 아니라면 프로그램을 종료한다..." alt="" coords="879,56,929,83"/>
+<area shape="rect" id="node6" href="class_game.html#aeb128045605ef167c233da9f993d407d" title="사용자의 조작을 읽어 블럭을 조작한다. " alt="" coords="547,107,693,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a902cd3b288be772ba6b7abc6a822afea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a902cd3b288be772ba6b7abc6a822afea">&#9670;&nbsp;</a></span>entryCoord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_coord.html">Coord</a> Board::entryCoord </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>진입 지점을 리턴한다 </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00180">180</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    {</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_board.html#a51d0b870dfe79367034bdda967e63a82">entryPoint</a>;</div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    }</div><div class="ttc" id="class_board_html_a51d0b870dfe79367034bdda967e63a82"><div class="ttname"><a href="class_board.html#a51d0b870dfe79367034bdda967e63a82">Board::entryPoint</a></div><div class="ttdeci">const Coord entryPoint</div><div class="ttdoc">보드 내 블럭의 진입 지점 - width와 height 다음에 선언되어야 한다 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00030">tetris_board.h:30</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a888725ae3b1177a60a8f77299c1c939a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a888725ae3b1177a60a8f77299c1c939a">&#9670;&nbsp;</a></span>getHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Board::getHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>보드의 높이를 리턴한다 </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00085">85</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_board.html#a37b65287f3b416ed31b0f15cfd9b3f7c">height</a>;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div><div class="ttc" id="class_board_html_a37b65287f3b416ed31b0f15cfd9b3f7c"><div class="ttname"><a href="class_board.html#a37b65287f3b416ed31b0f15cfd9b3f7c">Board::height</a></div><div class="ttdeci">const int height</div><div class="ttdoc">보드의 높이(10) </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00028">tetris_board.h:28</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a31bdad2985e3b4857a383dd2da8e8e27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31bdad2985e3b4857a383dd2da8e8e27">&#9670;&nbsp;</a></span>getWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Board::getWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>보드의 너비를 리턴한다 </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00079">79</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_board.html#a5c5b64d99e3c653c425206d2babf2f97">width</a>;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div><div class="ttc" id="class_board_html_a5c5b64d99e3c653c425206d2babf2f97"><div class="ttname"><a href="class_board.html#a5c5b64d99e3c653c425206d2babf2f97">Board::width</a></div><div class="ttdeci">const int width</div><div class="ttdoc">보드의 너비(25) </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00027">tetris_board.h:27</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a61ff9b1284e5c3e1214a780361ed650b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61ff9b1284e5c3e1214a780361ed650b">&#9670;&nbsp;</a></span>isBlocked() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Board::isBlocked </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_coord.html">Coord</a> &amp;&#160;</td>
+          <td class="paramname"><em>dest</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>좌표에 해당하는 자리에 이미 블럭이 있는지를 리턴 </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">// 좌표와 배열 subscript 사이에는 반대 관계가 존재함에 유의</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_board.html#ad26aada4f19d2ca0c7bd534e8f466b6b">board</a>[dest.<a class="code" href="struct_coord.html#a214166cca70cef7dda9201689c3e81ab">y</a>][dest.<a class="code" href="struct_coord.html#a696eaa744360fc791d0e3b331c549dbe">x</a>].occupied == <span class="keyword">true</span>;  </div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div><div class="ttc" id="class_board_html_ad26aada4f19d2ca0c7bd534e8f466b6b"><div class="ttname"><a href="class_board.html#ad26aada4f19d2ca0c7bd534e8f466b6b">Board::board</a></div><div class="ttdeci">BoardType board</div><div class="ttdoc">보드(cellInfo 2차원 배열) </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00029">tetris_board.h:29</a></div></div>
+<div class="ttc" id="struct_coord_html_a214166cca70cef7dda9201689c3e81ab"><div class="ttname"><a href="struct_coord.html#a214166cca70cef7dda9201689c3e81ab">Coord::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="tetris__block_8h_source.html#l00012">tetris_block.h:12</a></div></div>
+<div class="ttc" id="struct_coord_html_a696eaa744360fc791d0e3b331c549dbe"><div class="ttname"><a href="struct_coord.html#a696eaa744360fc791d0e3b331c549dbe">Coord::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="tetris__block_8h_source.html#l00011">tetris_block.h:11</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_a61ff9b1284e5c3e1214a780361ed650b_icgraph.png" border="0" usemap="#class_board_a61ff9b1284e5c3e1214a780361ed650b_icgraph" alt=""/></div>
+<map name="class_board_a61ff9b1284e5c3e1214a780361ed650b_icgraph" id="class_board_a61ff9b1284e5c3e1214a780361ed650b_icgraph">
+<area shape="rect" id="node2" href="class_board.html#a1ba0d2a44e1469738220b5ff7dfda6fc" title="해당하는 자리가 막혀있는지를 리턴 " alt="" coords="191,5,312,32"/>
+<area shape="rect" id="node3" href="class_board.html#a5545704e21b5f7447eb9ffe014954cb3" title="현재 블럭의 왼쪽이 막혀 있는 지를 리턴 " alt="" coords="180,56,323,83"/>
+<area shape="rect" id="node8" href="class_board.html#ad38cdb8757f58a32b5747e2b7e0be277" title="현재 블럭의 오른쪽이 막혀 있는 지를 리턴 " alt="" coords="176,107,327,133"/>
+<area shape="rect" id="node10" href="class_board.html#ad617ae22e46d1a62ed33592b20e00b44" title="현재 블럭의 아래가 막혀 있는 지를 리턴 " alt="" coords="175,208,328,235"/>
+<area shape="rect" id="node12" href="class_board.html#a4b84310dd1ac3a08a3180361508a43e3" title="현재 블럭이 회전 불가능한지를 리턴 " alt="" coords="177,157,326,184"/>
+<area shape="rect" id="node14" href="class_board.html#a538ca2c02fbccf3af07ed3c821d9a736" title="현재 블럭이 보드에 진입 가능한지를 리턴 " alt="" coords="184,259,319,285"/>
+<area shape="rect" id="node4" href="class_game.html#a3bd586b9c1bcd71f78bc2c2f7e2fe9e7" title="왼쪽으로 움직일 수 있으면, 현 블럭을 옮기고 새로 그린다. " alt="" coords="381,56,497,83"/>
+<area shape="rect" id="node5" href="class_game.html#aeb128045605ef167c233da9f993d407d" title="사용자의 조작을 읽어 블럭을 조작한다. " alt="" coords="551,157,697,184"/>
+<area shape="rect" id="node6" href="class_game.html#aa333825d0bca80e91e53c7e23f053405" title="게임을 실행한다. " alt="" coords="745,208,835,235"/>
+<area shape="rect" id="node7" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="사용자에게 게임 실행 여부를 묻고, 실행할 경우 난이도를 설정한다. 아니라면 프로그램을 종료한다..." alt="" coords="883,208,933,235"/>
+<area shape="rect" id="node9" href="class_game.html#a36ee055aa2c311deea72c38f50814007" title="오른쪽으로 움직일 수 있으면, 현 블럭을 옮기고 새로 그린다. " alt="" coords="377,107,502,133"/>
+<area shape="rect" id="node11" href="class_game.html#af379862400da53dd8f296f0990c0953f" title="Game::moveDown" alt="" coords="376,208,503,235"/>
+<area shape="rect" id="node13" href="class_game.html#a8727c9c167265bff376f606d02687c6b" title="현 블럭을 회전시킬 수 있으면 회전시킨다. " alt="" coords="390,157,489,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1ba0d2a44e1469738220b5ff7dfda6fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba0d2a44e1469738220b5ff7dfda6fc">&#9670;&nbsp;</a></span>isBlocked() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Board::isBlocked </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_coord.html">Coord</a> &amp;&#160;</td>
+          <td class="paramname"><em>currPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_block.html#aca5d951639f113e2ebd7856209d6b9ab">Block::BlockShape</a> &amp;&#160;</td>
+          <td class="paramname"><em>blockShape</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>해당하는 자리가 막혀있는지를 리턴 </p>
+<p>현 위치와 현재 회전 상태를 읽어, 블럭의 자리에 다른 블럭이 막혀있는지를 리턴 </p><dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currPos</td><td>: 현재 좌표 </td></tr>
+    <tr><td class="paramname">blockShape</td><td>: 현재 회전 상태에 따른 블럭 모양 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00050">50</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; x : blockShape)</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <a class="code" href="struct_coord.html">Coord</a> temp = currPos + x;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="comment">// 좌우 순서 중요(순서 변경 시 array out of bound 예외 발생)</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="class_board.html#a5df9c4c18c53b8029e0a080e5e089732">isValid</a>(temp) || <a class="code" href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b">isBlocked</a>(temp))</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div><div class="ttc" id="struct_coord_html"><div class="ttname"><a href="struct_coord.html">Coord</a></div><div class="ttdoc">Board 내의 좌표와 Block 모양의 좌표 형식 정보 표현 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__block_8h_source.html#l00009">tetris_block.h:9</a></div></div>
+<div class="ttc" id="class_board_html_a61ff9b1284e5c3e1214a780361ed650b"><div class="ttname"><a href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b">Board::isBlocked</a></div><div class="ttdeci">bool isBlocked(const Coord &amp;dest) const</div><div class="ttdoc">좌표에 해당하는 자리에 이미 블럭이 있는지를 리턴 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00033">tetris_board.h:33</a></div></div>
+<div class="ttc" id="class_board_html_a5df9c4c18c53b8029e0a080e5e089732"><div class="ttname"><a href="class_board.html#a5df9c4c18c53b8029e0a080e5e089732">Board::isValid</a></div><div class="ttdeci">bool isValid(const Coord &amp;dest) const</div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00039">tetris_board.h:39</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_a1ba0d2a44e1469738220b5ff7dfda6fc_cgraph.png" border="0" usemap="#class_board_a1ba0d2a44e1469738220b5ff7dfda6fc_cgraph" alt=""/></div>
+<map name="class_board_a1ba0d2a44e1469738220b5ff7dfda6fc_cgraph" id="class_board_a1ba0d2a44e1469738220b5ff7dfda6fc_cgraph">
+<area shape="rect" id="node2" href="class_board.html#a5df9c4c18c53b8029e0a080e5e089732" title="Board::isValid" alt="" coords="184,5,287,32"/>
+<area shape="rect" id="node3" href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b" title="좌표에 해당하는 자리에 이미 블럭이 있는지를 리턴 " alt="" coords="175,56,296,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad617ae22e46d1a62ed33592b20e00b44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad617ae22e46d1a62ed33592b20e00b44">&#9670;&nbsp;</a></span>isDownBlocked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Board::isDownBlocked </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_block_handler.html">BlockHandler</a> &amp;&#160;</td>
+          <td class="paramname"><em>handler</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>현재 블럭의 아래가 막혀 있는 지를 리턴 </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00105">105</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="struct_coord.html">Coord</a> temp(handler.<a class="code" href="class_block_handler.html#a11bd634fdc179446f9c6751e2394999e">currPos</a>.<a class="code" href="struct_coord.html#a696eaa744360fc791d0e3b331c549dbe">x</a>, handler.<a class="code" href="class_block_handler.html#a11bd634fdc179446f9c6751e2394999e">currPos</a>.<a class="code" href="struct_coord.html#a214166cca70cef7dda9201689c3e81ab">y</a> + 1);</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b">isBlocked</a>(temp, handler.<a class="code" href="class_block_handler.html#ab57212ded2552ab5559d278c8538c454">blk</a>-&gt;getBlockInfo());</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div><div class="ttc" id="struct_coord_html"><div class="ttname"><a href="struct_coord.html">Coord</a></div><div class="ttdoc">Board 내의 좌표와 Block 모양의 좌표 형식 정보 표현 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__block_8h_source.html#l00009">tetris_block.h:9</a></div></div>
+<div class="ttc" id="class_board_html_a61ff9b1284e5c3e1214a780361ed650b"><div class="ttname"><a href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b">Board::isBlocked</a></div><div class="ttdeci">bool isBlocked(const Coord &amp;dest) const</div><div class="ttdoc">좌표에 해당하는 자리에 이미 블럭이 있는지를 리턴 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00033">tetris_board.h:33</a></div></div>
+<div class="ttc" id="struct_coord_html_a214166cca70cef7dda9201689c3e81ab"><div class="ttname"><a href="struct_coord.html#a214166cca70cef7dda9201689c3e81ab">Coord::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="tetris__block_8h_source.html#l00012">tetris_block.h:12</a></div></div>
+<div class="ttc" id="class_block_handler_html_a11bd634fdc179446f9c6751e2394999e"><div class="ttname"><a href="class_block_handler.html#a11bd634fdc179446f9c6751e2394999e">BlockHandler::currPos</a></div><div class="ttdeci">Coord currPos</div><div class="ttdoc">Block의 Board 내 현재 위치 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__blockhandler_8h_source.html#l00051">tetris_blockhandler.h:51</a></div></div>
+<div class="ttc" id="struct_coord_html_a696eaa744360fc791d0e3b331c549dbe"><div class="ttname"><a href="struct_coord.html#a696eaa744360fc791d0e3b331c549dbe">Coord::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="tetris__block_8h_source.html#l00011">tetris_block.h:11</a></div></div>
+<div class="ttc" id="class_block_handler_html_ab57212ded2552ab5559d278c8538c454"><div class="ttname"><a href="class_block_handler.html#ab57212ded2552ab5559d278c8538c454">BlockHandler::blk</a></div><div class="ttdeci">std::unique_ptr&lt; Block &gt; blk</div><div class="ttdoc">현재 블럭 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__blockhandler_8h_source.html#l00052">tetris_blockhandler.h:52</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_ad617ae22e46d1a62ed33592b20e00b44_cgraph.png" border="0" usemap="#class_board_ad617ae22e46d1a62ed33592b20e00b44_cgraph" alt=""/></div>
+<map name="class_board_ad617ae22e46d1a62ed33592b20e00b44_cgraph" id="class_board_ad617ae22e46d1a62ed33592b20e00b44_cgraph">
+<area shape="rect" id="node2" href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b" title="좌표에 해당하는 자리에 이미 블럭이 있는지를 리턴 " alt="" coords="207,5,328,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_ad617ae22e46d1a62ed33592b20e00b44_icgraph.png" border="0" usemap="#class_board_ad617ae22e46d1a62ed33592b20e00b44_icgraph" alt=""/></div>
+<map name="class_board_ad617ae22e46d1a62ed33592b20e00b44_icgraph" id="class_board_ad617ae22e46d1a62ed33592b20e00b44_icgraph">
+<area shape="rect" id="node2" href="class_game.html#af379862400da53dd8f296f0990c0953f" title="Game::moveDown" alt="" coords="207,31,333,57"/>
+<area shape="rect" id="node3" href="class_game.html#aeb128045605ef167c233da9f993d407d" title="사용자의 조작을 읽어 블럭을 조작한다. " alt="" coords="381,5,528,32"/>
+<area shape="rect" id="node4" href="class_game.html#aa333825d0bca80e91e53c7e23f053405" title="게임을 실행한다. " alt="" coords="576,31,665,57"/>
+<area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="사용자에게 게임 실행 여부를 묻고, 실행할 경우 난이도를 설정한다. 아니라면 프로그램을 종료한다..." alt="" coords="713,31,764,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a538ca2c02fbccf3af07ed3c821d9a736"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a538ca2c02fbccf3af07ed3c821d9a736">&#9670;&nbsp;</a></span>isGameOver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Board::isGameOver </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_block_handler.html">BlockHandler</a> &amp;&#160;</td>
+          <td class="paramname"><em>handler</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>현재 블럭이 보드에 진입 가능한지를 리턴 </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00118">118</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b">isBlocked</a>(<a class="code" href="class_board.html#a51d0b870dfe79367034bdda967e63a82">entryPoint</a>, handler.<a class="code" href="class_block_handler.html#ab57212ded2552ab5559d278c8538c454">blk</a>-&gt;getBlockInfo());</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div><div class="ttc" id="class_board_html_a51d0b870dfe79367034bdda967e63a82"><div class="ttname"><a href="class_board.html#a51d0b870dfe79367034bdda967e63a82">Board::entryPoint</a></div><div class="ttdeci">const Coord entryPoint</div><div class="ttdoc">보드 내 블럭의 진입 지점 - width와 height 다음에 선언되어야 한다 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00030">tetris_board.h:30</a></div></div>
+<div class="ttc" id="class_board_html_a61ff9b1284e5c3e1214a780361ed650b"><div class="ttname"><a href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b">Board::isBlocked</a></div><div class="ttdeci">bool isBlocked(const Coord &amp;dest) const</div><div class="ttdoc">좌표에 해당하는 자리에 이미 블럭이 있는지를 리턴 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00033">tetris_board.h:33</a></div></div>
+<div class="ttc" id="class_block_handler_html_ab57212ded2552ab5559d278c8538c454"><div class="ttname"><a href="class_block_handler.html#ab57212ded2552ab5559d278c8538c454">BlockHandler::blk</a></div><div class="ttdeci">std::unique_ptr&lt; Block &gt; blk</div><div class="ttdoc">현재 블럭 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__blockhandler_8h_source.html#l00052">tetris_blockhandler.h:52</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_a538ca2c02fbccf3af07ed3c821d9a736_cgraph.png" border="0" usemap="#class_board_a538ca2c02fbccf3af07ed3c821d9a736_cgraph" alt=""/></div>
+<map name="class_board_a538ca2c02fbccf3af07ed3c821d9a736_cgraph" id="class_board_a538ca2c02fbccf3af07ed3c821d9a736_cgraph">
+<area shape="rect" id="node2" href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b" title="좌표에 해당하는 자리에 이미 블럭이 있는지를 리턴 " alt="" coords="188,5,309,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_a538ca2c02fbccf3af07ed3c821d9a736_icgraph.png" border="0" usemap="#class_board_a538ca2c02fbccf3af07ed3c821d9a736_icgraph" alt=""/></div>
+<map name="class_board_a538ca2c02fbccf3af07ed3c821d9a736_icgraph" id="class_board_a538ca2c02fbccf3af07ed3c821d9a736_icgraph">
+<area shape="rect" id="node2" href="class_game.html#aa333825d0bca80e91e53c7e23f053405" title="게임을 실행한다. " alt="" coords="557,31,647,57"/>
+<area shape="rect" id="node4" href="class_game.html#af379862400da53dd8f296f0990c0953f" title="Game::moveDown" alt="" coords="188,31,315,57"/>
+<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="사용자에게 게임 실행 여부를 묻고, 실행할 경우 난이도를 설정한다. 아니라면 프로그램을 종료한다..." alt="" coords="695,31,745,57"/>
+<area shape="rect" id="node5" href="class_game.html#aeb128045605ef167c233da9f993d407d" title="사용자의 조작을 읽어 블럭을 조작한다. " alt="" coords="363,81,509,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5545704e21b5f7447eb9ffe014954cb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5545704e21b5f7447eb9ffe014954cb3">&#9670;&nbsp;</a></span>isLeftBlocked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Board::isLeftBlocked </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_block_handler.html">BlockHandler</a> &amp;&#160;</td>
+          <td class="paramname"><em>handler</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>현재 블럭의 왼쪽이 막혀 있는 지를 리턴 </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00091">91</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="struct_coord.html">Coord</a> temp(handler.<a class="code" href="class_block_handler.html#a11bd634fdc179446f9c6751e2394999e">currPos</a>.<a class="code" href="struct_coord.html#a696eaa744360fc791d0e3b331c549dbe">x</a> - 1, handler.<a class="code" href="class_block_handler.html#a11bd634fdc179446f9c6751e2394999e">currPos</a>.<a class="code" href="struct_coord.html#a214166cca70cef7dda9201689c3e81ab">y</a>); <span class="comment">// 현 위치를 왼쪽으로 1칸 옮긴 임시 위치 생성</span></div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b">isBlocked</a>(temp, handler.<a class="code" href="class_block_handler.html#ab57212ded2552ab5559d278c8538c454">blk</a>-&gt;getBlockInfo());  <span class="comment">// 임시 위치가 막혀 있는지를 리턴</span></div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div><div class="ttc" id="struct_coord_html"><div class="ttname"><a href="struct_coord.html">Coord</a></div><div class="ttdoc">Board 내의 좌표와 Block 모양의 좌표 형식 정보 표현 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__block_8h_source.html#l00009">tetris_block.h:9</a></div></div>
+<div class="ttc" id="class_board_html_a61ff9b1284e5c3e1214a780361ed650b"><div class="ttname"><a href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b">Board::isBlocked</a></div><div class="ttdeci">bool isBlocked(const Coord &amp;dest) const</div><div class="ttdoc">좌표에 해당하는 자리에 이미 블럭이 있는지를 리턴 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00033">tetris_board.h:33</a></div></div>
+<div class="ttc" id="struct_coord_html_a214166cca70cef7dda9201689c3e81ab"><div class="ttname"><a href="struct_coord.html#a214166cca70cef7dda9201689c3e81ab">Coord::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="tetris__block_8h_source.html#l00012">tetris_block.h:12</a></div></div>
+<div class="ttc" id="class_block_handler_html_a11bd634fdc179446f9c6751e2394999e"><div class="ttname"><a href="class_block_handler.html#a11bd634fdc179446f9c6751e2394999e">BlockHandler::currPos</a></div><div class="ttdeci">Coord currPos</div><div class="ttdoc">Block의 Board 내 현재 위치 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__blockhandler_8h_source.html#l00051">tetris_blockhandler.h:51</a></div></div>
+<div class="ttc" id="struct_coord_html_a696eaa744360fc791d0e3b331c549dbe"><div class="ttname"><a href="struct_coord.html#a696eaa744360fc791d0e3b331c549dbe">Coord::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="tetris__block_8h_source.html#l00011">tetris_block.h:11</a></div></div>
+<div class="ttc" id="class_block_handler_html_ab57212ded2552ab5559d278c8538c454"><div class="ttname"><a href="class_block_handler.html#ab57212ded2552ab5559d278c8538c454">BlockHandler::blk</a></div><div class="ttdeci">std::unique_ptr&lt; Block &gt; blk</div><div class="ttdoc">현재 블럭 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__blockhandler_8h_source.html#l00052">tetris_blockhandler.h:52</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_a5545704e21b5f7447eb9ffe014954cb3_cgraph.png" border="0" usemap="#class_board_a5545704e21b5f7447eb9ffe014954cb3_cgraph" alt=""/></div>
+<map name="class_board_a5545704e21b5f7447eb9ffe014954cb3_cgraph" id="class_board_a5545704e21b5f7447eb9ffe014954cb3_cgraph">
+<area shape="rect" id="node2" href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b" title="좌표에 해당하는 자리에 이미 블럭이 있는지를 리턴 " alt="" coords="196,5,317,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_a5545704e21b5f7447eb9ffe014954cb3_icgraph.png" border="0" usemap="#class_board_a5545704e21b5f7447eb9ffe014954cb3_icgraph" alt=""/></div>
+<map name="class_board_a5545704e21b5f7447eb9ffe014954cb3_icgraph" id="class_board_a5545704e21b5f7447eb9ffe014954cb3_icgraph">
+<area shape="rect" id="node2" href="class_game.html#a3bd586b9c1bcd71f78bc2c2f7e2fe9e7" title="왼쪽으로 움직일 수 있으면, 현 블럭을 옮기고 새로 그린다. " alt="" coords="196,5,312,32"/>
+<area shape="rect" id="node3" href="class_game.html#aeb128045605ef167c233da9f993d407d" title="사용자의 조작을 읽어 블럭을 조작한다. " alt="" coords="360,5,507,32"/>
+<area shape="rect" id="node4" href="class_game.html#aa333825d0bca80e91e53c7e23f053405" title="게임을 실행한다. " alt="" coords="555,5,644,32"/>
+<area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="사용자에게 게임 실행 여부를 묻고, 실행할 경우 난이도를 설정한다. 아니라면 프로그램을 종료한다..." alt="" coords="692,5,743,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4b84310dd1ac3a08a3180361508a43e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b84310dd1ac3a08a3180361508a43e3">&#9670;&nbsp;</a></span>isNotRotatable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Board::isNotRotatable </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_block_handler.html">BlockHandler</a> &amp;&#160;</td>
+          <td class="paramname"><em>handler</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>현재 블럭이 회전 불가능한지를 리턴 </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00112">112</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    {</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b">isBlocked</a>(handler.<a class="code" href="class_block_handler.html#a11bd634fdc179446f9c6751e2394999e">currPos</a>, handler.<a class="code" href="class_block_handler.html#ab57212ded2552ab5559d278c8538c454">blk</a>-&gt;getNextBlockInfo()); <span class="comment">// 현재 블럭을 회전했을 경우 막히는지를 리턴</span></div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div><div class="ttc" id="class_board_html_a61ff9b1284e5c3e1214a780361ed650b"><div class="ttname"><a href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b">Board::isBlocked</a></div><div class="ttdeci">bool isBlocked(const Coord &amp;dest) const</div><div class="ttdoc">좌표에 해당하는 자리에 이미 블럭이 있는지를 리턴 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00033">tetris_board.h:33</a></div></div>
+<div class="ttc" id="class_block_handler_html_a11bd634fdc179446f9c6751e2394999e"><div class="ttname"><a href="class_block_handler.html#a11bd634fdc179446f9c6751e2394999e">BlockHandler::currPos</a></div><div class="ttdeci">Coord currPos</div><div class="ttdoc">Block의 Board 내 현재 위치 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__blockhandler_8h_source.html#l00051">tetris_blockhandler.h:51</a></div></div>
+<div class="ttc" id="class_block_handler_html_ab57212ded2552ab5559d278c8538c454"><div class="ttname"><a href="class_block_handler.html#ab57212ded2552ab5559d278c8538c454">BlockHandler::blk</a></div><div class="ttdeci">std::unique_ptr&lt; Block &gt; blk</div><div class="ttdoc">현재 블럭 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__blockhandler_8h_source.html#l00052">tetris_blockhandler.h:52</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_a4b84310dd1ac3a08a3180361508a43e3_cgraph.png" border="0" usemap="#class_board_a4b84310dd1ac3a08a3180361508a43e3_cgraph" alt=""/></div>
+<map name="class_board_a4b84310dd1ac3a08a3180361508a43e3_cgraph" id="class_board_a4b84310dd1ac3a08a3180361508a43e3_cgraph">
+<area shape="rect" id="node2" href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b" title="좌표에 해당하는 자리에 이미 블럭이 있는지를 리턴 " alt="" coords="203,5,324,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_a4b84310dd1ac3a08a3180361508a43e3_icgraph.png" border="0" usemap="#class_board_a4b84310dd1ac3a08a3180361508a43e3_icgraph" alt=""/></div>
+<map name="class_board_a4b84310dd1ac3a08a3180361508a43e3_icgraph" id="class_board_a4b84310dd1ac3a08a3180361508a43e3_icgraph">
+<area shape="rect" id="node2" href="class_game.html#a8727c9c167265bff376f606d02687c6b" title="현 블럭을 회전시킬 수 있으면 회전시킨다. " alt="" coords="203,5,301,32"/>
+<area shape="rect" id="node3" href="class_game.html#aeb128045605ef167c233da9f993d407d" title="사용자의 조작을 읽어 블럭을 조작한다. " alt="" coords="349,5,496,32"/>
+<area shape="rect" id="node4" href="class_game.html#aa333825d0bca80e91e53c7e23f053405" title="게임을 실행한다. " alt="" coords="544,5,633,32"/>
+<area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="사용자에게 게임 실행 여부를 묻고, 실행할 경우 난이도를 설정한다. 아니라면 프로그램을 종료한다..." alt="" coords="681,5,732,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad38cdb8757f58a32b5747e2b7e0be277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad38cdb8757f58a32b5747e2b7e0be277">&#9670;&nbsp;</a></span>isRightBlocked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Board::isRightBlocked </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_block_handler.html">BlockHandler</a> &amp;&#160;</td>
+          <td class="paramname"><em>handler</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>현재 블럭의 오른쪽이 막혀 있는 지를 리턴 </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00098">98</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="struct_coord.html">Coord</a> temp(handler.<a class="code" href="class_block_handler.html#a11bd634fdc179446f9c6751e2394999e">currPos</a>.<a class="code" href="struct_coord.html#a696eaa744360fc791d0e3b331c549dbe">x</a> + 1, handler.<a class="code" href="class_block_handler.html#a11bd634fdc179446f9c6751e2394999e">currPos</a>.<a class="code" href="struct_coord.html#a214166cca70cef7dda9201689c3e81ab">y</a>);</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b">isBlocked</a>(temp, handler.<a class="code" href="class_block_handler.html#ab57212ded2552ab5559d278c8538c454">blk</a>-&gt;getBlockInfo());</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div><div class="ttc" id="struct_coord_html"><div class="ttname"><a href="struct_coord.html">Coord</a></div><div class="ttdoc">Board 내의 좌표와 Block 모양의 좌표 형식 정보 표현 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__block_8h_source.html#l00009">tetris_block.h:9</a></div></div>
+<div class="ttc" id="class_board_html_a61ff9b1284e5c3e1214a780361ed650b"><div class="ttname"><a href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b">Board::isBlocked</a></div><div class="ttdeci">bool isBlocked(const Coord &amp;dest) const</div><div class="ttdoc">좌표에 해당하는 자리에 이미 블럭이 있는지를 리턴 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00033">tetris_board.h:33</a></div></div>
+<div class="ttc" id="struct_coord_html_a214166cca70cef7dda9201689c3e81ab"><div class="ttname"><a href="struct_coord.html#a214166cca70cef7dda9201689c3e81ab">Coord::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="tetris__block_8h_source.html#l00012">tetris_block.h:12</a></div></div>
+<div class="ttc" id="class_block_handler_html_a11bd634fdc179446f9c6751e2394999e"><div class="ttname"><a href="class_block_handler.html#a11bd634fdc179446f9c6751e2394999e">BlockHandler::currPos</a></div><div class="ttdeci">Coord currPos</div><div class="ttdoc">Block의 Board 내 현재 위치 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__blockhandler_8h_source.html#l00051">tetris_blockhandler.h:51</a></div></div>
+<div class="ttc" id="struct_coord_html_a696eaa744360fc791d0e3b331c549dbe"><div class="ttname"><a href="struct_coord.html#a696eaa744360fc791d0e3b331c549dbe">Coord::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="tetris__block_8h_source.html#l00011">tetris_block.h:11</a></div></div>
+<div class="ttc" id="class_block_handler_html_ab57212ded2552ab5559d278c8538c454"><div class="ttname"><a href="class_block_handler.html#ab57212ded2552ab5559d278c8538c454">BlockHandler::blk</a></div><div class="ttdeci">std::unique_ptr&lt; Block &gt; blk</div><div class="ttdoc">현재 블럭 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__blockhandler_8h_source.html#l00052">tetris_blockhandler.h:52</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_ad38cdb8757f58a32b5747e2b7e0be277_cgraph.png" border="0" usemap="#class_board_ad38cdb8757f58a32b5747e2b7e0be277_cgraph" alt=""/></div>
+<map name="class_board_ad38cdb8757f58a32b5747e2b7e0be277_cgraph" id="class_board_ad38cdb8757f58a32b5747e2b7e0be277_cgraph">
+<area shape="rect" id="node2" href="class_board.html#a61ff9b1284e5c3e1214a780361ed650b" title="좌표에 해당하는 자리에 이미 블럭이 있는지를 리턴 " alt="" coords="204,5,325,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_ad38cdb8757f58a32b5747e2b7e0be277_icgraph.png" border="0" usemap="#class_board_ad38cdb8757f58a32b5747e2b7e0be277_icgraph" alt=""/></div>
+<map name="class_board_ad38cdb8757f58a32b5747e2b7e0be277_icgraph" id="class_board_ad38cdb8757f58a32b5747e2b7e0be277_icgraph">
+<area shape="rect" id="node2" href="class_game.html#a36ee055aa2c311deea72c38f50814007" title="오른쪽으로 움직일 수 있으면, 현 블럭을 옮기고 새로 그린다. " alt="" coords="204,5,329,32"/>
+<area shape="rect" id="node3" href="class_game.html#aeb128045605ef167c233da9f993d407d" title="사용자의 조작을 읽어 블럭을 조작한다. " alt="" coords="377,5,524,32"/>
+<area shape="rect" id="node4" href="class_game.html#aa333825d0bca80e91e53c7e23f053405" title="게임을 실행한다. " alt="" coords="572,5,661,32"/>
+<area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="사용자에게 게임 실행 여부를 묻고, 실행할 경우 난이도를 설정한다. 아니라면 프로그램을 종료한다..." alt="" coords="709,5,760,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5df9c4c18c53b8029e0a080e5e089732"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5df9c4c18c53b8029e0a080e5e089732">&#9670;&nbsp;</a></span>isValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Board::isValid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_coord.html">Coord</a> &amp;&#160;</td>
+          <td class="paramname"><em>dest</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00039">39</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> !(dest.<a class="code" href="struct_coord.html#a696eaa744360fc791d0e3b331c549dbe">x</a> &lt; 0 || dest.<a class="code" href="struct_coord.html#a696eaa744360fc791d0e3b331c549dbe">x</a> &gt;= <a class="code" href="class_board.html#a5c5b64d99e3c653c425206d2babf2f97">width</a> || dest.<a class="code" href="struct_coord.html#a214166cca70cef7dda9201689c3e81ab">y</a> &lt; 0 || dest.<a class="code" href="struct_coord.html#a214166cca70cef7dda9201689c3e81ab">y</a> &gt;= <a class="code" href="class_board.html#a37b65287f3b416ed31b0f15cfd9b3f7c">height</a>);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div><div class="ttc" id="class_board_html_a37b65287f3b416ed31b0f15cfd9b3f7c"><div class="ttname"><a href="class_board.html#a37b65287f3b416ed31b0f15cfd9b3f7c">Board::height</a></div><div class="ttdeci">const int height</div><div class="ttdoc">보드의 높이(10) </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00028">tetris_board.h:28</a></div></div>
+<div class="ttc" id="struct_coord_html_a214166cca70cef7dda9201689c3e81ab"><div class="ttname"><a href="struct_coord.html#a214166cca70cef7dda9201689c3e81ab">Coord::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="tetris__block_8h_source.html#l00012">tetris_block.h:12</a></div></div>
+<div class="ttc" id="struct_coord_html_a696eaa744360fc791d0e3b331c549dbe"><div class="ttname"><a href="struct_coord.html#a696eaa744360fc791d0e3b331c549dbe">Coord::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="tetris__block_8h_source.html#l00011">tetris_block.h:11</a></div></div>
+<div class="ttc" id="class_board_html_a5c5b64d99e3c653c425206d2babf2f97"><div class="ttname"><a href="class_board.html#a5c5b64d99e3c653c425206d2babf2f97">Board::width</a></div><div class="ttdeci">const int width</div><div class="ttdoc">보드의 너비(25) </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00027">tetris_board.h:27</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_a5df9c4c18c53b8029e0a080e5e089732_icgraph.png" border="0" usemap="#class_board_a5df9c4c18c53b8029e0a080e5e089732_icgraph" alt=""/></div>
+<map name="class_board_a5df9c4c18c53b8029e0a080e5e089732_icgraph" id="class_board_a5df9c4c18c53b8029e0a080e5e089732_icgraph">
+<area shape="rect" id="node2" href="class_board.html#a1ba0d2a44e1469738220b5ff7dfda6fc" title="해당하는 자리가 막혀있는지를 리턴 " alt="" coords="156,5,277,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a06e5188ef352fc5c0e3957895cef6a89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06e5188ef352fc5c0e3957895cef6a89">&#9670;&nbsp;</a></span>updateBoard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Board::updateBoard </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_block_handler.html">BlockHandler</a> &amp;&#160;</td>
+          <td class="paramname"><em>handler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>블럭이 끝에 도달했을 때, 이를 보드에 기록한다. 줄이 꽉찼다면 보드를 새로 고친다. </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00124">124</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    {</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="comment">// 현재 블럭의 정보를 보드에 반영한다.</span></div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="class_block.html#ad054b4ac51df79aa910040b2a2fdf7b5">Block::Color</a> currentBlockColor = handler.<a class="code" href="class_block_handler.html#ab57212ded2552ab5559d278c8538c454">blk</a>-&gt;getColor();</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; blkInfo : handler.<a class="code" href="class_block_handler.html#ab57212ded2552ab5559d278c8538c454">blk</a>-&gt;getBlockInfo())</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        {</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="comment">// 좌표와 배열 subscript 사이에는 반대 관계가 존재함에 유의</span></div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <a class="code" href="class_board.html#ad26aada4f19d2ca0c7bd534e8f466b6b">board</a>[handler.<a class="code" href="class_block_handler.html#a11bd634fdc179446f9c6751e2394999e">currPos</a>.<a class="code" href="struct_coord.html#a214166cca70cef7dda9201689c3e81ab">y</a> + blkInfo.y][handler.<a class="code" href="class_block_handler.html#a11bd634fdc179446f9c6751e2394999e">currPos</a>.<a class="code" href="struct_coord.html#a696eaa744360fc791d0e3b331c549dbe">x</a> + blkInfo.x].occupied = <span class="keyword">true</span>;</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <a class="code" href="class_board.html#ad26aada4f19d2ca0c7bd534e8f466b6b">board</a>[handler.<a class="code" href="class_block_handler.html#a11bd634fdc179446f9c6751e2394999e">currPos</a>.<a class="code" href="struct_coord.html#a214166cca70cef7dda9201689c3e81ab">y</a> + blkInfo.y][handler.<a class="code" href="class_block_handler.html#a11bd634fdc179446f9c6751e2394999e">currPos</a>.<a class="code" href="struct_coord.html#a696eaa744360fc791d0e3b331c549dbe">x</a> + blkInfo.x].color = currentBlockColor;</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        }</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="comment">// 꽉찬 줄이 있는지 검사한다.</span></div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        std::vector&lt;bool&gt; lineChecker;</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordtype">int</span> count;</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordtype">bool</span> refreshFlag = <span class="keyword">false</span>;</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="comment">// 보드의 위에서부터 아래로 꽉찬 줄을 검사한다.</span></div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = <a class="code" href="class_board.html#a37b65287f3b416ed31b0f15cfd9b3f7c">height</a> - 1; i &gt;= 0; --i)</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        {</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            count = 0;</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="comment">// 이번 줄의 찬 자리를 센다.</span></div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="class_board.html#a5c5b64d99e3c653c425206d2babf2f97">width</a>; ++j)</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            {</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_board.html#ad26aada4f19d2ca0c7bd534e8f466b6b">board</a>[i][j].occupied == <span class="keyword">true</span>)</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                    ++count;</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                <span class="keywordflow">else</span></div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            }</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="comment">// 줄이 꽉찼다면 false, 반대라면 true를 push한다.</span></div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordflow">if</span> (count == <a class="code" href="class_board.html#a5c5b64d99e3c653c425206d2babf2f97">width</a>)</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            {</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                lineChecker.push_back(<span class="keyword">false</span>);</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                refreshFlag = <span class="keyword">true</span>;</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            }</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">else</span></div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                lineChecker.push_back(<span class="keyword">true</span>);</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        }</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="comment">// 만약 꽉찬 줄이 하나라도 있다면, 보드를 새로 고친다.</span></div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">if</span> (refreshFlag == <span class="keyword">true</span>)</div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        {</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="comment">// 새 보드를 생성하여 기존 보드로부터 정보를 받되, 꽉 찬 줄은 스킵한다.</span></div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <a class="code" href="class_board.html#a84bf794bc185e31e333b78bb003c4bc3">BoardType</a> newBoard {};</div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordtype">int</span> j = lineChecker.size() - 1;</div><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = lineChecker.size() - 1; i &gt;= 0; --i)</div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                <span class="keywordflow">if</span> (lineChecker[lineChecker.size() - 1 - i] == <span class="keyword">true</span>)</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                {</div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; <a class="code" href="class_board.html#a5c5b64d99e3c653c425206d2babf2f97">width</a>; ++k)</div><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                        newBoard[j][k] = <a class="code" href="class_board.html#ad26aada4f19d2ca0c7bd534e8f466b6b">board</a>[i][k];</div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                    --j;</div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                }</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <a class="code" href="class_board.html#ad26aada4f19d2ca0c7bd534e8f466b6b">board</a> = newBoard;</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        }</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div><div class="ttc" id="class_board_html_ad26aada4f19d2ca0c7bd534e8f466b6b"><div class="ttname"><a href="class_board.html#ad26aada4f19d2ca0c7bd534e8f466b6b">Board::board</a></div><div class="ttdeci">BoardType board</div><div class="ttdoc">보드(cellInfo 2차원 배열) </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00029">tetris_board.h:29</a></div></div>
+<div class="ttc" id="class_board_html_a37b65287f3b416ed31b0f15cfd9b3f7c"><div class="ttname"><a href="class_board.html#a37b65287f3b416ed31b0f15cfd9b3f7c">Board::height</a></div><div class="ttdeci">const int height</div><div class="ttdoc">보드의 높이(10) </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00028">tetris_board.h:28</a></div></div>
+<div class="ttc" id="class_block_html_ad054b4ac51df79aa910040b2a2fdf7b5"><div class="ttname"><a href="class_block.html#ad054b4ac51df79aa910040b2a2fdf7b5">Block::Color</a></div><div class="ttdeci">Color</div><div class="ttdoc">블럭들이 가질 수 있는 색상을 나타내는 enum type </div><div class="ttdef"><b>Definition:</b> <a href="tetris__block_8h_source.html#l00031">tetris_block.h:31</a></div></div>
+<div class="ttc" id="class_board_html_a84bf794bc185e31e333b78bb003c4bc3"><div class="ttname"><a href="class_board.html#a84bf794bc185e31e333b78bb003c4bc3">Board::BoardType</a></div><div class="ttdeci">std::array&lt; std::array&lt; cellInfo, 10 &gt;, 25 &gt; BoardType</div><div class="ttdoc">25 * 10의 cellInfo 2차원 배열로 보드를 나타냄 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00024">tetris_board.h:24</a></div></div>
+<div class="ttc" id="struct_coord_html_a214166cca70cef7dda9201689c3e81ab"><div class="ttname"><a href="struct_coord.html#a214166cca70cef7dda9201689c3e81ab">Coord::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="tetris__block_8h_source.html#l00012">tetris_block.h:12</a></div></div>
+<div class="ttc" id="class_block_handler_html_a11bd634fdc179446f9c6751e2394999e"><div class="ttname"><a href="class_block_handler.html#a11bd634fdc179446f9c6751e2394999e">BlockHandler::currPos</a></div><div class="ttdeci">Coord currPos</div><div class="ttdoc">Block의 Board 내 현재 위치 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__blockhandler_8h_source.html#l00051">tetris_blockhandler.h:51</a></div></div>
+<div class="ttc" id="struct_coord_html_a696eaa744360fc791d0e3b331c549dbe"><div class="ttname"><a href="struct_coord.html#a696eaa744360fc791d0e3b331c549dbe">Coord::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="tetris__block_8h_source.html#l00011">tetris_block.h:11</a></div></div>
+<div class="ttc" id="class_block_handler_html_ab57212ded2552ab5559d278c8538c454"><div class="ttname"><a href="class_block_handler.html#ab57212ded2552ab5559d278c8538c454">BlockHandler::blk</a></div><div class="ttdeci">std::unique_ptr&lt; Block &gt; blk</div><div class="ttdoc">현재 블럭 </div><div class="ttdef"><b>Definition:</b> <a href="tetris__blockhandler_8h_source.html#l00052">tetris_blockhandler.h:52</a></div></div>
+<div class="ttc" id="class_board_html_a5c5b64d99e3c653c425206d2babf2f97"><div class="ttname"><a href="class_board.html#a5c5b64d99e3c653c425206d2babf2f97">Board::width</a></div><div class="ttdeci">const int width</div><div class="ttdoc">보드의 너비(25) </div><div class="ttdef"><b>Definition:</b> <a href="tetris__board_8h_source.html#l00027">tetris_board.h:27</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_a06e5188ef352fc5c0e3957895cef6a89_icgraph.png" border="0" usemap="#class_board_a06e5188ef352fc5c0e3957895cef6a89_icgraph" alt=""/></div>
+<map name="class_board_a06e5188ef352fc5c0e3957895cef6a89_icgraph" id="class_board_a06e5188ef352fc5c0e3957895cef6a89_icgraph">
+<area shape="rect" id="node2" href="class_game.html#af379862400da53dd8f296f0990c0953f" title="Game::moveDown" alt="" coords="191,31,317,57"/>
+<area shape="rect" id="node3" href="class_game.html#aeb128045605ef167c233da9f993d407d" title="사용자의 조작을 읽어 블럭을 조작한다. " alt="" coords="365,5,512,32"/>
+<area shape="rect" id="node4" href="class_game.html#aa333825d0bca80e91e53c7e23f053405" title="게임을 실행한다. " alt="" coords="560,31,649,57"/>
+<area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="사용자에게 게임 실행 여부를 묻고, 실행할 경우 난이도를 설정한다. 아니라면 프로그램을 종료한다..." alt="" coords="697,31,748,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="ad26aada4f19d2ca0c7bd534e8f466b6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad26aada4f19d2ca0c7bd534e8f466b6b">&#9670;&nbsp;</a></span>board</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_board.html#a84bf794bc185e31e333b78bb003c4bc3">BoardType</a> Board::board {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>보드(<a class="el" href="struct_board_1_1cell_info.html" title="보드 내 각 셀에 대한 정보(채워져 있나 여부, 채운 블럭의 색상) 저장. ">cellInfo</a> 2차원 배열) </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00029">29</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a51d0b870dfe79367034bdda967e63a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51d0b870dfe79367034bdda967e63a82">&#9670;&nbsp;</a></span>entryPoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_coord.html">Coord</a> Board::entryPoint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>보드 내 블럭의 진입 지점 - width와 height 다음에 선언되어야 한다 </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00030">30</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a37b65287f3b416ed31b0f15cfd9b3f7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37b65287f3b416ed31b0f15cfd9b3f7c">&#9670;&nbsp;</a></span>height</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Board::height</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>보드의 높이(10) </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00028">28</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a5c5b64d99e3c653c425206d2babf2f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c5b64d99e3c653c425206d2babf2f97">&#9670;&nbsp;</a></span>width</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Board::width</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>보드의 너비(25) </p>
+
+<p class="definition"><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a> 파일의 <a class="el" href="tetris__board_8h_source.html#l00027">27</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li><a class="el" href="tetris__board_8h_source.html">tetris_board.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_board.html">Board</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<map id="Game::eraseHandlerContent" name="Game::eraseHandlerContent">
+<area shape="rect" id="node2" href="$class_drawer.html#a513de5ba9d65771ed21918a90cd70afa" title="현재 블럭을 지움 " alt="" coords="240,5,417,32"/>
+<area shape="rect" id="node4" href="$class_drawer.html#a3110e80f9256176373f0580788e69037" title="다음 블럭을 지움 " alt="" coords="247,56,410,83"/>
+<area shape="rect" id="node3" href="$class_drawer.html#ac1a96e007c07cab2e36a7c78484ee9a6" title="해당 좌표로 커서를 이동시킴 " alt="" coords="465,31,613,57"/>
+</map>

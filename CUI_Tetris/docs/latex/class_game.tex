@@ -1,0 +1,543 @@
+\hypertarget{class_game}{}\section{Game 클래스 참조}
+\label{class_game}\index{Game@{Game}}
+
+
+\mbox{\hyperlink{class_board}{Board}}, \mbox{\hyperlink{class_block_handler}{Block\+Handler}}, Drawer를 이용하여 게임을 시작, 진행, 종료한다.  
+
+
+
+
+{\ttfamily \#include $<$tetris\+\_\+game.\+h$>$}
+
+
+
+Game에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_a46a5ded6c47eeab8c880ebf0d6abd0cf}{Game}} (int level)
+\begin{DoxyCompactList}\small\item\em 게임의 초기 설정(블럭, 진입 위치, 난이도, 난수 시드 초기화)을 진행한다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_aa333825d0bca80e91e53c7e23f053405}{play}} ()
+\begin{DoxyCompactList}\small\item\em 게임을 실행한다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a3bd586b9c1bcd71f78bc2c2f7e2fe9e7}{move\+Left}} ()
+\begin{DoxyCompactList}\small\item\em 왼쪽으로 움직일 수 있으면, 현 블럭을 옮기고 새로 그린다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a36ee055aa2c311deea72c38f50814007}{move\+Right}} ()
+\begin{DoxyCompactList}\small\item\em 오른쪽으로 움직일 수 있으면, 현 블럭을 옮기고 새로 그린다. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_af379862400da53dd8f296f0990c0953f}{move\+Down}} ()
+\item 
+void \mbox{\hyperlink{class_game_a8727c9c167265bff376f606d02687c6b}{rotate}} ()
+\begin{DoxyCompactList}\small\item\em 현 블럭을 회전시킬 수 있으면 회전시킨다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_a00e70c3fa536c8b76e92aaca66c5ccc2}{press\+Space\+To\+Continue}} () const
+\begin{DoxyCompactList}\small\item\em 사용자가 스페이스를 누를 때까지 대기한다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_aeb128045605ef167c233da9f993d407d}{read\+User\+Move}} ()
+\begin{DoxyCompactList}\small\item\em 사용자의 조작을 읽어 블럭을 조작한다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_aa61075838d60bc5c850b72bc4804b7b8}{draw\+Handler\+Content}} () const
+\begin{DoxyCompactList}\small\item\em 현재 블럭과 다음 블럭을 그리는 함수를 호출하는 함수. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a7ab3d17dc7bf72f0a59fbb7b17c6ce5a}{erase\+Handler\+Content}} () const
+\begin{DoxyCompactList}\small\item\em 현재 블럭과 다음 블럭을 지우는 함수를 호출하는 함수. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_drawer}{Drawer}} \mbox{\hyperlink{class_game_a045e1468514c0c0d51e968364e0678ad}{drawer}}
+\item 
+\mbox{\hyperlink{class_board}{Board}} \mbox{\hyperlink{class_game_af5bc546b0c766ecf2f7e008f750832ed}{board}}
+\item 
+\mbox{\hyperlink{class_block_handler}{Block\+Handler}} \mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}}
+\item 
+int \mbox{\hyperlink{class_game_a536a6390d16f05d402928bd731e06ef3}{difficulty}}
+\begin{DoxyCompactList}\small\item\em 난이도를 나타내는 변수. 1 -\/ 5의 범위를 가지며, 1 높아질 수록 블럭이 100ms 빨리 내려간다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+\mbox{\hyperlink{class_board}{Board}}, \mbox{\hyperlink{class_block_handler}{Block\+Handler}}, Drawer를 이용하여 게임을 시작, 진행, 종료한다. 
+
+tetris\+\_\+game.\+h 파일의 19 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_game_a46a5ded6c47eeab8c880ebf0d6abd0cf}\label{class_game_a46a5ded6c47eeab8c880ebf0d6abd0cf}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\subsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}\item[{int}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+게임의 초기 설정(블럭, 진입 위치, 난이도, 난수 시드 초기화)을 진행한다. 
+
+
+
+tetris\+\_\+game.\+h 파일의 76 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+76                     : \mbox{\hyperlink{class_game_af5bc546b0c766ecf2f7e008f750832ed}{board}}(), \mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}}(\mbox{\hyperlink{class_game_af5bc546b0c766ecf2f7e008f750832ed}{board}}.\mbox{\hyperlink{class_board_a902cd3b288be772ba6b7abc6a822afea}{entryCoord}}()), 
+      \mbox{\hyperlink{class_game_a536a6390d16f05d402928bd731e06ef3}{difficulty}}(level - 1)
+77     \{
+78         std::srand(std::time(NULL));
+79     \}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_game_aa61075838d60bc5c850b72bc4804b7b8}\label{class_game_aa61075838d60bc5c850b72bc4804b7b8}} 
+\index{Game@{Game}!draw\+Handler\+Content@{draw\+Handler\+Content}}
+\index{draw\+Handler\+Content@{draw\+Handler\+Content}!Game@{Game}}
+\subsubsection{\texorpdfstring{draw\+Handler\+Content()}{drawHandlerContent()}}
+{\footnotesize\ttfamily void Game\+::draw\+Handler\+Content (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+현재 블럭과 다음 블럭을 그리는 함수를 호출하는 함수. 
+
+
+
+tetris\+\_\+game.\+h 파일의 60 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+61     \{
+62         \mbox{\hyperlink{class_game_a045e1468514c0c0d51e968364e0678ad}{drawer}}.\mbox{\hyperlink{class_drawer_acef9be5772c0a3bdbae4f01d851e60f1}{drawCurrentBlock}}(\mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}});
+63         \mbox{\hyperlink{class_game_a045e1468514c0c0d51e968364e0678ad}{drawer}}.\mbox{\hyperlink{class_drawer_a6d8f74fa5fae96990547abb2521b5432}{drawNextBlock}}(\mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}});
+64     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_aa61075838d60bc5c850b72bc4804b7b8_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_aa61075838d60bc5c850b72bc4804b7b8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a7ab3d17dc7bf72f0a59fbb7b17c6ce5a}\label{class_game_a7ab3d17dc7bf72f0a59fbb7b17c6ce5a}} 
+\index{Game@{Game}!erase\+Handler\+Content@{erase\+Handler\+Content}}
+\index{erase\+Handler\+Content@{erase\+Handler\+Content}!Game@{Game}}
+\subsubsection{\texorpdfstring{erase\+Handler\+Content()}{eraseHandlerContent()}}
+{\footnotesize\ttfamily void Game\+::erase\+Handler\+Content (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+현재 블럭과 다음 블럭을 지우는 함수를 호출하는 함수. 
+
+
+
+tetris\+\_\+game.\+h 파일의 67 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+68     \{
+69         \mbox{\hyperlink{class_game_a045e1468514c0c0d51e968364e0678ad}{drawer}}.\mbox{\hyperlink{class_drawer_a513de5ba9d65771ed21918a90cd70afa}{eraseCurrentBlock}}(\mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}});
+70         \mbox{\hyperlink{class_game_a045e1468514c0c0d51e968364e0678ad}{drawer}}.\mbox{\hyperlink{class_drawer_a3110e80f9256176373f0580788e69037}{eraseNextBlock}}(\mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}});
+71     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a7ab3d17dc7bf72f0a59fbb7b17c6ce5a_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a7ab3d17dc7bf72f0a59fbb7b17c6ce5a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_af379862400da53dd8f296f0990c0953f}\label{class_game_af379862400da53dd8f296f0990c0953f}} 
+\index{Game@{Game}!move\+Down@{move\+Down}}
+\index{move\+Down@{move\+Down}!Game@{Game}}
+\subsubsection{\texorpdfstring{move\+Down()}{moveDown()}}
+{\footnotesize\ttfamily bool Game\+::move\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+아래로 움직일 수 있으면, 현 블럭을 옮기고 새로 그린다. 아니라면, 보드와 현 블럭, 그리고 다음 블럭을 화면에서 지우고, 새로 고쳐 다시 그린다. \begin{DoxyReturn}{반환값}
+아래로 움직였는 지 여부 
+\end{DoxyReturn}
+
+
+tetris\+\_\+game.\+h 파일의 139 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+140     \{
+141         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_game_af5bc546b0c766ecf2f7e008f750832ed}{board}}.\mbox{\hyperlink{class_board_ad617ae22e46d1a62ed33592b20e00b44}{isDownBlocked}}(\mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}}))
+142         \{
+143             \mbox{\hyperlink{class_game_a7ab3d17dc7bf72f0a59fbb7b17c6ce5a}{eraseHandlerContent}}();
+144             \mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}}.\mbox{\hyperlink{class_block_handler_a11bd634fdc179446f9c6751e2394999e}{currPos}}.\mbox{\hyperlink{struct_coord_a214166cca70cef7dda9201689c3e81ab}{y}} += 1;
+145             \mbox{\hyperlink{class_game_aa61075838d60bc5c850b72bc4804b7b8}{drawHandlerContent}}();
+146             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+147         \}
+148         \textcolor{keywordflow}{else}
+149         \{
+150             \mbox{\hyperlink{class_game_a045e1468514c0c0d51e968364e0678ad}{drawer}}.\mbox{\hyperlink{class_drawer_ad8b55aff1fbf975536ef3d995d3a4526}{eraseBoard}}(\mbox{\hyperlink{class_game_af5bc546b0c766ecf2f7e008f750832ed}{board}});
+151             \mbox{\hyperlink{class_game_a7ab3d17dc7bf72f0a59fbb7b17c6ce5a}{eraseHandlerContent}}();
+152 
+153             \mbox{\hyperlink{class_game_af5bc546b0c766ecf2f7e008f750832ed}{board}}.\mbox{\hyperlink{class_board_a06e5188ef352fc5c0e3957895cef6a89}{updateBoard}}(\mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}});  
+154             \mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}}.\mbox{\hyperlink{class_block_handler_a170a8b83b6df72530675d722a17fb8c4}{resetHandler}}();
+155 
+156             \textcolor{comment}{// 게임 오버라면 보드, 현 블럭, 그리고 다음 블럭을 다시 그리는 과정은 생략한다.}
+157             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_game_af5bc546b0c766ecf2f7e008f750832ed}{board}}.\mbox{\hyperlink{class_board_a538ca2c02fbccf3af07ed3c821d9a736}{isGameOver}}(\mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}}))
+158             \{
+159                 \mbox{\hyperlink{class_game_a045e1468514c0c0d51e968364e0678ad}{drawer}}.\mbox{\hyperlink{class_drawer_af26df40487cb2de033887b5342d94b5a}{drawBoard}}(\mbox{\hyperlink{class_game_af5bc546b0c766ecf2f7e008f750832ed}{board}});
+160                 \mbox{\hyperlink{class_game_aa61075838d60bc5c850b72bc4804b7b8}{drawHandlerContent}}();
+161             \}
+162             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+163         \}
+164     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_af379862400da53dd8f296f0990c0953f_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_af379862400da53dd8f296f0990c0953f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a3bd586b9c1bcd71f78bc2c2f7e2fe9e7}\label{class_game_a3bd586b9c1bcd71f78bc2c2f7e2fe9e7}} 
+\index{Game@{Game}!move\+Left@{move\+Left}}
+\index{move\+Left@{move\+Left}!Game@{Game}}
+\subsubsection{\texorpdfstring{move\+Left()}{moveLeft()}}
+{\footnotesize\ttfamily void Game\+::move\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+왼쪽으로 움직일 수 있으면, 현 블럭을 옮기고 새로 그린다. 
+
+
+
+tetris\+\_\+game.\+h 파일의 112 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+113     \{
+114         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_game_af5bc546b0c766ecf2f7e008f750832ed}{board}}.\mbox{\hyperlink{class_board_a5545704e21b5f7447eb9ffe014954cb3}{isLeftBlocked}}(\mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}}))
+115         \{
+116             \mbox{\hyperlink{class_game_a7ab3d17dc7bf72f0a59fbb7b17c6ce5a}{eraseHandlerContent}}();
+117             \mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}}.\mbox{\hyperlink{class_block_handler_a11bd634fdc179446f9c6751e2394999e}{currPos}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}} -= 1;
+118             \mbox{\hyperlink{class_game_aa61075838d60bc5c850b72bc4804b7b8}{drawHandlerContent}}();
+119         \}
+120     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a3bd586b9c1bcd71f78bc2c2f7e2fe9e7_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a3bd586b9c1bcd71f78bc2c2f7e2fe9e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a36ee055aa2c311deea72c38f50814007}\label{class_game_a36ee055aa2c311deea72c38f50814007}} 
+\index{Game@{Game}!move\+Right@{move\+Right}}
+\index{move\+Right@{move\+Right}!Game@{Game}}
+\subsubsection{\texorpdfstring{move\+Right()}{moveRight()}}
+{\footnotesize\ttfamily void Game\+::move\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+오른쪽으로 움직일 수 있으면, 현 블럭을 옮기고 새로 그린다. 
+
+
+
+tetris\+\_\+game.\+h 파일의 123 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+124     \{
+125         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_game_af5bc546b0c766ecf2f7e008f750832ed}{board}}.\mbox{\hyperlink{class_board_ad38cdb8757f58a32b5747e2b7e0be277}{isRightBlocked}}(\mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}}))
+126         \{
+127             \mbox{\hyperlink{class_game_a7ab3d17dc7bf72f0a59fbb7b17c6ce5a}{eraseHandlerContent}}();
+128             \mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}}.\mbox{\hyperlink{class_block_handler_a11bd634fdc179446f9c6751e2394999e}{currPos}}.\mbox{\hyperlink{struct_coord_a696eaa744360fc791d0e3b331c549dbe}{x}} += 1;
+129             \mbox{\hyperlink{class_game_aa61075838d60bc5c850b72bc4804b7b8}{drawHandlerContent}}();
+130         \}
+131     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a36ee055aa2c311deea72c38f50814007_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a36ee055aa2c311deea72c38f50814007_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_aa333825d0bca80e91e53c7e23f053405}\label{class_game_aa333825d0bca80e91e53c7e23f053405}} 
+\index{Game@{Game}!play@{play}}
+\index{play@{play}!Game@{Game}}
+\subsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Game\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+게임을 실행한다. 
+
+
+
+tetris\+\_\+game.\+h 파일의 82 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+83     \{
+84         \mbox{\hyperlink{class_game_a045e1468514c0c0d51e968364e0678ad}{drawer}}.\mbox{\hyperlink{class_drawer_ad87ca95db3cafee6f005e297e2c6d4de}{drawTitleScreen}}(); 
+85         \mbox{\hyperlink{class_game_a00e70c3fa536c8b76e92aaca66c5ccc2}{pressSpaceToContinue}}();
+86         \mbox{\hyperlink{class_game_a045e1468514c0c0d51e968364e0678ad}{drawer}}.\mbox{\hyperlink{class_drawer_a9f5e10f6175710be253244d6f80ebcf7}{drawGameFrame}}();
+87         \mbox{\hyperlink{class_game_a045e1468514c0c0d51e968364e0678ad}{drawer}}.\mbox{\hyperlink{class_drawer_af26df40487cb2de033887b5342d94b5a}{drawBoard}}(\mbox{\hyperlink{class_game_af5bc546b0c766ecf2f7e008f750832ed}{board}});
+88         \mbox{\hyperlink{class_game_aa61075838d60bc5c850b72bc4804b7b8}{drawHandlerContent}}();
+89         \textcolor{keywordtype}{int} countForAutoDown = 0;                   \textcolor{comment}{// 100ms에 1 증가하는 카운트. 블럭 자동 내림에 사용}
+90         \textcolor{keywordtype}{int} countLimit = \mbox{\hyperlink{tetris__game_8h_aca9e87e8e4e22a94653954e21e81c939}{normalLevel}} - \mbox{\hyperlink{class_game_a536a6390d16f05d402928bd731e06ef3}{difficulty}};  \textcolor{comment}{// 난이도가 1에서 오를 수록 1000ms에서 100ms씩
+       감소하는 카운트 제한}
+91         \textcolor{keywordflow}{while} (\textcolor{keyword}{true})
+92         \{
+93             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_game_af5bc546b0c766ecf2f7e008f750832ed}{board}}.\mbox{\hyperlink{class_board_a538ca2c02fbccf3af07ed3c821d9a736}{isGameOver}}(\mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}}))
+94             \{
+95                 Sleep(75);
+96                 \mbox{\hyperlink{class_game_a045e1468514c0c0d51e968364e0678ad}{drawer}}.\mbox{\hyperlink{class_drawer_a57ec099eb46c93f20d9221a2244dd9a7}{drawGameOverScreen}}(\mbox{\hyperlink{class_game_af5bc546b0c766ecf2f7e008f750832ed}{board}});
+97                 \textcolor{keywordflow}{break};
+98             \}
+99             
+100             ++countForAutoDown;
+101             \textcolor{keywordflow}{if} (countForAutoDown == countLimit) \textcolor{comment}{// 1 second}
+102             \{
+103                 \mbox{\hyperlink{class_game_af379862400da53dd8f296f0990c0953f}{moveDown}}();
+104                 countForAutoDown = 0;
+105             \}
+106 
+107             \mbox{\hyperlink{class_game_aeb128045605ef167c233da9f993d407d}{readUserMove}}();
+108         \}
+109     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_aa333825d0bca80e91e53c7e23f053405_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{class_game_aa333825d0bca80e91e53c7e23f053405_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a00e70c3fa536c8b76e92aaca66c5ccc2}\label{class_game_a00e70c3fa536c8b76e92aaca66c5ccc2}} 
+\index{Game@{Game}!press\+Space\+To\+Continue@{press\+Space\+To\+Continue}}
+\index{press\+Space\+To\+Continue@{press\+Space\+To\+Continue}!Game@{Game}}
+\subsubsection{\texorpdfstring{press\+Space\+To\+Continue()}{pressSpaceToContinue()}}
+{\footnotesize\ttfamily void Game\+::press\+Space\+To\+Continue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+사용자가 스페이스를 누를 때까지 대기한다. 
+
+
+
+tetris\+\_\+game.\+h 파일의 29 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+30     \{
+31         \textcolor{keywordflow}{while} (\textcolor{keyword}{true})
+32             \textcolor{keywordflow}{if} (GetAsyncKeyState(VK\_SPACE) & 0x8000)
+33             \{
+34                 Sleep(500);
+35                 \textcolor{keywordflow}{break};
+36             \}
+37     \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a00e70c3fa536c8b76e92aaca66c5ccc2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_aeb128045605ef167c233da9f993d407d}\label{class_game_aeb128045605ef167c233da9f993d407d}} 
+\index{Game@{Game}!read\+User\+Move@{read\+User\+Move}}
+\index{read\+User\+Move@{read\+User\+Move}!Game@{Game}}
+\subsubsection{\texorpdfstring{read\+User\+Move()}{readUserMove()}}
+{\footnotesize\ttfamily void Game\+::read\+User\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+사용자의 조작을 읽어 블럭을 조작한다. 
+
+
+
+tetris\+\_\+game.\+h 파일의 40 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+41     \{
+42         \textcolor{keywordflow}{if} (GetAsyncKeyState(VK\_UP) & 0x8000)
+43             \mbox{\hyperlink{class_game_a8727c9c167265bff376f606d02687c6b}{rotate}}();
+44         \textcolor{keywordflow}{if} (GetAsyncKeyState(VK\_DOWN) & 0x8000)
+45             \mbox{\hyperlink{class_game_af379862400da53dd8f296f0990c0953f}{moveDown}}();
+46         \textcolor{keywordflow}{if} (GetAsyncKeyState(VK\_LEFT) & 0x8000)
+47             \mbox{\hyperlink{class_game_a3bd586b9c1bcd71f78bc2c2f7e2fe9e7}{moveLeft}}();
+48         \textcolor{keywordflow}{if} (GetAsyncKeyState(VK\_RIGHT) & 0x8000)
+49             \mbox{\hyperlink{class_game_a36ee055aa2c311deea72c38f50814007}{moveRight}}();
+50         \textcolor{keywordflow}{if} (GetAsyncKeyState(VK\_SPACE) & 0x8000)
+51         \{
+52             \textcolor{keywordflow}{while} (\mbox{\hyperlink{class_game_af379862400da53dd8f296f0990c0953f}{moveDown}}())
+53                 \textcolor{keywordflow}{continue};
+54             \mbox{\hyperlink{class_game_aa61075838d60bc5c850b72bc4804b7b8}{drawHandlerContent}}();
+55         \}
+56         Sleep(100);
+57     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_aeb128045605ef167c233da9f993d407d_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_aeb128045605ef167c233da9f993d407d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_a8727c9c167265bff376f606d02687c6b}\label{class_game_a8727c9c167265bff376f606d02687c6b}} 
+\index{Game@{Game}!rotate@{rotate}}
+\index{rotate@{rotate}!Game@{Game}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Game\+::rotate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+현 블럭을 회전시킬 수 있으면 회전시킨다. 
+
+
+
+tetris\+\_\+game.\+h 파일의 167 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+168     \{
+169         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_game_af5bc546b0c766ecf2f7e008f750832ed}{board}}.\mbox{\hyperlink{class_board_a4b84310dd1ac3a08a3180361508a43e3}{isNotRotatable}}(\mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}}))
+170         \{
+171             \mbox{\hyperlink{class_game_a7ab3d17dc7bf72f0a59fbb7b17c6ce5a}{eraseHandlerContent}}();
+172             \mbox{\hyperlink{class_game_ae72b7259125e83dfd258c6a132394eec}{handler}}.\mbox{\hyperlink{class_block_handler_ab57212ded2552ab5559d278c8538c454}{blk}}->rotate();
+173             \mbox{\hyperlink{class_game_aa61075838d60bc5c850b72bc4804b7b8}{drawHandlerContent}}();
+174         \}
+175     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a8727c9c167265bff376f606d02687c6b_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_a8727c9c167265bff376f606d02687c6b_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_game_af5bc546b0c766ecf2f7e008f750832ed}\label{class_game_af5bc546b0c766ecf2f7e008f750832ed}} 
+\index{Game@{Game}!board@{board}}
+\index{board@{board}!Game@{Game}}
+\subsubsection{\texorpdfstring{board}{board}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board}{Board}} Game\+::board\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+tetris\+\_\+game.\+h 파일의 24 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_game_a536a6390d16f05d402928bd731e06ef3}\label{class_game_a536a6390d16f05d402928bd731e06ef3}} 
+\index{Game@{Game}!difficulty@{difficulty}}
+\index{difficulty@{difficulty}!Game@{Game}}
+\subsubsection{\texorpdfstring{difficulty}{difficulty}}
+{\footnotesize\ttfamily int Game\+::difficulty\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+난이도를 나타내는 변수. 1 -\/ 5의 범위를 가지며, 1 높아질 수록 블럭이 100ms 빨리 내려간다. 
+
+
+
+tetris\+\_\+game.\+h 파일의 26 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_game_a045e1468514c0c0d51e968364e0678ad}\label{class_game_a045e1468514c0c0d51e968364e0678ad}} 
+\index{Game@{Game}!drawer@{drawer}}
+\index{drawer@{drawer}!Game@{Game}}
+\subsubsection{\texorpdfstring{drawer}{drawer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_drawer}{Drawer}} Game\+::drawer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+tetris\+\_\+game.\+h 파일의 23 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_game_ae72b7259125e83dfd258c6a132394eec}\label{class_game_ae72b7259125e83dfd258c6a132394eec}} 
+\index{Game@{Game}!handler@{handler}}
+\index{handler@{handler}!Game@{Game}}
+\subsubsection{\texorpdfstring{handler}{handler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_block_handler}{Block\+Handler}} Game\+::handler\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+tetris\+\_\+game.\+h 파일의 25 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tetris__game_8h}{tetris\+\_\+game.\+h}}\end{DoxyCompactItemize}

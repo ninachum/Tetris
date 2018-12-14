@@ -1,0 +1,6 @@
+<map id="Drawer::drawGameFrame" name="Drawer::drawGameFrame">
+<area shape="rect" id="node2" href="$class_drawer.html#a2deae79fb268b41b72693d005cdf2178" title="다음 블럭을 나타낼 자리에 프레임을 그림 " alt="" coords="226,5,387,32"/>
+<area shape="rect" id="node4" href="$class_drawer.html#a72d01f53fc2c5ff15763dcd76a9b9395" title="보드 프레임을 그림 " alt="" coords="223,56,391,83"/>
+<area shape="rect" id="node5" href="$class_drawer.html#a4fb74bcad295250c519bb848dd48b0de" title="게임 플레이 방법을 그림 " alt="" coords="228,107,385,133"/>
+<area shape="rect" id="node3" href="$class_drawer.html#ac1a96e007c07cab2e36a7c78484ee9a6" title="해당 좌표로 커서를 이동시킴 " alt="" coords="439,56,587,83"/>
+</map>
